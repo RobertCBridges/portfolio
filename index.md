@@ -11,9 +11,6 @@ title: Robert Bridges
   alt="Profile Picture"
   class="profile-image"
 />
-
-
-
  
 My name is {{ site.name }}, 
 I am an AeroSpace Meng student with my bachelors in Mechanical Engineering. I am graduating this May, so I am looking for early career opportunities.
