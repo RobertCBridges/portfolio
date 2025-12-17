@@ -6,7 +6,12 @@ title: Robert Bridges
 ## About Me
 
 
-![Profile Picture]({{ "assets/images/profile-pic.png" | relative_url }}){: class="profile-image"}
+<img
+  src="{{ '/assets/images/profile-pic.png' | relative_url }}"
+  alt="Profile Picture"
+  class="profile-image"
+/>
+
 
  
 My name is {{ site.name }}, 
