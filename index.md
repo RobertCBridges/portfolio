@@ -7,7 +7,7 @@ title: Robert Bridges
 
 
 <img
-  src="{{ '/assets/images/profile-pic.png' | relative_url }}"
+  src="{{ '/home/codespace/fa25-portfolio-RobertCBridges/assets/images/profile-pic.png' | relative_url }}"
   alt="Profile Picture"
   class="profile-image"
 />
