@@ -14,7 +14,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : Robert Bridges
 description              : Robert Bridges - Projects and CV 
 url: https://robertcbridges.github.io
-baseurl: "/portfolio
+
 
 # Theme and Style
 theme: jekyll-theme-minimal
