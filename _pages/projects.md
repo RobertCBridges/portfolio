@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-permalink: /projects/
+permalink: {{ "/projects/" | relative_url }}
 ---
 
 <div class="gallery-container">
