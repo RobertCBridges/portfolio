@@ -1,4 +1,8 @@
 ---
 ---
 
+/* Jekyll will compile this SCSS into CSS.
+   Keep the front matter above exactly as-is. */
+
+/* Import your custom overrides (stored in _sass/custom.scss) */
 @import "custom";

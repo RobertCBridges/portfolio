@@ -1,8 +1,9 @@
 ---
-layout: default
-title: Robert Bridges - Curriculum Vitae
+layout: page
+title: CV
 permalink: /cv/
 ---
+
 ## Curriculum Vitae
 
 [Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.

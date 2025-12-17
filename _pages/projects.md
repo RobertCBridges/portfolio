@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Robert Bridges - Portfolio
+layout: page
+title: Projects
 permalink: /projects/
 ---
 
