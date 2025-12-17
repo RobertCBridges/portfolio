@@ -7,10 +7,11 @@ title: Robert Bridges
 
 
 <img
-  src="{{ '/home/codespace/fa25-portfolio-RobertCBridges/assets/images/profile-pic.png' | relative_url }}"
+  src="{{ '/assets/images/profile-pic.png' | relative_url }}"
   alt="Profile Picture"
   class="profile-image"
 />
+
 
 
  
@@ -24,5 +25,6 @@ What makes me stand out from other students are my passion projects. Automatic b
 For my Meng project, I have started to work on a robotic bat. With the purpose of analyzing the fluid dynamics and mechanics behind how a bat drinks. Ranging from CAD, to circuits, and material selection.
 
 
-Take a look at <a href="{{ "/projects/" | relative_url }}">my projects and <a href="{{ "/cv/" | relative_url }}">CV.
+Take a look at [my projects]({{ '/projects/' | relative_url }}).
+
 

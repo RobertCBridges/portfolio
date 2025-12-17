@@ -13,8 +13,8 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : Robert Bridges
 description              : Robert Bridges - Projects and CV 
-baseurl: "/portfolio"
-url: "https://robertcbridges.github.io"
+url: https://robertcbridges.github.io
+baseurl: "/portfolio
 
 # Theme and Style
 theme: jekyll-theme-minimal
