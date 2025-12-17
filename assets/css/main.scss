@@ -1,15 +1,12 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
---- 
+---
 
-$color_scheme: '{{ site.color_scheme }}';
-
-@import "base";
+{@import "base";
 @import "layout";
 @import "syntax";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
+
 
 .content-wrap {
   display: flex;
@@ -59,4 +56,5 @@ $color_scheme: '{{ site.color_scheme }}';
   margin-top: 0.6rem;
   font-size: 0.92rem;
   opacity: 0.75;
+}
 }
