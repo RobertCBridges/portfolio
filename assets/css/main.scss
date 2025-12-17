@@ -1,23 +1,4 @@
 ---
 ---
 
-{@import "base";
-@import "layout";
-@import "syntax";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap");
 @import "custom";
-
-/* Your custom styles below */
-.content-wrap {
-  display: flex;
-  justify-content: center;
-  padding: 3rem 1.25rem;
-}
-
-.content {
-  max-width: 820px;
-  width: 100%;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-}
