@@ -5,107 +5,23 @@
 
 $color_scheme: '{{ site.color_scheme }}';
 
+@import "base";
+@import "layout";
+@import "syntax";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 @import "custom";
 
-/* ---------- Portfolio readability + softened visual tone ---------- */
-
-.portfolio-wrap {
-  max-width: 880px;   /* outer container width */
-  margin: 0 auto;
-  padding: 2.25rem 1.25rem;
-}
-
-.portfolio-content {
-  max-width: 760px;   /* actual text column */
-  margin: 0 auto;
-  line-height: 1.7;
-  font-size: 1.03rem;
-}
-
-/* Headings: softer, more editorial */
-.portfolio-content h1,
-.portfolio-content h2,
-.portfolio-content h3 {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.portfolio-content h2 {
-  margin-top: 2.4rem;
-  margin-bottom: 0.8rem;
-}
-
-.portfolio-content h3 {
-  margin-top: 1.6rem;
-  margin-bottom: 0.6rem;
-}
-
-/* Paragraph rhythm */
-.portfolio-content p {
-  margin: 0 0 1.1rem 0;
-}
-
-/* Make lists look clean (not harsh) */
-.portfolio-content ul,
-.portfolio-content ol {
-  margin: 0.25rem 0 1.15rem 1.15rem;
-}
-
-.portfolio-content li {
-  margin: 0.35rem 0;
-}
-
-/* Links: slightly softer */
-.portfolio-content a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-/* Figures: centered, responsive, with gentle framing */
-.portfolio-content figure {
-  margin: 2.1rem 0;
-  text-align: center;
-}
-
-.portfolio-content figure img,
-.portfolio-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.10);
-}
-
-/* Captions */
-.portfolio-content figcaption {
-  font-size: 0.93rem;
-  opacity: 0.78;
-  margin-top: 0.55rem;
-}
-
-/* Soft callout blocks */
-.portfolio-content .callout {
-  margin: 1.35rem 0;
-  padding: 0.95rem 1rem;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.10);
-  background: rgba(0,0,0,0.03);
-}
-
-/* Small metadata chips (optional) */
-.portfolio-content .chips {
+.content-wrap {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin: 1rem 0 1.35rem 0;
+  justify-content: center;
+  padding: 3rem 1.25rem;
 }
 
-.portfolio-content .chip {
-  padding: 0.55rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,0.12);
-  background: rgba(0,0,0,0.02);
-  font-size: 0.92rem;
+.content {
+  max-width: 720px;
+  width: 100%;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 .content h2 {
@@ -122,4 +38,25 @@ $color_scheme: '{{ site.color_scheme }}';
   height: 2px;
   background: rgba(0,0,0,0.25);
   margin-top: 0.4rem;
+}
+
+.content p {
+  margin-bottom: 1.1rem;
+}
+
+.content figure {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.content img {
+  max-width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.content figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  opacity: 0.75;
 }
