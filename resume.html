@@ -80,18 +80,19 @@
       const downloadLink = document.getElementById('downloadLink');
       const openLink = document.getElementById('openLink');
       const fallbackDownload = document.getElementById('fallbackDownload');
-      const filenames = {
-        en: 'assets/resumes/General.pdf',
-        fr: 'assets/resumes/Manufacturing.pdf',
-        de: 'assets/resumes/Propulsion.pdf'
+      const resumes = {
+        en: { file: 'assets/resumes/General.pdf', downloadName: 'RobertCBridges-Resume.pdf' },
+        fr: { file: 'assets/resumes/Manufacturing.pdf', downloadName: 'RobertCBridges-Manufacturing-Resume.pdf' },
+        de: { file: 'assets/resumes/Propulsion.pdf', downloadName: 'RobertCBridges-Propulsion-Resume.pdf' }
       };
 
       function setLang(lang) {
-        const file = filenames[lang] || filenames.General;
+        const resume = resumes[lang] || resumes.en;
+        const file = resume.file;
         iframe.src = file;
         downloadLink.href = file;
         openLink.href = file;
-        downloadLink.setAttribute('download', `RobertCBridges-Resume-${lang}.pdf`);
+        downloadLink.setAttribute('download', resume.downloadName);
         openLink.setAttribute('href', file);
         if (fallbackDownload) fallbackDownload.setAttribute('href', file);
         // update active styles
