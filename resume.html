@@ -81,9 +81,9 @@
       const openLink = document.getElementById('openLink');
       const fallbackDownload = document.getElementById('fallbackDownload');
       const filenames = {
-        General: 'assets/resumes/General.pdf',
-        Manufacturing: 'assets/resumes/Manufacturing.pdf',
-        Propulsion: 'assets/resumes/Propulsion.pdf'
+        en: 'assets/resumes/General.pdf',
+        fr: 'assets/resumes/Manufacturing.pdf',
+        de: 'assets/resumes/Propulsion.pdf'
       };
 
       function setLang(lang) {
@@ -101,7 +101,7 @@
       buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
 
       // default to English
-      setLang('General');
+      setLang('en');
     })();
   </script>
 
