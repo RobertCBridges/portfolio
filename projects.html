@@ -52,7 +52,6 @@
     });
   </script>
 
-
 <article class="project" role="article" aria-labelledby="project-title-foca" data-project-id="foca-spacecraft" itemscope itemtype="https://schema.org/CreativeWork">
 
   <header class="project-header">
@@ -287,6 +286,46 @@
         <figcaption>Subsystem block diagram. Dashed lines are external interfaces: ground RF link, and the optical and mechanical interfaces to the target.</figcaption>
       </figure>
 
+      <figure>
+        <svg viewBox="0 0 640 390" role="img" aria-labelledby="svg-cfg-t svg-cfg-d">
+          <title id="svg-cfg-t">Bus configuration schematic, plan view</title>
+          <desc id="svg-cfg-d">Plan view of the FOCA bus with two deployed array wings, the net launcher on the negative Y face along the deployment axis, and the backup net and steerable low gain antenna on the opposite face.</desc>
+          <defs>
+            <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+            </marker>
+          </defs>
+          <text class="bs" x="20" y="24">Schematic, not to scale. Array orientation is illustrative.</text>
+
+          <rect class="bx" x="160" y="130" width="110" height="80"/>
+          <line class="grid" x1="196.7" y1="130" x2="196.7" y2="210"/>
+          <line class="grid" x1="233.3" y1="130" x2="233.3" y2="210"/>
+          <rect class="bx" x="370" y="130" width="110" height="80"/>
+          <line class="grid" x1="406.7" y1="130" x2="406.7" y2="210"/>
+          <line class="grid" x1="443.3" y1="130" x2="443.3" y2="210"/>
+          <text class="bs" x="150" y="174" text-anchor="end">Array wing</text>
+          <text class="bs" x="490" y="174">Array wing</text>
+
+          <rect class="bx" x="270" y="120" width="100" height="100"/>
+          <text class="bt" x="320" y="165" text-anchor="middle">Bus</text>
+          <text class="bs" x="320" y="182" text-anchor="middle">1.0 m class</text>
+
+          <rect class="bx" x="282" y="96" width="36" height="24"/>
+          <circle class="bx" cx="345" cy="108" r="8"/>
+          <text class="bs" x="274" y="108" text-anchor="end">Backup net (+Y face)</text>
+          <text class="bs" x="360" y="112">Steerable LGA, anti-target face</text>
+
+          <rect class="bx" x="300" y="220" width="40" height="28"/>
+          <text class="bs" x="350" y="238">Net launcher, tether eyelet (-Y face)</text>
+          <line class="rf" x1="320" y1="248" x2="320" y2="325" marker-end="url(#arr2)"/>
+          <text class="bs" x="332" y="300">Deployment axis, toward target</text>
+
+          <line class="ln" x1="160" y1="352" x2="480" y2="352" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+          <text class="bs" x="320" y="374" text-anchor="middle">Approx. 3 to 4 m span with arrays deployed</text>
+        </svg>
+        <figcaption>Bus configuration schematic, plan view. Face assignments follow the PDR: net launcher on the negative Y face, backup net on the opposite face, steerable low gain antenna on the anti-target face.</figcaption>
+      </figure>
+
     </div>
 
     <!-- ============================== SUBSYSTEM DESIGN ============================== -->
@@ -318,6 +357,45 @@
         The same relation is used in reverse for operations: remaining delta-V is computed from propellant gauging and compared against the budget reserved for downstream events before each maneuver is committed. This is built into the go and no-go logic at each authorization gate so that no maneuver can consume the margin reserved for capture, reel-in compensation, and end-of-mission disposal.
       </p>
 
+      <figure>
+        <svg viewBox="0 0 640 340" role="img" aria-labelledby="svg-dv-t svg-dv-d">
+          <title id="svg-dv-t">Delta-V capability versus propellant load</title>
+          <desc id="svg-dv-d">Rocket equation curve for a 236 kilogram dry mass and 220 second specific impulse. The 350 meter per second requirement is met at about 41.6 kilograms of propellant; the 44 kilogram design load gives about 369 meters per second.</desc>
+          <line class="grid" x1="70" y1="300" x2="600" y2="300"/>
+          <line class="grid" x1="70" y1="246" x2="600" y2="246"/>
+          <line class="grid" x1="70" y1="192" x2="600" y2="192"/>
+          <line class="grid" x1="70" y1="138" x2="600" y2="138"/>
+          <line class="grid" x1="70" y1="84" x2="600" y2="84"/>
+          <line class="grid" x1="70" y1="30" x2="600" y2="30"/>
+          <text class="axis" x="62" y="304" text-anchor="end">0</text>
+          <text class="axis" x="62" y="250" text-anchor="end">100</text>
+          <text class="axis" x="62" y="196" text-anchor="end">200</text>
+          <text class="axis" x="62" y="142" text-anchor="end">300</text>
+          <text class="axis" x="62" y="88" text-anchor="end">400</text>
+          <text class="axis" x="62" y="34" text-anchor="end">500</text>
+          <text class="axis" x="16" y="170" transform="rotate(-90 16 170)" text-anchor="middle">Delta-V (m/s)</text>
+          <text class="axis" x="70" y="318" text-anchor="middle">0</text>
+          <text class="axis" x="158.3" y="318" text-anchor="middle">10</text>
+          <text class="axis" x="246.7" y="318" text-anchor="middle">20</text>
+          <text class="axis" x="335" y="318" text-anchor="middle">30</text>
+          <text class="axis" x="423.3" y="318" text-anchor="middle">40</text>
+          <text class="axis" x="511.7" y="318" text-anchor="middle">50</text>
+          <text class="axis" x="600" y="318" text-anchor="middle">60</text>
+          <text class="axis" x="335" y="336" text-anchor="middle">Hydrazine propellant load (kg)</text>
+
+          <polyline fill="none" stroke="currentColor" stroke-width="2" points="70,300 158.3,251.6 246.7,205.2 335,160.5 423.3,117.5 458.7,100.7 511.7,76.1 600,36"/>
+          <line class="rf" x1="70" y1="111" x2="600" y2="111" style="stroke:var(--foca-warn)"/>
+          <text class="bs" x="76" y="104">350 m/s requirement</text>
+          <line class="rf" x1="437.4" y1="111" x2="437.4" y2="300" style="stroke:var(--foca-warn)"/>
+          <text class="bs" x="443" y="290">41.6 kg minimum</text>
+          <circle class="mass" cx="458.7" cy="100.7" r="5"/>
+          <text class="bs" x="466" y="138">44 kg design load</text>
+          <text class="bs" x="466" y="153">approx. 369 m/s</text>
+          <text class="bs" x="80" y="50">236 kg dry mass, I_sp = 220 s</text>
+        </svg>
+        <figcaption>Delta-V versus propellant load from the Tsiolkovsky relation at 236 kg dry mass. The 44 kg design load sits above the 41.6 kg needed for 350 m/s (reported in the requirements table as 370 m/s).</figcaption>
+      </figure>
+
       <h5>Power</h5>
       <p>
         Two deployable rigid wings with triple-junction GaAs cells (end-of-life efficiency near 28%) supply approximately 250 W at beginning of life against a design average load of approximately 200 W, with the 600 km worst-case eclipse fraction as the sizing case. A lithium-ion battery of about 500 Wh buffers eclipse and peak events (net deployment, reel-in, and continuous attitude control thruster operation) and is sized for roughly 30% depth of discharge in nominal operation, which leaves room for off-nominal events and end-of-life capacity fade. A centralized PMAD unit carries redundant MPPT converters on the array side and a switched, fused load network on the load side, regulated at 28 V. Array release uses a hold-and-release mechanism with redundant non-explosive actuators. The subsystem-level power table sums to a 170 W average and a peak case in proximity operations when LIDAR, reel motor, and thrusters operate concurrently.
@@ -346,7 +424,7 @@
         The primary structure is an aluminum honeycomb sandwich box, 1.0 x 1.0 x 1.2 m, with internal shear panels carrying the propulsion module, avionics stack, wheel assembly, and net deployment system. Launch quasi-static and random vibration loads govern sizing, not the on-orbit environment. Local stiffening is added at the launch vehicle separation interface, the propellant tank mount, and the net mechanism mount to handle concentrated loads and keep natural frequencies above launch vehicle requirements. The design achieves a factor of safety of 1.5 at all interfaces against a 1.4 requirement. Carbon fiber face sheets are carried as a mass-reduction option pending a cost trade. System-level mass margin follows a declining policy of 30% at SDR, 25% at PDR, 20% at CDR, and 10% at acceptance.
       </p>
 
-      <!-- CONFIRM: the sentence in the Overview about honeycomb panels and common geometry, and the CAD slots above, assume Fusion 360 was used for bus structure and packaging. Edit if the scope was different. -->
+      <!-- CONFIRM: the Structure and Skills sections assume Fusion 360 was used for bus structure, packaging, and mechanism layout. Edit if the scope was different. -->
 
       <h5>Telemetry, tracking, and command</h5>
       <p>
@@ -768,6 +846,7 @@
         <li><strong>Net deployment mechanism:</strong> approx. 200 x 200 x 300 mm, 12 to 15 kg stowed including the 10 kg net, four corner mass guides at 90 degree spacing about the deployment axis, redundant non-explosive release latch, spring stack or cold gas launcher, tether routed through a guide eyelet to the reel motor on a stiffened internal shear panel.</li>
       </ul>
 
+      <!-- CONFIRM: which of MATLAB or Python produced the delta-V sizing, budget roll-ups, and Monte Carlo work. The Tech & tools list below names both generically. -->
     </div>
 
     <!-- ============================== SKILLS ============================== -->
