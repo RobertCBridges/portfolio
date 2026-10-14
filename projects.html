@@ -52,7 +52,7 @@
     });
   </script>
 
-<article class="project" role="article" aria-labelledby="project-title-foca" data-project-id="foca-spacecraft" itemscope itemtype="https://schema.org/CreativeWork">
+<article class="project foca-entry" role="article" aria-labelledby="project-title-foca" data-project-id="foca-spacecraft" itemscope itemtype="https://schema.org/CreativeWork">
 
   <header class="project-header">
     <h2 id="project-title-foca" class="project-title" itemprop="name">F.O.C.A.: Original Spacecraft Mission Design</h2>
@@ -71,11 +71,35 @@
     <figcaption>Hand drawn mission storyboard: launch vehicle separation through net capture, reel-in, and measurement phase. Mission success milestones are flagged in the panels.</figcaption>
   </figure>
 
+  <dl class="foca-stats" aria-label="Key figures">
+    <div class="foca-stat"><dt>Orbit</dt><dd class="value">600 km</dd><dd class="sub">circular LEO</dd></div>
+    <div class="foca-stat"><dt>Wet mass</dt><dd class="value">280 kg</dd><dd class="sub">236 kg dry, 44 kg hydrazine</dd></div>
+    <div class="foca-stat"><dt>Delta-V</dt><dd class="value">370 m/s</dd><dd class="sub">against 350 m/s required</dd></div>
+    <div class="foca-stat"><dt>Power</dt><dd class="value">250 W</dd><dd class="sub">BOL, 28 V regulated bus</dd></div>
+    <div class="foca-stat"><dt>Net</dt><dd class="value">8 m</dd><dd class="sub">approx. 10 kg, 10 m/s launch</dd></div>
+    <div class="foca-stat"><dt>Approach</dt><dd class="value">0.2 m/s</dd><dd class="sub">max relative velocity at 20 m</dd></div>
+  </dl>
+
+  <nav class="foca-toc" aria-label="Contents">
+    <a href="#foca-overview">Overview</a>
+    <a href="#foca-mission">Mission</a>
+    <a href="#foca-conops">ConOps</a>
+    <a href="#foca-architecture">Architecture</a>
+    <a href="#foca-subsystems">Subsystems</a>
+    <a href="#foca-budgets">Budgets</a>
+    <a href="#foca-requirements">Requirements</a>
+    <a href="#foca-trades">Trade studies</a>
+    <a href="#foca-focus-risk">Net and tether risk</a>
+    <a href="#foca-risk">Risk and TRL</a>
+    <a href="#foca-cdr">CDR plan</a>
+    <a href="#foca-skills">Skills</a>
+  </nav>
+
   <section class="project-details">
     <h3 class="sr-only">Project details</h3>
 
     <!-- ============================== OVERVIEW ============================== -->
-    <div class="project-overview">
+    <div class="project-overview" id="foca-overview">
       <h4>Overview</h4>
       <p>
         F.O.C.A. (Foreign Object Capture &amp; Analysis) is a 300 kg class, monopropellant LEO spacecraft designed to demonstrate autonomous rendezvous, capture, and stabilization of an uncooperative object. The target class is a tumbling, non-responsive body of 1 to 3 m characteristic size and up to 200 kg, with no grapple fixtures, no docking interface, and no attitude cooperation. Capture is by deployable net and tether, followed by closed-loop reel-in to a 2 to 3 m hold length and an optical characterization phase with data returned over S-band.
@@ -87,7 +111,7 @@
         The architecture is deliberately conservative on the bus and aggressive in one place. Propulsion, power, ADCS, TT&amp;C, and thermal are built from flight-proven hardware classes (TRL 9). Development risk is concentrated in the net and tether payload and the autonomous proximity operations software, because those are the elements that determine mission success and the ones that most need verification budget. The net capture concept is baselined on the RemoveDEBRIS in-flight demonstration.
       </p>
 
-      <table aria-label="Design point summary">
+      <div class="table-wrap"><table class="kv" aria-label="Design point summary">
         <caption class="sr-only">Design point summary</caption>
         <thead><tr><th>Parameter</th><th>Value at PDR</th></tr></thead>
         <tbody>
@@ -100,11 +124,11 @@
           <tr><td>Relative navigation</td><td>Flash imaging LIDAR (approx. 5 km to close approach corridor) plus stereo cameras; 0.5 m knowledge at 20 m range</td></tr>
           <tr><td>Parametric development cost</td><td>$50M to $100M (payload NRE $2M to $4M)</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <!-- ============================== MISSION CONCEPT ============================== -->
-    <div class="project-mission">
+    <div class="project-mission" id="foca-mission">
       <h4>Mission objectives and success criteria</h4>
       <p>
         Four objectives are ranked in decreasing priority: (1) autonomous rendezvous of a 300 kg class vehicle with an uncooperative target at controlled relative velocity, (2) net envelopment of a 1 to 3 m, 200 kg class target without fragmentation, (3) post-capture stabilization that converts a tumbling object into a stably tethered one with bounded relative motion, and (4) on-orbit characterization with downlink to ground. A secondary objective is flight data on net deployment dynamics, tether reel-in control, and reaction force compensation. The mission is framed against IADC space debris mitigation guidelines.
@@ -112,8 +136,7 @@
       <p>
         Success is tiered so that partial achievement is still measurable. Each tier maps to storyboard events that are verifiable by telemetry, imagery, or ground tracking.
       </p>
-      <div class="table-wrap">
-      <table aria-label="Tiered mission success criteria">
+      <div class="table-wrap"><table aria-label="Tiered mission success criteria">
         <thead><tr><th>Tier</th><th>Criterion</th><th>Verification</th></tr></thead>
         <tbody>
           <tr><td>Minimum</td><td>Controlled close approach to within 20 m at relative velocity at or below 0.2 m/s, attitude stabilized, station keeping without contact</td><td>Relative navigation telemetry, onboard imagery</td></tr>
@@ -121,22 +144,31 @@
           <tr><td>Full</td><td>Stabilization of the captured object by reel-in to a 2 to 3 m hold length, residual relative motion damped below attitude control authority</td><td>Tether load cell, pose estimate, attitude telemetry</td></tr>
           <tr><td>Extended</td><td>Completion of the measurement phase with characterization data returned via S-band</td><td>Ground receipt of science data set</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
     </div>
 
     <!-- ============================== CONOPS ============================== -->
-    <div class="project-conops">
+    <div class="project-conops" id="foca-conops">
       <h4>Concept of operations</h4>
       <p>
         The operations concept divides autonomy cleanly. FOCA is fully autonomous within a mission phase and ground-gated between phases. Three authorization gates sit ahead of irreversible or high-consequence events: cruise to proximity operations (G1), the 100 m hold point to the 20 m close approach (G2), and net armed to net deployed (G3). The spacecraft cannot cross a gate on its own. Gate timing is a design driver: the interval between the 100 m characterization and the G2 authorization is held to no more than one orbital period, which sizes the ground pass cadence and same-pass command turnaround.
       </p>
 
       <figure>
-        <svg viewBox="0 0 1040 280" role="img" aria-labelledby="svg-timeline-t svg-timeline-d">
+        <svg class="wide" viewBox="0 58 1040 222" role="img" aria-labelledby="svg-timeline-t svg-timeline-d">
           <title id="svg-timeline-t">Mission event timeline with ground authorization gates</title>
           <desc id="svg-timeline-d">Twelve mission events from launch vehicle separation at MET plus 0:00 to the measurement phase at MET plus 16:00, with three ground authorization gates before proximity operations, close approach, and net deployment.</desc>
-          <line class="ln" x1="50" y1="140" x2="1000" y2="140" stroke-width="2"/>
+          <line class="ln" x1="90" y1="140" x2="150" y2="140"/>
+          <line class="ln" x1="170" y1="140" x2="230" y2="140"/>
+          <line class="ln" x1="250" y1="140" x2="310" y2="140"/>
+          <line class="ln" x1="330" y1="140" x2="390" y2="140"/>
+          <line class="ln" x1="410" y1="140" x2="470" y2="140"/>
+          <line class="ln" x1="490" y1="140" x2="550" y2="140"/>
+          <line class="ln" x1="570" y1="140" x2="630" y2="140"/>
+          <line class="ln" x1="650" y1="140" x2="710" y2="140"/>
+          <line class="ln" x1="730" y1="140" x2="790" y2="140"/>
+          <line class="ln" x1="810" y1="140" x2="870" y2="140"/>
+          <line class="ln" x1="890" y1="140" x2="950" y2="140"/>
 
           <!-- nodes: x = 80 + 80*i -->
           <circle class="node" cx="80"  cy="140" r="8"/>
@@ -200,14 +232,14 @@
     </div>
 
     <!-- ============================== ARCHITECTURE ============================== -->
-    <div class="project-architecture">
+    <div class="project-architecture" id="foca-architecture">
       <h4>Vehicle architecture</h4>
       <p>
         The bus is a monolithic aluminum honeycomb sandwich box. All subsystems are hosted inside or on this structure, with the net launcher on the negative Y face, aligned with the close approach corridor, and a backup net stowed on the opposite face.
       </p>
 
       <figure>
-        <svg viewBox="0 0 970 480" role="img" aria-labelledby="svg-block-t svg-block-d">
+        <svg class="wide" viewBox="0 0 970 480" role="img" aria-labelledby="svg-block-t svg-block-d">
           <title id="svg-block-t">FOCA subsystem block diagram</title>
           <desc id="svg-block-d">C&amp;DH at the center connected to power, propulsion, GNC, TT&amp;C, thermal, and payload subsystems inside a primary structure outline. Ground segment connects to TT&amp;C and the target connects to GNC and payload.</desc>
 
@@ -287,7 +319,7 @@
       </figure>
 
       <figure>
-        <svg viewBox="0 0 640 390" role="img" aria-labelledby="svg-cfg-t svg-cfg-d">
+        <svg viewBox="0 80 640 310" role="img" aria-labelledby="svg-cfg-t svg-cfg-d">
           <title id="svg-cfg-t">Bus configuration schematic, plan view</title>
           <desc id="svg-cfg-d">Plan view of the FOCA bus with two deployed array wings, the net launcher on the negative Y face along the deployment axis, and the backup net and steerable low gain antenna on the opposite face.</desc>
           <defs>
@@ -295,7 +327,6 @@
               <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
             </marker>
           </defs>
-          <text class="bs" x="20" y="24">Schematic, not to scale. Array orientation is illustrative.</text>
 
           <rect class="bx" x="160" y="130" width="110" height="80"/>
           <line class="grid" x1="196.7" y1="130" x2="196.7" y2="210"/>
@@ -323,13 +354,13 @@
           <line class="ln" x1="160" y1="352" x2="480" y2="352" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
           <text class="bs" x="320" y="374" text-anchor="middle">Approx. 3 to 4 m span with arrays deployed</text>
         </svg>
-        <figcaption>Bus configuration schematic, plan view. Face assignments follow the PDR: net launcher on the negative Y face, backup net on the opposite face, steerable low gain antenna on the anti-target face.</figcaption>
+        <figcaption>Bus configuration schematic, plan view (not to scale; array orientation is illustrative). Face assignments follow the PDR: net launcher on the negative Y face, backup net on the opposite face, steerable low gain antenna on the anti-target face.</figcaption>
       </figure>
 
     </div>
 
     <!-- ============================== SUBSYSTEM DESIGN ============================== -->
-    <div class="project-subsystems">
+    <div class="project-subsystems" id="foca-subsystems">
       <h4>Subsystem design</h4>
 
       <h5>Propulsion</h5>
@@ -341,8 +372,7 @@
       </p>
       <p>Propellant mass is sized with the Tsiolkovsky equation:</p>
       <div class="equation">&Delta;v = I<sub>sp</sub> &middot; g<sub>0</sub> &middot; ln(m<sub>0</sub> / m<sub>f</sub>) &nbsp;&nbsp;&rArr;&nbsp;&nbsp; m<sub>0</sub> / m<sub>f</sub> = exp[ &Delta;v / (I<sub>sp</sub> &middot; g<sub>0</sub>) ]</div>
-      <div class="table-wrap">
-      <table aria-label="Propellant sizing">
+      <div class="table-wrap"><table aria-label="Propellant sizing">
         <thead><tr><th>Quantity</th><th class="num">Value</th><th>Note</th></tr></thead>
         <tbody>
           <tr><td>Delta-V requirement</td><td class="num">350 m/s</td><td>Phasing, rendezvous, proximity operations, capture compensation, disposal reserve</td></tr>
@@ -351,8 +381,7 @@
           <tr><td>Propellant at 290 kg wet</td><td class="num">43 kg</td><td>Design value of 44 kg carried for dispersion and cold-start I<sub>sp</sub> penalty</td></tr>
           <tr><td>Capability at 236 kg dry / 280 kg wet</td><td class="num">approx. 369 m/s</td><td>Consistent with the 370 m/s reported against the 350 m/s requirement (+5.7%)</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
       <p>
         The same relation is used in reverse for operations: remaining delta-V is computed from propellant gauging and compared against the budget reserved for downstream events before each maneuver is committed. This is built into the go and no-go logic at each authorization gate so that no maneuver can consume the margin reserved for capture, reel-in compensation, and end-of-mission disposal.
       </p>
@@ -396,11 +425,14 @@
         <figcaption>Delta-V versus propellant load from the Tsiolkovsky relation at 236 kg dry mass. The 44 kg design load sits above the 41.6 kg needed for 350 m/s (reported in the requirements table as 370 m/s).</figcaption>
       </figure>
 
+      <div class="foca-grid">
+      <div class="foca-card">
       <h5>Power</h5>
       <p>
         Two deployable rigid wings with triple-junction GaAs cells (end-of-life efficiency near 28%) supply approximately 250 W at beginning of life against a design average load of approximately 200 W, with the 600 km worst-case eclipse fraction as the sizing case. A lithium-ion battery of about 500 Wh buffers eclipse and peak events (net deployment, reel-in, and continuous attitude control thruster operation) and is sized for roughly 30% depth of discharge in nominal operation, which leaves room for off-nominal events and end-of-life capacity fade. A centralized PMAD unit carries redundant MPPT converters on the array side and a switched, fused load network on the load side, regulated at 28 V. Array release uses a hold-and-release mechanism with redundant non-explosive actuators. The subsystem-level power table sums to a 170 W average and a peak case in proximity operations when LIDAR, reel motor, and thrusters operate concurrently.
       </p>
-
+      </div>
+      <div class="foca-card">
       <h5>Guidance, navigation, and control</h5>
       <p>
         Absolute navigation uses GPS augmented by ground tracking. Relative navigation is the most demanding function: a flash imaging LIDAR covers roughly 5 km down to the close approach corridor, and a stereo camera pair supports proximity operations and pose estimation of the target. Pose estimation fuses synchronized LIDAR point clouds and camera frames and runs on the flight computer at 1 Hz or faster (2 Hz demonstrated against a 1 Hz requirement). Required relative position knowledge is sub-meter at close approach, with pose quality sufficient to time net release within milliseconds of the planned window. The guidance law commands a sequence of small impulses that hold a glide slope to the target while keeping relative velocity within budget.
@@ -408,38 +440,46 @@
       <p>
         Attitude determination uses a star tracker, a Sun sensor for safe-mode acquisition, and a redundant IMU. Attitude control is a four-wheel reaction wheel pyramid that tolerates a single wheel failure, with magnetorquers for desaturation and thrusters for fast slews and the high-disturbance capture environment. Each wheel stores about 0.5 N&middot;m&middot;s with 0.05 N&middot;m peak torque. Wheel saturation during capture is tracked as a specific risk (T5), since that is the point at which control authority matters most.
       </p>
-
+      </div>
+      <div class="foca-card">
       <h5>Command and data handling</h5>
       <p>
         The flight computer is a radiation-tolerant LEON or RAD750 class processor running a real-time operating system, with a redundant pair of mass memory modules sized for several days of high-rate data. A dedicated FPGA hosts the time-critical LIDAR and pose estimation pipeline so burst data rates do not stall the main processor during proximity operations. Flight software is layered (hardware abstraction, flight software framework, mission application) with phase managers, fault detection, isolation and recovery, and a safe mode controller. Safe mode triggers on loss of attitude knowledge beyond threshold, propellant pressure excursion, processor watchdog timeout, or a commanding gap beyond a configurable limit. Exit from safe mode requires a ground command.
       </p>
-
+      </div>
+      <div class="foca-card">
       <h5>Thermal</h5>
       <p>
         Thermal control is predominantly passive: MLI on most external surfaces, second-surface mirror radiators on selected panels, and thermal interface materials at high-dissipation mounts. Active control is limited to heaters with redundant controllers on the propellant tank, the hydrazine catalyst beds, and the LIDAR mount. Two cases drive the design. The hot case combines high solar flux, full power during capture, and minimum deep-space view, with radiators rejecting approximately 200 W continuous plus reel motor peak load. The cold case is post-deployment safe mode, where loads fall to survival minimum and survival heaters hold the tank and catalyst beds above minimum temperature. Heater power carries at least 50% reserve against the worst cold case, and component temperature margin is greater than 5 degrees C in all cases.
       </p>
-
+      </div>
+      <div class="foca-card">
       <h5>Structure</h5>
       <p>
         The primary structure is an aluminum honeycomb sandwich box, 1.0 x 1.0 x 1.2 m, with internal shear panels carrying the propulsion module, avionics stack, wheel assembly, and net deployment system. Launch quasi-static and random vibration loads govern sizing, not the on-orbit environment. Local stiffening is added at the launch vehicle separation interface, the propellant tank mount, and the net mechanism mount to handle concentrated loads and keep natural frequencies above launch vehicle requirements. The design achieves a factor of safety of 1.5 at all interfaces against a 1.4 requirement. Carbon fiber face sheets are carried as a mass-reduction option pending a cost trade. System-level mass margin follows a declining policy of 30% at SDR, 25% at PDR, 20% at CDR, and 10% at acceptance.
       </p>
 
       <!-- CONFIRM: the Structure and Skills sections assume Fusion 360 was used for bus structure, packaging, and mechanism layout. Edit if the scope was different. -->
-
+      </div>
+      <div class="foca-card">
       <h5>Telemetry, tracking, and command</h5>
       <p>
         A coherent S-band transponder with hot spare redundancy handles command, telemetry, and ranging. Two patch antennas on opposite faces give omnidirectional coverage in safe mode, and a steerable low-gain antenna bore-sighted on the anti-target face carries science downlink. Uplink is 4 kbps; downlink is 4 kbps housekeeping and up to 1 Mbps science, with rate selected autonomously from link margin reported at pass acquisition (1.2 Mbps capability, +20% margin). Commercial small-satellite transponders (L3Harris, Syrlinks) cover the need. FCC licensing carries a 6 to 12 month tail and is treated as a long-lead programmatic item to be started at kickoff.
       </p>
+      </div>
+      </div>
 
+      <div class="foca-card foca-card-wide">
       <h5>Payload: net and tether capture system</h5>
       <p>
         The payload is the only custom-development element on the vehicle. An 8 m net of approximately 10 kg is launched at about 10 m/s by a spring stack or cold gas charge, with four 0.3 to 0.5 kg corner masses that carry the net outward and keep it tensioned in free flight. After envelopment, a Dyneema or Kevlar tether rated to 1000 N transfers load to a brushless-motor reel inside the bus. The reel retracts at approximately 0.02 m/s and holds 20 to 50 N of regulated tension using load cell feedback at the tether attachment. A designed weak link allows autonomous tether release if tension passes a hard limit. The package stows in roughly 200 x 200 x 300 mm at 12 to 15 kg including the launcher, mounted on the negative Y face with the deployment axis along the close approach corridor, and draws about 20 W average and 60 W peak. The payload is allocated 30 kg and is sized for 250 kg dynamic capture capacity against the 200 kg target requirement (+25%).
       </p>
+      </div>
 
     </div>
 
     <!-- ============================== BUDGETS ============================== -->
-    <div class="project-budgets">
+    <div class="project-budgets" id="foca-budgets">
       <h4>Mass, power, and cost budgets</h4>
       <p>
         Budgets are carried per subsystem with explicit margin and rolled up against the PDR system-level policy. The dry total of 236 kg with 25% system-level margin gives an upper bound of approximately 295 kg dry, and a wet mass envelope of roughly 280 to 340 kg, which remains inside the lift capability of the launch vehicle candidates evaluated.
@@ -474,8 +514,7 @@
         <figcaption>Subsystem mass allocation at PDR.</figcaption>
       </figure>
 
-      <div class="table-wrap">
-      <table aria-label="Mass and power summary by subsystem">
+      <div class="table-wrap"><table aria-label="Mass and power summary by subsystem">
         <thead><tr><th>Subsystem</th><th class="num">Dry mass (kg)</th><th class="num">Avg power (W)</th><th class="num">Peak power (W)</th><th class="num">Mass margin</th></tr></thead>
         <tbody>
           <tr><td>Propulsion</td><td class="num">60</td><td class="num">15</td><td class="num">40</td><td class="num">20%</td></tr>
@@ -491,8 +530,7 @@
           <tr><td>Propellant (hydrazine)</td><td class="num">44</td><td class="num">n/a</td><td class="num">n/a</td><td class="num">n/a</td></tr>
           <tr><th>Wet total</th><th class="num">280</th><th class="num"></th><th class="num"></th><th class="num"></th></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
 
       <p>
         Cost was estimated parametrically from reference data: propulsion assembly $1.5M to $2.5M, deployable arrays $0.5M to $1M plus $0.1M to $0.2M for the battery, flight LIDAR $0.3M to $0.7M, reaction wheel units $0.2M to $0.5M each, primary structure $0.5M to $1M, and $2M to $4M NRE for the custom payload, which scales with the extent of ground testing and qualification. Total development cost, including integration, test, and program management, is estimated at $50M to $100M, consistent with comparable LEO small spacecraft demonstration missions.
@@ -500,13 +538,12 @@
     </div>
 
     <!-- ============================== REQUIREMENTS ============================== -->
-    <div class="project-requirements">
+    <div class="project-requirements" id="foca-requirements">
       <h4>Requirements, margins, and contingency posture</h4>
       <p>
         Each subsystem carries an allocated requirement derived from the top-level objectives. The table records the design value and margin at PDR. Where margin is thin, the contingency action is stated now, so that growth between PDR and CDR has a defined response.
       </p>
-      <div class="table-wrap">
-      <table aria-label="Subsystem requirements and margins">
+      <div class="table-wrap"><table aria-label="Subsystem requirements and margins">
         <thead><tr><th>Subsystem</th><th>Key requirement</th><th>Current value</th><th>Margin</th></tr></thead>
         <tbody>
           <tr><td>Propulsion</td><td>Deliver 350 m/s delta-V</td><td>370 m/s capability</td><td>+5.7%</td></tr>
@@ -518,8 +555,7 @@
           <tr><td>TT&amp;C</td><td>Downlink 1 Mbps at S-band</td><td>1.2 Mbps capability</td><td>+20%</td></tr>
           <tr><td>Payload</td><td>Capture target up to 200 kg</td><td>250 kg dynamic margin</td><td>+25%</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
       <ul>
         <li><strong>Propulsion (+5.7%):</strong> reduce the phasing delta-V budget through more accurate ephemeris uplinks first; if needed, accept a longer timeline and use natural orbit precession.</li>
         <li><strong>Power (+4%):</strong> shed non-critical heaters during peak operations; if needed, add a third array wing at a small mass cost.</li>
@@ -528,15 +564,14 @@
     </div>
 
     <!-- ============================== TRADE STUDIES ============================== -->
-    <div class="project-trades">
+    <div class="project-trades" id="foca-trades">
       <h4>Trade studies</h4>
       <p>
         Three trades were carried through PDR: propulsion technology, capture mechanism, and launch vehicle. Each used a weighted attribute matrix with a stated selection rationale. The working rule was that the quantitative ranking informs the decision but a hard requirement governs it: where the highest raw score belonged to an option that cannot meet a requirement, the narrative says so and the option is rejected on that basis.
       </p>
 
       <h5>Propulsion: cold gas, bipropellant hydrazine, monopropellant hydrazine</h5>
-      <div class="table-wrap">
-      <table aria-label="Propulsion trade attribute values">
+      <div class="table-wrap"><table aria-label="Propulsion trade attribute values">
         <thead><tr><th>Attribute</th><th>Cold gas</th><th>Bipropellant</th><th>Monoprop</th></tr></thead>
         <tbody>
           <tr><td>I<sub>sp</sub> (normalized)</td><td>0.27</td><td>1.00</td><td>0.96</td></tr>
@@ -545,15 +580,13 @@
           <tr><td>Thermal impact (relative, 1 to 3)</td><td>1</td><td>3</td><td>2</td></tr>
           <tr><td>Power requirement (relative, 1 to 3)</td><td>1</td><td>2</td><td>2</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
       <p>
         Bipropellant has the best specific impulse but adds dual propellant storage, ignition and thermal complexity, and mass. Cold gas is light and simple, and it scores well on mass, cost, thermal, and power attributes, but its specific impulse cannot close a roughly 350 m/s delta-V budget at a reasonable propellant mass. That requirement overrides its raw score. Monopropellant hydrazine is the compromise: adequate efficiency, flight heritage, and a simple, robust architecture suited to responsive proximity operations.
       </p>
 
       <h5>Capture mechanism: net, robotic arm, harpoon</h5>
-      <div class="table-wrap">
-      <table aria-label="Capture payload trade attribute values">
+      <div class="table-wrap"><table aria-label="Capture payload trade attribute values">
         <thead><tr><th>Attribute</th><th>Net</th><th>Robotic arm</th><th>Harpoon</th></tr></thead>
         <tbody>
           <tr><td>Complexity (relative, 1 to 3)</td><td>1</td><td>3</td><td>2</td></tr>
@@ -562,15 +595,13 @@
           <tr><td>Power (W)</td><td>20</td><td>80</td><td>40</td></tr>
           <tr><td>Tolerance to uncertain geometry and motion</td><td>Highest</td><td>Low</td><td>Moderate</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
       <p>
         Capture flexibility carried the heaviest weight, since the mission premise is a target of unknown geometry and tumble state. The net captures by entanglement over a large envelope, which tolerates pose error and yields the lowest fragmentation risk. The arm needs tight alignment against a tumbling body and costs roughly four times the power and 15 kg more mass. The harpoon is simpler to deploy but penetrates the target and carries the highest risk of structural damage and new debris.
       </p>
 
       <h5>Launch vehicle: Rocket Lab Electron, Firefly Alpha, Falcon 9 Transporter</h5>
-      <div class="table-wrap">
-      <table aria-label="Launch vehicle trade matrix">
+      <div class="table-wrap"><table aria-label="Launch vehicle trade matrix">
         <thead><tr><th>Weight</th><th>Attribute</th><th class="num">Electron</th><th class="num">Alpha</th><th class="num">F9 Transporter</th></tr></thead>
         <tbody>
           <tr><td>0.20</td><td>Cost (lower is better)</td><td class="num">0.4</td><td class="num">0.5</td><td class="num">1.0</td></tr>
@@ -581,8 +612,7 @@
           <tr><td>0.10</td><td>Integration complexity</td><td class="num">0.7</td><td class="num">0.7</td><td class="num">0.5</td></tr>
           <tr><th colspan="2">Weighted total</th><th class="num">0.66</th><th class="num">0.74</th><th class="num">0.74</th></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
       <p>
         Alpha and Falcon 9 Transporter tie on score, so the decision rests on the engineering narrative. Electron (approx. 300 kg to LEO, approx. $7.5M dedicated) leaves inadequate growth margin against the upper end of the wet mass range, since mass grows between PDR and CDR; it stays viable only if wet mass settles below about 280 kg at CDR. Alpha (approx. 1030 kg to LEO) gives comfortable mass margin and dedicated control of the insertion orbit and timing, at the cost of a shorter flight history. Transporter rideshare is the cost leader (roughly $7,000/kg, a low single-digit million launch cost) with the strongest heritage, but the drop-off orbit is set by the primary customer, and circularizing at 600 km would consume delta-V from a margin that is already 5.7%.
       </p>
@@ -593,7 +623,7 @@
     </div>
 
     <!-- ============================== FOCUS RISK ============================== -->
-    <div class="project-focus-risk">
+    <div class="project-focus-risk" id="foca-focus-risk">
       <h4>Focus technology risk: net and tether capture</h4>
       <p>
         The net and tether system is the lowest-maturity element and the one that determines mission success, so it received a dedicated analysis. The risk decomposes into three coupled physics problems.
@@ -605,7 +635,7 @@
       </ul>
 
       <figure>
-        <svg viewBox="0 0 960 280" role="img" aria-labelledby="svg-net-t svg-net-d">
+        <svg class="wide" viewBox="0 0 960 280" role="img" aria-labelledby="svg-net-t svg-net-d">
           <title id="svg-net-t">Net capture sequence schematic</title>
           <desc id="svg-net-d">Three panels: chaser armed at 20 meter standoff from a tumbling target; net launched at about 10 meters per second with four corner masses; target enveloped with tether under 20 to 50 newton tension and reel-in at 0.02 meters per second.</desc>
           <defs>
@@ -688,15 +718,14 @@
     </div>
 
     <!-- ============================== RISK MANAGEMENT ============================== -->
-    <div class="project-risk">
+    <div class="project-risk" id="foca-risk">
       <h4>Risk and technology readiness assessment</h4>
       <p>
         Risks are tracked on 5 x 5 likelihood and consequence matrices, with technical and programmatic risks separated. Risks in the upper right region require active reduction before CDR; the central band is re-evaluated periodically; the lower left is accepted. Blue pills mark risks under active reduction.
       </p>
 
       <h5>Technical risk matrix</h5>
-      <div class="table-wrap">
-      <table class="rm" aria-label="Technical risk matrix">
+      <div class="table-wrap"><table class="rm" aria-label="Technical risk matrix">
         <thead>
           <tr><th>Likelihood / Consequence</th><th>1 Negligible</th><th>2 Minor</th><th>3 Moderate</th><th>4 Major</th><th>5 Catastrophic</th></tr>
         </thead>
@@ -707,10 +736,8 @@
           <tr><th>2 Low</th><td class="lo"></td><td class="lo"></td><td class="md"><span class="pill">T4</span></td><td class="md"><span class="pill">T5</span></td><td class="md"><span class="pill">T6</span></td></tr>
           <tr><th>1 Very low</th><td class="lo"></td><td class="lo"></td><td class="lo"></td><td class="lo"></td><td class="lo"><span class="pill">T7</span></td></tr>
         </tbody>
-      </table>
-      </div>
-      <div class="table-wrap">
-      <table aria-label="Technical risk register">
+      </table></div>
+      <div class="table-wrap"><table class="register" aria-label="Technical risk register">
         <thead><tr><th>ID</th><th>Risk</th><th>L / C</th><th>Rationale and treatment</th></tr></thead>
         <tbody>
           <tr><td>T1</td><td>Net deployment dispersion</td><td>4 / 3</td><td>Symmetry depends on tight tolerances in corner mass value, ejection velocity uniformity, and packing geometry, and 1 g ground tests cannot replicate on-orbit deployment. Consequence is moderate because partial deployment still has a finite envelopment probability and a backup net permits retry. Treatment: Monte Carlo mass tuning, vacuum deployment kinematics tests.</td></tr>
@@ -721,12 +748,10 @@
           <tr><td>T6</td><td>Target fragmentation on net contact</td><td>2 / 5</td><td>Net distributes load over the full envelope rather than impulsively, at relative velocity well below hypervelocity thresholds. Catastrophic because new debris contradicts the sustainability premise and exposes the chaser. Treatment: 5 deg/s per axis tumble-rate limit before capture.</td></tr>
           <tr><td>T7</td><td>MMOD strike on a critical component</td><td>1 / 5</td><td>Very low likelihood from standard MMOD modeling for a six-month LEO mission. Accepted, since shielding mass against the strike envelope is prohibitive at this scale.</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
 
       <h5>Programmatic risk matrix</h5>
-      <div class="table-wrap">
-      <table class="rm" aria-label="Programmatic risk matrix">
+      <div class="table-wrap"><table class="rm" aria-label="Programmatic risk matrix">
         <thead>
           <tr><th>Likelihood / Consequence</th><th>1 Negligible</th><th>2 Minor</th><th>3 Moderate</th><th>4 Major</th><th>5 Catastrophic</th></tr>
         </thead>
@@ -737,10 +762,8 @@
           <tr><th>2 Low</th><td class="lo"></td><td class="lo"><span class="pill">P4</span></td><td class="md"><span class="pill">P5</span></td><td class="md"></td><td class="md"></td></tr>
           <tr><th>1 Very low</th><td class="lo"></td><td class="lo"></td><td class="lo"><span class="pill">P6</span></td><td class="lo"></td><td class="lo"></td></tr>
         </tbody>
-      </table>
-      </div>
-      <div class="table-wrap">
-      <table aria-label="Programmatic risk register">
+      </table></div>
+      <div class="table-wrap"><table class="register" aria-label="Programmatic risk register">
         <thead><tr><th>ID</th><th>Risk</th><th>L / C</th><th>Rationale and treatment</th></tr></thead>
         <tbody>
           <tr><td>P1</td><td>Payload NRE cost growth</td><td>4 / 3</td><td>Least heritage cost basis on the program; custom payloads in this class historically grow 30 to 100% from PDR to CDR. Moderate consequence because the payload is roughly 5% of mission cost. Treatment: explicit not-to-exceed allocation.</td></tr>
@@ -750,8 +773,7 @@
           <tr><td>P5</td><td>Workforce churn</td><td>2 / 3</td><td>Turnover bounded by the academic calendar; engineering documentation and reviews hold redundant knowledge.</td></tr>
           <tr><td>P6</td><td>Export control delay</td><td>1 / 3</td><td>Domestic suppliers baselined for all flight-critical items. If international procurement became necessary, review adds 6 to 12 months of lead time.</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
 
       <h5>Technology readiness</h5>
       <p>
@@ -759,7 +781,7 @@
       </p>
 
       <figure>
-        <svg viewBox="0 0 820 380" role="img" aria-labelledby="svg-trl-t svg-trl-d">
+        <svg class="wide" viewBox="0 0 820 380" role="img" aria-labelledby="svg-trl-t svg-trl-d">
           <title id="svg-trl-t">Technology readiness levels, current and CDR target</title>
           <desc id="svg-trl-d">Chart of current TRL (filled bar, range where uncertain) and CDR target (open diamond) for nine FOCA technologies.</desc>
 
@@ -808,20 +830,20 @@
           <polygon class="bx" points="575,279 584,288 575,297 566,288" stroke-width="2"/>
           <polygon class="bx" points="575,313 584,322 575,331 566,322" stroke-width="2"/>
 
-          <text class="bs" x="300" y="362">Filled bar: current TRL (spans a range where assessment is uncertain). Open diamond: target at CDR. Dashed line: TRL 5.</text>
+          <text class="bs" x="20" y="356">Filled bar: current TRL (spans a range where assessment is uncertain).</text>
+          <text class="bs" x="20" y="372">Open diamond: target at CDR. Dashed line: TRL 5 threshold.</text>
         </svg>
         <figcaption>Current TRL and CDR target by technology.</figcaption>
       </figure>
     </div>
 
     <!-- ============================== CDR PLAN ============================== -->
-    <div class="project-cdr">
+    <div class="project-cdr" id="foca-cdr">
       <h4>CDR plan: long-lead items and make-or-buy</h4>
       <p>
         Long-lead items were identified and given purchase order release dates relative to PDR so that procurement does not become the schedule critical path. LIDAR and COPV orders release at PDR plus 3 months, reaction wheels at PDR plus 6 months, and propulsion hardware at PDR plus 9 months. The net and reel mechanism begins prototype development immediately after PDR closure, with a hardware-in-the-loop deployment test article delivered before CDR. Risk reduction to CDR focuses on vacuum deployment kinematics and contact load envelope tests, closed-loop simulation of the reel control law against realistic target dynamics, and integrated rehearsal of the abort and retry sequence on the flight processor with hardware in the loop.
       </p>
-      <div class="table-wrap">
-      <table aria-label="Make or buy decisions">
+      <div class="table-wrap"><table aria-label="Make or buy decisions">
         <thead><tr><th>Component</th><th>Make / Buy</th><th>Lead time</th><th>Rationale</th></tr></thead>
         <tbody>
           <tr><td>Net capture and tether reel mechanism</td><td>Make</td><td>24 to 36 mo</td><td>No commercial equivalent; mission-specific design and qualification testing</td></tr>
@@ -835,8 +857,7 @@
           <tr><td>Primary structure</td><td>Make</td><td>9 to 12 mo</td><td>In-house aluminum honeycomb sandwich fabrication</td></tr>
           <tr><td>Flight software</td><td>Make</td><td>PDR + 18 mo</td><td>In-house development on a heritage flight software framework</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
 
       <h5>Key component definitions</h5>
       <ul>
@@ -850,10 +871,9 @@
     </div>
 
     <!-- ============================== SKILLS ============================== -->
-    <div class="project-skills">
+    <div class="project-skills" id="foca-skills">
       <h4>Skills applied</h4>
-      <div class="table-wrap">
-      <table aria-label="Skills applied">
+      <div class="table-wrap"><table aria-label="Skills applied">
         <thead><tr><th>Area</th><th>Application on FOCA</th></tr></thead>
         <tbody>
           <tr><td>Systems engineering</td><td>Objective and success criteria definition, requirements flow-down, ConOps with ground-gated autonomy, margin policy by review phase, verification and maturation planning, SRR/SDR/PDR documentation</td></tr>
@@ -867,11 +887,10 @@
           <tr><td>Risk management</td><td>5 x 5 likelihood and consequence matrices, risk register with rationale, TRL assessment and maturation plans, defense-in-depth mitigation design</td></tr>
           <tr><td>Programmatics</td><td>Long-lead procurement scheduling, make-or-buy analysis, FCC licensing and export control schedule impact, vendor concentration risk, parametric cost estimation</td></tr>
         </tbody>
-      </table>
-      </div>
+      </table></div>
 
       <h4>What I learned</h4>
-      <ul>
+      <ul class="foca-learned">
         <li><strong>Numbers have to close across documents.</strong> Mass, power, and delta-V figures appear in the budget, the sizing calculation, the trade studies, and the requirements table. Keeping them consistent, and tracking margins against a policy that tightens at each review, is a configuration control task in itself.</li>
         <li><strong>A trade score informs the decision but does not make it.</strong> The propulsion trade was decided by a hard delta-V requirement over the raw ranking, and the launch vehicle trade ended in a tie that only the mass-growth and insertion-control arguments could resolve. I now state the rejection logic explicitly in the matrix narrative.</li>
         <li><strong>Concentrate development risk deliberately.</strong> Using TRL 9 hardware everywhere except the payload and autonomy software keeps verification budget on the elements that decide mission success.</li>
@@ -882,9 +901,9 @@
     </div>
 
     <!-- ============================== YOUR ORIGINAL BLOCKS ============================== -->
-    <div class="project-features">
+    <div class="project-features" id="foca-features">
       <h4>Key features / highlights</h4>
-      <ul>
+      <ul class="foca-checks">
         <li>Vehicle architecture based on prior flight mission baselines, with development risk concentrated in the net and tether payload</li>
         <li>Full mission life timeline from separation through measurement phase, with three ground authorization gates</li>
         <li>Authored SRR, SDR, and PDR documentation to validate the design</li>
@@ -895,7 +914,7 @@
       </ul>
     </div>
 
-    <div class="project-tech">
+    <div class="project-tech" id="foca-tech">
       <h4>Tech &amp; tools</h4>
       <ul class="tech-list" aria-label="Technologies used">
         <li>Fusion 360 (structure, packaging, mechanism layout)</li>
@@ -908,7 +927,7 @@
       </ul>
     </div>
 
-    <div class="project-role">
+    <div class="project-role" id="foca-role">
       <h4>My role</h4>
       <p>Sole designer and author. I defined the mission objectives and success criteria, designed the spacecraft's vehicle architecture and subsystem budgets, performed the trade studies and focus risk analysis, and authored the SRR, SDR, and PDR documentation used to validate the design and define the mission life timeline.</p>
     </div>
@@ -923,6 +942,7 @@
     <p class="project-stats">Duration: Jan to May 2026 &bull; Team: Individual &bull; Status: Completed</p>
   </footer>
 </article>
+
 
 <article class="project" role="article" aria-labelledby="project-title-robotic-bat" data-project-id="robotic-bat" itemscope itemtype="https://schema.org/CreativeWork">
     <header class="project-header">
