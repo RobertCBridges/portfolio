@@ -52,99 +52,6 @@
     });
   </script>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>F.O.C.A. Portfolio Entry</title>
-
-<!--
-##########################################################################
- PHOTO SLOT INDEX  (search this file for "PHOTO SLOT" to jump to each one)
-##########################################################################
- Each slot renders as an ORANGE DASHED BOX in the browser. Swap the whole
- <figure class="project-media photo-slot"> block for the replacement markup
- shown in the comment directly above it.
-
-  1  Fusion 360 isometric render, stowed launch configuration
-  2  Fusion 360 render, on-orbit configuration, arrays deployed
-  3  Fusion 360 exploded or sectioned view, internal layout
-  4  Net deployment mechanism detail (CAD close-up)
-  5  PDR page excerpt (trade matrix or budget table screenshot)
-  6  Component schematics from PDR Section 5.3 (LIDAR, COPV, wheel)
-  7  OPTIONAL plot: delta-V / propellant sizing output
-  8  OPTIONAL plot: Monte Carlo net opening area output
-  9  OPTIONAL plot: tether tension / reel control simulation output
- Slots 7 to 9 are only valid if you have the actual output. Delete them if not.
-
- CONFIRM markers: search for "CONFIRM" to find statements about which tool
- (Fusion 360, MATLAB, Python) did which task. Edit to match what you did.
-##########################################################################
--->
-
-<style>
-/* ===================== OPTIONAL BASE STYLES (standalone preview only) ===================== */
-/* Delete this block when pasting into your site if your site already styles body text. */
-:root { --foca-accent:#2f6fdb; --foca-warn:#d9822b; --foca-line:rgba(127,127,127,.45); }
-body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.65; max-width:64rem; margin:2rem auto; padding:0 1.25rem; color-scheme: light dark; }
-
-/* ===================== STYLES FOR THE ADDED COMPONENTS ===================== */
-.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
-.project h4 { margin-top:2.5rem; padding-bottom:.3rem; border-bottom:1px solid var(--foca-line); }
-.project h5 { margin:1.6rem 0 .4rem; font-size:1.02rem; }
-.project .table-wrap { overflow-x:auto; }
-.project table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
-.project th, .project td { border:1px solid var(--foca-line); padding:.4rem .6rem; text-align:left; vertical-align:top; }
-.project th { background:rgba(127,127,127,.12); }
-.project td.num, .project th.num { text-align:right; white-space:nowrap; }
-.project figure { margin:1.6rem 0; }
-.project figure img, .project figure svg { max-width:100%; height:auto; display:block; margin:0 auto; }
-.project figcaption { font-size:.88rem; opacity:.8; margin-top:.5rem; }
-.project .equation { font-family: "Cambria Math","STIX Two Math",serif; font-size:1.1rem; text-align:center; margin:1rem 0; padding:.6rem; border:1px solid var(--foca-line); border-radius:6px; }
-.project .callout { border-left:4px solid var(--foca-accent); padding:.5rem 1rem; margin:1rem 0; background:rgba(47,111,219,.07); }
-
-/* SVG typography and strokes */
-.project svg text { fill:currentColor; font-family:inherit; }
-.project svg .bt { font-size:13px; font-weight:600; }
-.project svg .bs { font-size:11px; }
-.project svg .lbl { font-size:11px; text-anchor:middle; }
-.project svg .lbl-b { font-size:11px; text-anchor:middle; font-weight:700; }
-.project svg .axis { font-size:11px; opacity:.8; }
-.project svg .bx { fill:none; stroke:currentColor; stroke-opacity:.65; stroke-width:1.5; }
-.project svg .ext { fill:none; stroke:currentColor; stroke-opacity:.5; stroke-width:1.5; stroke-dasharray:5 4; }
-.project svg .ln { stroke:currentColor; stroke-opacity:.5; stroke-width:1.5; fill:none; }
-.project svg .rf { stroke:var(--foca-accent); stroke-width:1.5; stroke-dasharray:5 4; fill:none; }
-.project svg .node { fill:Canvas; stroke:currentColor; stroke-width:2; }
-.project svg .node-msc { fill:var(--foca-accent); stroke:var(--foca-accent); stroke-width:2; }
-.project svg .gate { fill:var(--foca-warn); stroke:none; }
-.project svg .bar { fill:currentColor; fill-opacity:.35; }
-.project svg .bar-acc { fill:var(--foca-accent); fill-opacity:.85; }
-.project svg .grid { stroke:currentColor; stroke-opacity:.18; }
-.project svg .tgt { fill:currentColor; fill-opacity:.18; stroke:currentColor; stroke-width:1.5; }
-.project svg .net { fill:none; stroke:var(--foca-accent); stroke-width:1.2; }
-.project svg .mass { fill:var(--foca-accent); }
-
-/* Risk matrices */
-.project table.rm td { width:15%; height:3.4rem; text-align:center; vertical-align:middle; }
-.project table.rm th { text-align:center; }
-.project td.lo { background:rgba(60,160,90,.22); }
-.project td.md { background:rgba(230,170,40,.28); }
-.project td.hi { background:rgba(210,70,60,.30); }
-.pill { display:inline-block; padding:.05rem .5rem; margin:.1rem; border:1px solid currentColor; border-radius:999px; font-weight:700; font-size:.8rem; }
-.pill.act { background:var(--foca-accent); border-color:var(--foca-accent); color:#fff; }
-
-/* PHOTO PLACEHOLDERS: intentionally loud so none are missed */
-.photo-slot-box { border:3px dashed var(--foca-warn); background:repeating-linear-gradient(45deg, rgba(217,130,43,.10) 0 14px, transparent 14px 28px); padding:2rem 1rem; text-align:center; min-height:220px; display:flex; flex-direction:column; justify-content:center; gap:.5rem; border-radius:8px; }
-.photo-slot-box strong { color:var(--foca-warn); font-size:1.05rem; letter-spacing:.04em; }
-.photo-slot-box code { font-size:.85rem; }
-</style>
-</head>
-<body>
-
-<!-- ======================================================================= -->
-<!-- ======================  COPY FROM HERE INTO YOUR SITE  ================= -->
-<!-- ======================================================================= -->
 
 <article class="project" role="article" aria-labelledby="project-title-foca" data-project-id="foca-spacecraft" itemscope itemtype="https://schema.org/CreativeWork">
 
@@ -380,41 +287,6 @@ body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-h
         <figcaption>Subsystem block diagram. Dashed lines are external interfaces: ground RF link, and the optical and mechanical interfaces to the target.</figcaption>
       </figure>
 
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 1 of 9: REPLACE THE FIGURE BELOW WITH YOUR IMAGE               -->
-      <!-- Suggested file: assets/pictures/foca-cad-stowed.png                       -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-cad-stowed.png" alt="Fusion 360 isometric render of the FOCA bus in stowed launch configuration" loading="lazy" />
-        <figcaption>FOCA bus in stowed configuration, 1.0 x 1.0 x 1.2 m envelope.</figcaption>
-      </figure>
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="1">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (1 of 9)</strong>
-          <span>Fusion 360 isometric render, stowed launch configuration (arrays folded, net launcher face visible)</span>
-          <code>assets/pictures/foca-cad-stowed.png</code>
-        </div>
-        <figcaption>FOCA bus in stowed configuration, 1.0 x 1.0 x 1.2 m envelope.</figcaption>
-      </figure>
-
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 2 of 9: REPLACE THE FIGURE BELOW WITH YOUR IMAGE               -->
-      <!-- Suggested file: assets/pictures/foca-cad-deployed.png                     -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-cad-deployed.png" alt="Fusion 360 render of FOCA in on-orbit configuration with both solar array wings deployed" loading="lazy" />
-        <figcaption>On-orbit configuration with both array wings deployed, approx. 3 to 4 m span.</figcaption>
-      </figure>
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="2">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (2 of 9)</strong>
-          <span>Fusion 360 render, on-orbit configuration with both solar array wings deployed</span>
-          <code>assets/pictures/foca-cad-deployed.png</code>
-        </div>
-        <figcaption>On-orbit configuration with both array wings deployed, approx. 3 to 4 m span.</figcaption>
-      </figure>
     </div>
 
     <!-- ============================== SUBSYSTEM DESIGN ============================== -->
@@ -474,23 +346,6 @@ body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-h
         The primary structure is an aluminum honeycomb sandwich box, 1.0 x 1.0 x 1.2 m, with internal shear panels carrying the propulsion module, avionics stack, wheel assembly, and net deployment system. Launch quasi-static and random vibration loads govern sizing, not the on-orbit environment. Local stiffening is added at the launch vehicle separation interface, the propellant tank mount, and the net mechanism mount to handle concentrated loads and keep natural frequencies above launch vehicle requirements. The design achieves a factor of safety of 1.5 at all interfaces against a 1.4 requirement. Carbon fiber face sheets are carried as a mass-reduction option pending a cost trade. System-level mass margin follows a declining policy of 30% at SDR, 25% at PDR, 20% at CDR, and 10% at acceptance.
       </p>
 
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 3 of 9: REPLACE THE FIGURE BELOW WITH YOUR IMAGE               -->
-      <!-- Suggested file: assets/pictures/foca-cad-exploded.png                      -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-cad-exploded.png" alt="Fusion 360 exploded view of the FOCA primary structure showing shear panels, propulsion module, avionics stack, reaction wheels, and net deployment system" loading="lazy" />
-        <figcaption>Exploded view of the primary structure and internal packaging.</figcaption>
-      </figure>
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="3">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (3 of 9)</strong>
-          <span>Fusion 360 exploded or sectioned view: honeycomb panels, shear panels, tank, avionics stack, wheels, net mechanism</span>
-          <code>assets/pictures/foca-cad-exploded.png</code>
-        </div>
-        <figcaption>Exploded view of the primary structure and internal packaging.</figcaption>
-      </figure>
       <!-- CONFIRM: the sentence in the Overview about honeycomb panels and common geometry, and the CAD slots above, assume Fusion 360 was used for bus structure and packaging. Edit if the scope was different. -->
 
       <h5>Telemetry, tracking, and command</h5>
@@ -503,23 +358,6 @@ body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-h
         The payload is the only custom-development element on the vehicle. An 8 m net of approximately 10 kg is launched at about 10 m/s by a spring stack or cold gas charge, with four 0.3 to 0.5 kg corner masses that carry the net outward and keep it tensioned in free flight. After envelopment, a Dyneema or Kevlar tether rated to 1000 N transfers load to a brushless-motor reel inside the bus. The reel retracts at approximately 0.02 m/s and holds 20 to 50 N of regulated tension using load cell feedback at the tether attachment. A designed weak link allows autonomous tether release if tension passes a hard limit. The package stows in roughly 200 x 200 x 300 mm at 12 to 15 kg including the launcher, mounted on the negative Y face with the deployment axis along the close approach corridor, and draws about 20 W average and 60 W peak. The payload is allocated 30 kg and is sized for 250 kg dynamic capture capacity against the 200 kg target requirement (+25%).
       </p>
 
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 4 of 9: REPLACE THE FIGURE BELOW WITH YOUR IMAGE               -->
-      <!-- Suggested file: assets/pictures/foca-cad-net-mechanism.png                -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-cad-net-mechanism.png" alt="CAD close-up of the net deployment mechanism showing corner mass guides, release latch, launcher, and tether eyelet" loading="lazy" />
-        <figcaption>Net deployment mechanism: launcher, four corner mass guides at 90 degree spacing, redundant non-explosive release latch, and tether guide eyelet to the reel.</figcaption>
-      </figure>
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="4">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (4 of 9)</strong>
-          <span>CAD close-up of the net deployment mechanism (corner mass guides, latch, launcher, eyelet, reel mount)</span>
-          <code>assets/pictures/foca-cad-net-mechanism.png</code>
-        </div>
-        <figcaption>Net deployment mechanism: launcher, four corner mass guides at 90 degree spacing, redundant non-explosive release latch, and tether guide eyelet to the reel.</figcaption>
-      </figure>
     </div>
 
     <!-- ============================== BUDGETS ============================== -->
@@ -674,23 +512,6 @@ body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-h
         <strong>Recommendation:</strong> Firefly Alpha as baseline, for mass margin and dedicated mission control. Falcon 9 Transporter is the cost-driven alternative, conditional on evaluating circularization delta-V against propulsion margin. Final selection is deferred to PDR closure, based on mass tracking and the available rideshare drop-off altitudes.
       </div>
 
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 5 of 9: REPLACE THE FIGURE BELOW WITH YOUR IMAGE               -->
-      <!-- Suggested file: assets/pictures/foca-pdr-excerpt.png                      -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-pdr-excerpt.png" alt="Excerpt from the FOCA Preliminary Design Review document showing a weighted trade matrix" loading="lazy" />
-        <figcaption>Excerpt from the PDR document: weighted trade matrix with selection narrative.</figcaption>
-      </figure>
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="5">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (5 of 9)</strong>
-          <span>Screenshot of a PDR page (trade matrix or mass budget table) to show the review document format</span>
-          <code>assets/pictures/foca-pdr-excerpt.png</code>
-        </div>
-        <figcaption>Excerpt from the PDR document: weighted trade matrix with selection narrative.</figcaption>
-      </figure>
     </div>
 
     <!-- ============================== FOCUS RISK ============================== -->
@@ -786,43 +607,6 @@ body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-h
         <li><strong>Redundant sensing.</strong> Pose estimation runs on LIDAR and stereo imagery simultaneously; a discrepancy above tolerance commands a hold instead of a deployment.</li>
       </ol>
 
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 8 of 9 (OPTIONAL): ONLY KEEP IF YOU HAVE THE ACTUAL OUTPUT      -->
-      <!-- Suggested file: assets/pictures/foca-analysis-net-montecarlo.png           -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-analysis-net-montecarlo.png" alt="Monte Carlo results for net opening area as a function of corner mass dispersion" loading="lazy" />
-        <figcaption>Monte Carlo dispersion results: net opening area at target plane versus pre-release rotation.</figcaption>
-      </figure>
-      DELETE this slot if no such plot exists.
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="8">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (8 of 9, OPTIONAL: delete if no plot exists)</strong>
-          <span>Plot of Monte Carlo net opening area vs. pre-release rotation dispersion</span>
-          <code>assets/pictures/foca-analysis-net-montecarlo.png</code>
-        </div>
-        <figcaption>Monte Carlo dispersion results: net opening area at target plane versus pre-release rotation.</figcaption>
-      </figure>
-
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 9 of 9 (OPTIONAL): ONLY KEEP IF YOU HAVE THE ACTUAL OUTPUT      -->
-      <!-- Suggested file: assets/pictures/foca-analysis-tether-tension.png           -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-analysis-tether-tension.png" alt="Simulated tether tension time history during reel-in with closed-loop control" loading="lazy" />
-        <figcaption>Simulated tether tension during reel-in under closed-loop control.</figcaption>
-      </figure>
-      DELETE this slot if no such plot exists.
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="9">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (9 of 9, OPTIONAL: delete if no plot exists)</strong>
-          <span>Plot of simulated tether tension vs. time during reel-in with the closed-loop control law</span>
-          <code>assets/pictures/foca-analysis-tether-tension.png</code>
-        </div>
-        <figcaption>Simulated tether tension during reel-in under closed-loop control.</figcaption>
-      </figure>
     </div>
 
     <!-- ============================== RISK MANAGEMENT ============================== -->
@@ -984,43 +768,6 @@ body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-h
         <li><strong>Net deployment mechanism:</strong> approx. 200 x 200 x 300 mm, 12 to 15 kg stowed including the 10 kg net, four corner mass guides at 90 degree spacing about the deployment axis, redundant non-explosive release latch, spring stack or cold gas launcher, tether routed through a guide eyelet to the reel motor on a stiffened internal shear panel.</li>
       </ul>
 
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 6 of 9: REPLACE THE FIGURE BELOW WITH YOUR IMAGE               -->
-      <!-- Suggested file: assets/pictures/foca-component-schematics.png             -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-component-schematics.png" alt="Schematics of the FOCA flash LIDAR, propellant tank, and reaction wheel showing envelope and interfaces" loading="lazy" />
-        <figcaption>Key component schematics: physical envelope, principal interfaces, and elements relevant to procurement and integration.</figcaption>
-      </figure>
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="6">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (6 of 9)</strong>
-          <span>Component schematics from PDR Section 5.3 (LIDAR, COPV, reaction wheel; add net mechanism if separate)</span>
-          <code>assets/pictures/foca-component-schematics.png</code>
-        </div>
-        <figcaption>Key component schematics: physical envelope, principal interfaces, and elements relevant to procurement and integration.</figcaption>
-      </figure>
-
-      <!-- ####################################################################### -->
-      <!-- PHOTO SLOT 7 of 9 (OPTIONAL): ONLY KEEP IF YOU HAVE THE ACTUAL OUTPUT      -->
-      <!-- Suggested file: assets/pictures/foca-analysis-dv-sizing.png               -->
-      <!-- Replacement markup:
-      <figure class="project-media">
-        <img src="assets/pictures/foca-analysis-dv-sizing.png" alt="Delta-V capability versus propellant mass from the rocket equation for the FOCA wet mass range" loading="lazy" />
-        <figcaption>Delta-V capability versus propellant load for the 280 to 290 kg wet mass range.</figcaption>
-      </figure>
-      DELETE this slot if no such plot exists.
-      -->
-      <figure class="project-media photo-slot" data-photo-slot="7">
-        <div class="photo-slot-box">
-          <strong>PHOTO NEEDED (7 of 9, OPTIONAL: delete if no plot exists)</strong>
-          <span>Plot or script output of delta-V vs. propellant mass (rocket equation sizing)</span>
-          <code>assets/pictures/foca-analysis-dv-sizing.png</code>
-        </div>
-        <figcaption>Delta-V capability versus propellant load for the 280 to 290 kg wet mass range.</figcaption>
-      </figure>
-      <!-- CONFIRM: which of MATLAB or Python produced the delta-V sizing, budget roll-ups, and Monte Carlo work. The Tech & tools list below names both generically. -->
     </div>
 
     <!-- ============================== SKILLS ============================== -->
