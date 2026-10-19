@@ -112,124 +112,7 @@
         Packaging followed three constraints. The net deployment axis has to stay clear of the arrays and antennas. The reel and net mechanism mount to a stiffened internal shear panel so tether loads go into primary structure. Thruster cant angles are set so the thrust centroid passes through the center of mass within the accuracy of mass property knowledge, which limits parasitic torque during translation.
       </p>
 
-      <figure>
-        <svg class="wide" viewBox="0 0 970 480" role="img" aria-labelledby="svg-block-t svg-block-d">
-          <title id="svg-block-t">FOCA subsystem block diagram</title>
-          <desc id="svg-block-d">C&amp;DH at the center connected to power, propulsion, GNC, TT&amp;C, thermal, and payload subsystems inside a primary structure outline. Ground segment connects to TT&amp;C and the target connects to GNC and payload.</desc>
 
-          <rect class="ext" x="140" y="15" width="680" height="450" rx="10"/>
-          <text class="bs" x="155" y="34" font-style="italic">Primary structure: aluminum honeycomb sandwich, 1.0 x 1.0 x 1.2 m</text>
-
-          <!-- center -->
-          <rect class="bx" x="370" y="195" width="220" height="90" rx="6"/>
-          <text class="bt" x="480" y="222" text-anchor="middle">C&amp;DH</text>
-          <text class="bs" x="480" y="243" text-anchor="middle">LEON / RAD750-class computer, RTOS</text>
-          <text class="bs" x="480" y="259" text-anchor="middle">FPGA for LIDAR and pose pipeline</text>
-          <text class="bs" x="480" y="275" text-anchor="middle">Phase manager, FDIR, safe mode</text>
-
-          <!-- connectors -->
-          <line class="ln" x1="480" y1="195" x2="260" y2="150"/>
-          <line class="ln" x1="480" y1="195" x2="480" y2="150"/>
-          <line class="ln" x1="480" y1="195" x2="700" y2="150"/>
-          <line class="ln" x1="480" y1="285" x2="260" y2="330"/>
-          <line class="ln" x1="480" y1="285" x2="480" y2="330"/>
-          <line class="ln" x1="480" y1="285" x2="700" y2="330"/>
-
-          <!-- top row -->
-          <rect class="bx" x="160" y="55" width="200" height="95" rx="6"/>
-          <text class="bt" x="260" y="78" text-anchor="middle">Power</text>
-          <text class="bs" x="260" y="99" text-anchor="middle">2 rigid GaAs wings, 250 W BOL</text>
-          <text class="bs" x="260" y="115" text-anchor="middle">Li-ion approx. 500 Wh</text>
-          <text class="bs" x="260" y="131" text-anchor="middle">28 V regulated PMAD, MPPT</text>
-
-          <rect class="bx" x="380" y="55" width="200" height="95" rx="6"/>
-          <text class="bt" x="480" y="78" text-anchor="middle">Propulsion</text>
-          <text class="bs" x="480" y="99" text-anchor="middle">Monoprop hydrazine, 44 kg</text>
-          <text class="bs" x="480" y="115" text-anchor="middle">20 N and 1 N thrusters</text>
-          <text class="bs" x="480" y="131" text-anchor="middle">COPV, 20 to 30 bar</text>
-
-          <rect class="bx" x="600" y="55" width="200" height="95" rx="6"/>
-          <text class="bt" x="700" y="78" text-anchor="middle">GNC</text>
-          <text class="bs" x="700" y="99" text-anchor="middle">Flash LIDAR, stereo cameras</text>
-          <text class="bs" x="700" y="115" text-anchor="middle">Star tracker, Sun sensor, IMU, GPS</text>
-          <text class="bs" x="700" y="131" text-anchor="middle">4-wheel pyramid, magnetorquers</text>
-
-          <!-- bottom row -->
-          <rect class="bx" x="160" y="330" width="200" height="95" rx="6"/>
-          <text class="bt" x="260" y="353" text-anchor="middle">TT&amp;C</text>
-          <text class="bs" x="260" y="374" text-anchor="middle">Coherent S-band transponder</text>
-          <text class="bs" x="260" y="390" text-anchor="middle">2 patch antennas, steerable LGA</text>
-          <text class="bs" x="260" y="406" text-anchor="middle">4 kbps up, up to 1 Mbps down</text>
-
-          <rect class="bx" x="380" y="330" width="200" height="95" rx="6"/>
-          <text class="bt" x="480" y="353" text-anchor="middle">Thermal</text>
-          <text class="bs" x="480" y="374" text-anchor="middle">MLI, second-surface mirrors</text>
-          <text class="bs" x="480" y="390" text-anchor="middle">Tank and catalyst bed heaters</text>
-          <text class="bs" x="480" y="406" text-anchor="middle">Redundant heater controllers</text>
-
-          <rect class="bx" x="600" y="330" width="200" height="95" rx="6"/>
-          <text class="bt" x="700" y="353" text-anchor="middle">Payload</text>
-          <text class="bs" x="700" y="374" text-anchor="middle">8 m net plus backup net</text>
-          <text class="bs" x="700" y="390" text-anchor="middle">Tether, brushless reel, load cell</text>
-          <text class="bs" x="700" y="406" text-anchor="middle">Weak-link tether release</text>
-
-          <!-- externals -->
-          <rect class="ext" x="10" y="330" width="110" height="95" rx="6"/>
-          <text class="bt" x="65" y="357" text-anchor="middle">Ground</text>
-          <text class="bs" x="65" y="376" text-anchor="middle">S-band network</text>
-          <text class="bs" x="65" y="392" text-anchor="middle">MOC, gates</text>
-          <line class="rf" x1="120" y1="377" x2="160" y2="377"/>
-
-          <rect class="ext" x="840" y="195" width="120" height="90" rx="6"/>
-          <text class="bt" x="900" y="224" text-anchor="middle">Target</text>
-          <text class="bs" x="900" y="243" text-anchor="middle">uncooperative</text>
-          <text class="bs" x="900" y="259" text-anchor="middle">tumbling, 1 to 3 m</text>
-          <line class="rf" x1="840" y1="240" x2="800" y2="102"/>
-          <line class="rf" x1="840" y1="240" x2="800" y2="377"/>
-          <text class="bs" x="824" y="168">LIDAR, optical</text>
-          <text class="bs" x="824" y="316">net, tether</text>
-        </svg>
-        <figcaption>Subsystem block diagram. Dashed lines are external interfaces: ground RF link, and the optical and mechanical interfaces to the target.</figcaption>
-      </figure>
-
-      <figure>
-        <svg viewBox="0 80 640 310" role="img" aria-labelledby="svg-cfg-t svg-cfg-d">
-          <title id="svg-cfg-t">Bus configuration schematic, plan view</title>
-          <desc id="svg-cfg-d">Plan view of the FOCA bus with two deployed array wings, the net launcher on the negative Y face along the deployment axis, and the backup net and steerable low gain antenna on the opposite face.</desc>
-          <defs>
-            <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
-            </marker>
-          </defs>
-
-          <rect class="bx" x="160" y="130" width="110" height="80"/>
-          <line class="grid" x1="196.7" y1="130" x2="196.7" y2="210"/>
-          <line class="grid" x1="233.3" y1="130" x2="233.3" y2="210"/>
-          <rect class="bx" x="370" y="130" width="110" height="80"/>
-          <line class="grid" x1="406.7" y1="130" x2="406.7" y2="210"/>
-          <line class="grid" x1="443.3" y1="130" x2="443.3" y2="210"/>
-          <text class="bs" x="150" y="174" text-anchor="end">Array wing</text>
-          <text class="bs" x="490" y="174">Array wing</text>
-
-          <rect class="bx" x="270" y="120" width="100" height="100"/>
-          <text class="bt" x="320" y="165" text-anchor="middle">Bus</text>
-          <text class="bs" x="320" y="182" text-anchor="middle">1.0 m class</text>
-
-          <rect class="bx" x="282" y="96" width="36" height="24"/>
-          <circle class="bx" cx="345" cy="108" r="8"/>
-          <text class="bs" x="274" y="108" text-anchor="end">Backup net (+Y face)</text>
-          <text class="bs" x="360" y="112">Steerable LGA, anti-target face</text>
-
-          <rect class="bx" x="300" y="220" width="40" height="28"/>
-          <text class="bs" x="350" y="238">Net launcher, tether eyelet (-Y face)</text>
-          <line class="rf" x1="320" y1="248" x2="320" y2="325" marker-end="url(#arr2)"/>
-          <text class="bs" x="332" y="300">Deployment axis, toward target</text>
-
-          <line class="ln" x1="160" y1="352" x2="480" y2="352" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
-          <text class="bs" x="320" y="374" text-anchor="middle">Approx. 3 to 4 m span with arrays deployed</text>
-        </svg>
-        <figcaption>Bus configuration schematic, plan view (not to scale; array orientation is illustrative). Face assignments follow the PDR: net launcher on the negative Y face, backup net on the opposite face, steerable low gain antenna on the anti-target face.</figcaption>
-      </figure>
     </div>
 
     <!-- ============================== STRUCTURE ============================== -->
@@ -273,7 +156,7 @@
       </p>
 
       <figure>
-        <svg class="wide" viewBox="0 0 960 280" role="img" aria-labelledby="svg-net-t svg-net-d">
+        <svg style="display:block;width:100%;max-width:100%;height:auto;overflow:visible" class="wide" viewBox="0 6 960 262" role="img" aria-labelledby="svg-net-t svg-net-d">
           <title id="svg-net-t">Net capture sequence schematic</title>
           <desc id="svg-net-d">Three panels: chaser armed at 20 meter standoff from a tumbling target; net launched at about 10 meters per second with four corner masses; target enveloped with tether under 20 to 50 newton tension and reel-in at 0.02 meters per second.</desc>
           <defs>
@@ -281,55 +164,55 @@
               <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
             </marker>
           </defs>
-          <line class="grid" x1="320" y1="10" x2="320" y2="265"/>
-          <line class="grid" x1="640" y1="10" x2="640" y2="265"/>
+          <line class="grid" x1="320" y1="10" x2="320" y2="265" style="fill:none !important;stroke:currentColor;stroke-opacity:.18"/>
+          <line class="grid" x1="640" y1="10" x2="640" y2="265" style="fill:none !important;stroke:currentColor;stroke-opacity:.18"/>
 
           <!-- PANEL 1 -->
-          <rect class="bx" x="20" y="100" width="50" height="70"/>
-          <text class="bs" x="45" y="139" text-anchor="middle" font-size="10">Chaser</text>
-          <polygon class="tgt" points="225,110 255,105 270,135 250,168 222,150"/>
-          <text class="bs" x="247" y="190" text-anchor="middle">tumbling target</text>
-          <line class="ln" x1="72" y1="215" x2="222" y2="215" marker-start="url(#arr)" marker-end="url(#arr)"/>
-          <text class="bs" x="147" y="232" text-anchor="middle">20 m standoff, v_rel &lt; 0.2 m/s</text>
-          <text class="bt" x="160" y="262" text-anchor="middle">1. Armed at close approach corridor</text>
+          <rect class="bx" x="20" y="100" width="50" height="70" style="fill:none !important;stroke:currentColor;stroke-opacity:.65;stroke-width:1.5"/>
+          <text class="bs" x="45" y="139" text-anchor="middle" font-size="10" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">Chaser</text>
+          <polygon class="tgt" points="225,110 255,105 270,135 250,168 222,150" style="fill:currentColor !important;fill-opacity:.18;stroke:currentColor;stroke-width:1.5"/>
+          <text class="bs" x="247" y="190" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">tumbling target</text>
+          <line class="ln" x1="72" y1="215" x2="222" y2="215" marker-start="url(#arr)" marker-end="url(#arr)" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <text class="bs" x="147" y="232" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">20 m standoff, v_rel &lt; 0.2 m/s</text>
+          <text class="bt" x="160" y="262" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:13px;font-weight:600">1. Armed at close approach corridor</text>
 
           <!-- PANEL 2 -->
-          <rect class="bx" x="340" y="100" width="50" height="70"/>
-          <text class="bs" x="365" y="139" text-anchor="middle" font-size="10">Chaser</text>
-          <line class="ln" x1="392" y1="135" x2="445" y2="100" stroke-dasharray="4 3"/>
-          <line class="ln" x1="392" y1="135" x2="515" y2="100" stroke-dasharray="4 3"/>
-          <line class="ln" x1="392" y1="135" x2="445" y2="170" stroke-dasharray="4 3"/>
-          <line class="ln" x1="392" y1="135" x2="515" y2="170" stroke-dasharray="4 3"/>
-          <polygon class="net" points="445,100 515,100 515,170 445,170"/>
-          <line class="net" x1="445" y1="100" x2="515" y2="170"/>
-          <line class="net" x1="515" y1="100" x2="445" y2="170"/>
-          <line class="net" x1="480" y1="100" x2="480" y2="170"/>
-          <line class="net" x1="445" y1="135" x2="515" y2="135"/>
-          <circle class="mass" cx="445" cy="100" r="5"/>
-          <circle class="mass" cx="515" cy="100" r="5"/>
-          <circle class="mass" cx="445" cy="170" r="5"/>
-          <circle class="mass" cx="515" cy="170" r="5"/>
-          <polygon class="tgt" points="545,110 575,105 590,135 570,168 542,150"/>
-          <line class="ln" x1="395" y1="72" x2="470" y2="72" marker-end="url(#arr)"/>
-          <text class="bs" x="432" y="64" text-anchor="middle">~10 m/s</text>
-          <text class="bs" x="480" y="195" text-anchor="middle">corner masses carry net open</text>
-          <text class="bt" x="480" y="262" text-anchor="middle">2. Net launch and expansion</text>
+          <rect class="bx" x="340" y="100" width="50" height="70" style="fill:none !important;stroke:currentColor;stroke-opacity:.65;stroke-width:1.5"/>
+          <text class="bs" x="365" y="139" text-anchor="middle" font-size="10" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">Chaser</text>
+          <line class="ln" x1="392" y1="135" x2="445" y2="100" stroke-dasharray="4 3" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <line class="ln" x1="392" y1="135" x2="515" y2="100" stroke-dasharray="4 3" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <line class="ln" x1="392" y1="135" x2="445" y2="170" stroke-dasharray="4 3" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <line class="ln" x1="392" y1="135" x2="515" y2="170" stroke-dasharray="4 3" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <polygon class="net" points="445,100 515,100 515,170 445,170" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="445" y1="100" x2="515" y2="170" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="515" y1="100" x2="445" y2="170" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="480" y1="100" x2="480" y2="170" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="445" y1="135" x2="515" y2="135" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <circle class="mass" cx="445" cy="100" r="5" style="fill:var(--foca-accent,#2f6fdb) !important;stroke:none"/>
+          <circle class="mass" cx="515" cy="100" r="5" style="fill:var(--foca-accent,#2f6fdb) !important;stroke:none"/>
+          <circle class="mass" cx="445" cy="170" r="5" style="fill:var(--foca-accent,#2f6fdb) !important;stroke:none"/>
+          <circle class="mass" cx="515" cy="170" r="5" style="fill:var(--foca-accent,#2f6fdb) !important;stroke:none"/>
+          <polygon class="tgt" points="545,110 575,105 590,135 570,168 542,150" style="fill:currentColor !important;fill-opacity:.18;stroke:currentColor;stroke-width:1.5"/>
+          <line class="ln" x1="395" y1="72" x2="470" y2="72" marker-end="url(#arr)" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <text class="bs" x="432" y="64" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">~10 m/s</text>
+          <text class="bs" x="480" y="195" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">corner masses carry net open</text>
+          <text class="bt" x="480" y="262" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:13px;font-weight:600">2. Net launch and expansion</text>
 
           <!-- PANEL 3 -->
-          <rect class="bx" x="660" y="100" width="50" height="70"/>
-          <text class="bs" x="685" y="139" text-anchor="middle" font-size="10">Chaser</text>
-          <polygon class="tgt" points="865,110 895,105 910,135 890,168 862,150"/>
-          <ellipse class="net" cx="887" cy="137" rx="50" ry="58"/>
-          <line class="net" x1="837" y1="137" x2="937" y2="137"/>
-          <line class="net" x1="887" y1="79" x2="887" y2="195"/>
-          <line class="net" x1="852" y1="97" x2="922" y2="177"/>
-          <line class="net" x1="922" y1="97" x2="852" y2="177"/>
-          <line class="ln" x1="712" y1="137" x2="837" y2="137" stroke-width="2"/>
-          <line class="ln" x1="810" y1="120" x2="750" y2="120" marker-end="url(#arr)"/>
-          <text class="bs" x="780" y="112" text-anchor="middle">reel-in 0.02 m/s</text>
-          <text class="bs" x="775" y="170" text-anchor="middle">T = 20 to 50 N</text>
-          <text class="bs" x="775" y="186" text-anchor="middle">load cell feedback</text>
-          <text class="bt" x="800" y="262" text-anchor="middle">3. Envelopment, tension control, reel-in</text>
+          <rect class="bx" x="660" y="100" width="50" height="70" style="fill:none !important;stroke:currentColor;stroke-opacity:.65;stroke-width:1.5"/>
+          <text class="bs" x="685" y="139" text-anchor="middle" font-size="10" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">Chaser</text>
+          <polygon class="tgt" points="865,110 895,105 910,135 890,168 862,150" style="fill:currentColor !important;fill-opacity:.18;stroke:currentColor;stroke-width:1.5"/>
+          <ellipse class="net" cx="887" cy="137" rx="50" ry="58" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="837" y1="137" x2="937" y2="137" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="887" y1="79" x2="887" y2="195" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="852" y1="97" x2="922" y2="177" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="net" x1="922" y1="97" x2="852" y2="177" style="fill:none !important;stroke:var(--foca-accent,#2f6fdb);stroke-width:1.2"/>
+          <line class="ln" x1="712" y1="137" x2="837" y2="137" stroke-width="2" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <line class="ln" x1="810" y1="120" x2="750" y2="120" marker-end="url(#arr)" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
+          <text class="bs" x="780" y="112" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">reel-in 0.02 m/s</text>
+          <text class="bs" x="775" y="170" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">T = 20 to 50 N</text>
+          <text class="bs" x="775" y="186" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">load cell feedback</text>
+          <text class="bt" x="800" y="262" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:13px;font-weight:600">3. Envelopment, tension control, reel-in</text>
         </svg>
         <figcaption>Net capture sequence schematic (not to scale).</figcaption>
       </figure>
@@ -402,34 +285,6 @@
         Mass is carried per subsystem with explicit margin and rolled up against the PDR system-level policy. The dry total of 236 kg with 25% system-level margin gives an upper bound of approximately 295 kg dry, and a wet mass envelope of roughly 280 to 340 kg, which remains inside the lift capability of the launch vehicle candidates evaluated.
       </p>
 
-      <figure>
-        <svg viewBox="0 0 760 340" role="img" aria-labelledby="svg-mass-t svg-mass-d">
-          <title id="svg-mass-t">Mass budget by subsystem</title>
-          <desc id="svg-mass-d">Horizontal bar chart of subsystem dry mass in kilograms plus propellant mass, totaling 236 kg dry and 280 kg wet.</desc>
-          <line class="grid" x1="160" y1="10" x2="160" y2="285"/>
-          <line class="grid" x1="300" y1="10" x2="300" y2="285"/>
-          <line class="grid" x1="440" y1="10" x2="440" y2="285"/>
-          <line class="grid" x1="580" y1="10" x2="580" y2="285"/>
-          <text class="axis" x="160" y="302" text-anchor="middle">0</text>
-          <text class="axis" x="300" y="302" text-anchor="middle">20</text>
-          <text class="axis" x="440" y="302" text-anchor="middle">40</text>
-          <text class="axis" x="580" y="302" text-anchor="middle">60 kg</text>
-
-          <text class="bs" x="150" y="29" text-anchor="end">Propulsion (dry)</text><rect class="bar" x="160" y="16" width="420" height="18"/><text class="bs" x="588" y="29">60</text>
-          <text class="bs" x="150" y="57" text-anchor="end">Structure</text><rect class="bar" x="160" y="44" width="280" height="18"/><text class="bs" x="448" y="57">40</text>
-          <text class="bs" x="150" y="85" text-anchor="end">Payload</text><rect class="bar" x="160" y="72" width="210" height="18"/><text class="bs" x="378" y="85">30</text>
-          <text class="bs" x="150" y="113" text-anchor="end">Power</text><rect class="bar" x="160" y="100" width="210" height="18"/><text class="bs" x="378" y="113">30</text>
-          <text class="bs" x="150" y="141" text-anchor="end">GNC</text><rect class="bar" x="160" y="128" width="175" height="18"/><text class="bs" x="343" y="141">25</text>
-          <text class="bs" x="150" y="169" text-anchor="end">TT&amp;C</text><rect class="bar" x="160" y="156" width="105" height="18"/><text class="bs" x="273" y="169">15</text>
-          <text class="bs" x="150" y="197" text-anchor="end">Harness, brackets, misc.</text><rect class="bar" x="160" y="184" width="98" height="18"/><text class="bs" x="266" y="197">14</text>
-          <text class="bs" x="150" y="225" text-anchor="end">C&amp;DH</text><rect class="bar" x="160" y="212" width="84" height="18"/><text class="bs" x="252" y="225">12</text>
-          <text class="bs" x="150" y="253" text-anchor="end">Thermal</text><rect class="bar" x="160" y="240" width="70" height="18"/><text class="bs" x="238" y="253">10</text>
-          <text class="bs" x="150" y="281" text-anchor="end">Hydrazine propellant</text><rect class="bar-acc" x="160" y="268" width="308" height="18"/><text class="bs" x="476" y="281">44</text>
-
-          <text class="bs" x="160" y="326">Dry total 236 kg + propellant 44 kg = 280 kg wet (allocation level, before system margin)</text>
-        </svg>
-        <figcaption>Subsystem mass allocation at PDR.</figcaption>
-      </figure>
 
       <div class="table-wrap"><table aria-label="Mass budget by subsystem">
         <thead><tr><th>Subsystem</th><th class="num">Dry mass (kg)</th><th class="num">Mass margin</th></tr></thead>
@@ -602,7 +457,6 @@
     <p class="project-stats">Duration: Jan to May 2026 &bull; Team: Individual &bull; Status: Completed</p>
   </footer>
 </article>
-
 
 
 
