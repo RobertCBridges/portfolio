@@ -52,9 +52,157 @@
     });
   </script>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>F.O.C.A. Portfolio Entry</title>
+
+<style>
+  :root {
+    --foca-accent: #2f6fdb;
+    --foca-warn: #d2463c;
+    --foca-line: #d0d0d0;
+    --foca-tint: rgba(240,240,240,.8);
+}
+/* ---------- One vertical column, no matter what the site does ---------- */
+article[data-project-id="foca-spacecraft"] .project-header,
+article[data-project-id="foca-spacecraft"] .project-media,
+article[data-project-id="foca-spacecraft"] .project-details,
+article[data-project-id="foca-spacecraft"] .project-footer,
+article[data-project-id="foca-spacecraft"] .project-details > div {
+  display:block !important; float:none !important; position:static !important;
+  width:auto !important; max-width:none !important;
+  columns:auto !important; column-count:1 !important; column-gap:0 !important;
+  grid-template-columns:none !important; grid-column:1 / -1 !important; grid-row:auto !important;
+  background:none !important; box-shadow:none !important; border-radius:0 !important;
+}
+article[data-project-id="foca-spacecraft"] .project-details > div > * {
+  float:none !important; position:static !important; clear:none !important;
+  width:auto !important; max-width:100% !important; box-sizing:border-box;
+  grid-column:1 / -1 !important; grid-row:auto !important; flex:none !important;
+  margin-left:0 !important; margin-right:0 !important; left:auto !important; right:auto !important; transform:none !important;
+}
+article[data-project-id="foca-spacecraft"] .project-details { margin:0 !important; padding:0 !important; border:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details > div > :last-child { margin-bottom:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details > div.project-links:empty { display:none !important; margin:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details > div::before, article[data-project-id="foca-spacecraft"] .project-details > div::after,
+article[data-project-id="foca-spacecraft"] .project-details > div > h4::before, article[data-project-id="foca-spacecraft"] .project-details > div > h4::after,
+article[data-project-id="foca-spacecraft"] .project-details > div > h5::before, article[data-project-id="foca-spacecraft"] .project-details > div > h5::after { content:none !important; display:none !important; }
+article[data-project-id="foca-spacecraft"] .project-details > br, article[data-project-id="foca-spacecraft"] .project-details > hr, article[data-project-id="foca-spacecraft"] .project-details > p:empty,
+article[data-project-id="foca-spacecraft"] .project-details > div > br, article[data-project-id="foca-spacecraft"] .project-details > div > hr, article[data-project-id="foca-spacecraft"] .project-details > div > p:empty,
+article[data-project-id="foca-spacecraft"] .project-details > div > div:empty,
+article[data-project-id="foca-spacecraft"] .project-details > p,
+article[data-project-id="foca-spacecraft"] .project-details > div > p:has(+ h4),
+article[data-project-id="foca-spacecraft"] .project-details > div > p:has(+ h5:first-of-type):first-child { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details > div:last-of-type { margin-bottom:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details figure { height:auto !important; min-height:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details > div {
+  margin:0 0 3rem 0 !important; padding:0 !important; border:0 !important; height:auto !important; min-height:0 !important;
+}
+article[data-project-id="foca-spacecraft"] .project-details > div > h4,
+article[data-project-id="foca-spacecraft"] .project-details > div > h5,
+article[data-project-id="foca-spacecraft"] .project-details > div > p,
+article[data-project-id="foca-spacecraft"] .project-details > div > figure,
+article[data-project-id="foca-spacecraft"] .project-details > div > .table-wrap,
+article[data-project-id="foca-spacecraft"] .project-details > div > .equation,
+article[data-project-id="foca-spacecraft"] .project-details > div > .callout { display:block !important; }
+/* ---------- Header ---------- */
+article[data-project-id="foca-spacecraft"] .project-header { margin:0 0 1.5rem !important; padding:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-title { font-size:2.2rem; line-height:1.2; letter-spacing:-.02em; margin:0 0 .6rem; }
+article[data-project-id="foca-spacecraft"] .project-meta { font-size:.92rem; opacity:.75; margin:0 0 1.25rem; }
+article[data-project-id="foca-spacecraft"] .project-summary { font-size:1.15rem; line-height:1.6; margin:0; }
+article[data-project-id="foca-spacecraft"] .project-media { margin:0 0 2.25rem !important; padding:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-media img { display:block; width:100%; height:auto; border-radius:8px; }
+article[data-project-id="foca-spacecraft"] .project-media figcaption { margin-top:.75rem; font-size:.85rem; opacity:.75; }
+article[data-project-id="foca-spacecraft"] .project-footer { margin:0 !important; padding:1.5rem 0 0 !important; border-top:1px solid var(--foca-line) !important; font-size:.9rem; opacity:.8; }
+/* ---------- Section headings and text ---------- */
+article[data-project-id="foca-spacecraft"] .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+article[data-project-id="foca-spacecraft"] h4 {
+  font-size:1.6rem; line-height:1.25; letter-spacing:-.01em;
+  margin:0 0 1.1rem !important; padding:0 0 .5rem !important; border-top:0 !important; border-bottom:1px solid var(--foca-line);
+}
+article[data-project-id="foca-spacecraft"] h5 { font-size:1.12rem; line-height:1.35; font-weight:650; margin:1.9rem 0 .5rem !important; padding:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details p { margin:0 0 1rem !important; padding:0 !important; }
+article[data-project-id="foca-spacecraft"] .project-details ul,
+article[data-project-id="foca-spacecraft"] .project-details ol { margin:0 0 1.1rem !important; padding-top:0 !important; padding-bottom:0 !important; padding-left:1.5rem; }
+article[data-project-id="foca-spacecraft"] .project-details li { margin:.35rem 0; }
+article[data-project-id="foca-spacecraft"] .project-details li::marker { color:var(--foca-accent); }
+article[data-project-id="foca-spacecraft"] .equation {
+  font-family:"Cambria Math","STIX Two Math",serif; font-size:1.15rem; text-align:center;
+  margin:1.25rem 0 !important; padding:.9rem 1rem; background:var(--foca-tint); border-radius:8px;
+}
+article[data-project-id="foca-spacecraft"] .callout {
+  border-left:4px solid var(--foca-accent); padding:.8rem 1.25rem; margin:1.4rem 0 !important;
+  background:rgba(47,111,219,.08); border-radius:0 8px 8px 0;
+}
+/* ---------- Figures ---------- */
+article[data-project-id="foca-spacecraft"] .project-details figure {
+  margin:1.5rem 0 !important; padding:1rem .9rem .8rem; background:var(--foca-tint); border-radius:8px; overflow-x:auto; counter-increment:foca-fig;
+}
+article[data-project-id="foca-spacecraft"] .project-details { counter-reset: foca-fig; }
+article[data-project-id="foca-spacecraft"] .project-details figure svg { display:block; width:100%; height:auto; min-width:600px; margin:0 auto; }
+article[data-project-id="foca-spacecraft"] .project-details figure svg.wide { min-width:860px; }
+article[data-project-id="foca-spacecraft"] .project-details figcaption { margin-top:.7rem; font-size:.86rem; line-height:1.5; opacity:.85; }
+article[data-project-id="foca-spacecraft"] .project-details figcaption::before { content:"Figure " counter(foca-fig) ". "; font-weight:700; }
+/* ---------- Tables ---------- */
+article[data-project-id="foca-spacecraft"] .table-wrap { overflow-x:auto; margin:1.25rem 0 !important; padding:0 !important; }
+article[data-project-id="foca-spacecraft"] table { border-collapse:collapse; width:100%; margin:0; font-size:.92rem; line-height:1.5; }
+article[data-project-id="foca-spacecraft"] th,
+article[data-project-id="foca-spacecraft"] td { padding:.55rem .8rem; border-bottom:1px solid var(--foca-line); text-align:left; vertical-align:top; }
+article[data-project-id="foca-spacecraft"] thead th { font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; border-bottom:2px solid var(--foca-line); opacity:.85; }
+article[data-project-id="foca-spacecraft"] tbody th { background:var(--foca-tint); }
+article[data-project-id="foca-spacecraft"] td.num, article[data-project-id="foca-spacecraft"] th.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+article[data-project-id="foca-spacecraft"] table.kv td:first-child { width:30%; font-weight:600; }
+article[data-project-id="foca-spacecraft"] table.register td:first-child { font-weight:700; }
+article[data-project-id="foca-spacecraft"] table.mfg td:nth-child(2), article[data-project-id="foca-spacecraft"] table.mfg td:nth-child(3) { white-space:nowrap; }
+article[data-project-id="foca-spacecraft"] table.register td:nth-child(3),
+article[data-project-id="foca-spacecraft"] table.register th:nth-child(3) { white-space:nowrap; }
+article[data-project-id="foca-spacecraft"] table.rm th,
+article[data-project-id="foca-spacecraft"] table.rm td { border:1px solid var(--foca-line); text-align:center; vertical-align:middle; padding:.5rem; }
+article[data-project-id="foca-spacecraft"] table.rm td { width:15%; height:3.4rem; }
+article[data-project-id="foca-spacecraft"] td.lo { background:rgba(60,160,90,.24); }
+article[data-project-id="foca-spacecraft"] td.md { background:rgba(230,170,40,.30); }
+article[data-project-id="foca-spacecraft"] td.hi { background:rgba(210,70,60,.32); }
+article[data-project-id="foca-spacecraft"] .pill { display:inline-block; padding:.05rem .55rem; margin:.1rem; border:1px solid currentColor; border-radius:999px; font-weight:700; font-size:.8rem; }
+article[data-project-id="foca-spacecraft"] .pill.act { background:var(--foca-accent); border-color:var(--foca-accent); color:#fff; }
+/* ---------- SVG typography and strokes ---------- */
+article[data-project-id="foca-spacecraft"] svg text { fill:currentColor; font-family:inherit; }
+article[data-project-id="foca-spacecraft"] svg .bt { font-size:13px; font-weight:600; }
+article[data-project-id="foca-spacecraft"] svg .bs { font-size:11px; }
+article[data-project-id="foca-spacecraft"] svg .lbl { font-size:11px; text-anchor:middle; }
+article[data-project-id="foca-spacecraft"] svg .lbl-b { font-size:11px; text-anchor:middle; font-weight:700; }
+article[data-project-id="foca-spacecraft"] svg .axis { font-size:11px; opacity:.8; }
+article[data-project-id="foca-spacecraft"] svg .bx { fill:none; stroke:currentColor; stroke-opacity:.65; stroke-width:1.5; }
+article[data-project-id="foca-spacecraft"] svg .ext { fill:none; stroke:currentColor; stroke-opacity:.5; stroke-width:1.5; stroke-dasharray:5 4; }
+article[data-project-id="foca-spacecraft"] svg .ln { stroke:currentColor; stroke-opacity:.5; stroke-width:1.5; fill:none; }
+article[data-project-id="foca-spacecraft"] svg .rf { stroke:var(--foca-accent); stroke-width:1.5; stroke-dasharray:5 4; fill:none; }
+article[data-project-id="foca-spacecraft"] svg .node { fill:none; stroke:currentColor; stroke-width:2; }
+article[data-project-id="foca-spacecraft"] svg .node-msc { fill:var(--foca-accent); stroke:var(--foca-accent); stroke-width:2; }
+article[data-project-id="foca-spacecraft"] svg .gate { fill:var(--foca-warn); stroke:none; }
+article[data-project-id="foca-spacecraft"] svg .bar { fill:currentColor; fill-opacity:.35; }
+article[data-project-id="foca-spacecraft"] svg .bar-acc { fill:var(--foca-accent); fill-opacity:.85; }
+article[data-project-id="foca-spacecraft"] svg .grid { stroke:currentColor; stroke-opacity:.18; }
+article[data-project-id="foca-spacecraft"] svg .tgt { fill:currentColor; fill-opacity:.18; stroke:currentColor; stroke-width:1.5; }
+article[data-project-id="foca-spacecraft"] svg .net { fill:none; stroke:var(--foca-accent); stroke-width:1.2; }
+article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); }
+</style>
+</head>
+<body>
+
+<!--
+ CONFIRM before publishing (the article markup itself has no comments, to keep it safe for CMS pasting):
+   1. Structure and Skills sections assume Fusion 360 was used for bus structure, packaging, and mechanism layout.
+   2. Monte Carlo corner mass tuning, propellant sizing, and mass roll-ups name MATLAB and Python generically.
+      Edit those lines to match the tool you actually used.
+ The copy block contains no blank lines or HTML comments on purpose.
+-->
+<!-- ======================================================================= -->
+<!-- ======================  COPY FROM HERE INTO YOUR SITE  ================= -->
+<!-- ======================================================================= -->
 
 <article class="project" role="article" aria-labelledby="project-title-foca" data-project-id="foca-spacecraft" itemscope itemtype="https://schema.org/CreativeWork">
-
   <header class="project-header">
     <h2 id="project-title-foca" class="project-title" itemprop="name">F.O.C.A.: Original Spacecraft Mission Design</h2>
     <p class="project-meta">
@@ -66,28 +214,17 @@
       Original LEO interceptor concept for net-and-tether capture of uncooperative tumbling objects, carried through SRR, SDR, and PDR review gates. This entry covers the structure, capture mechanism, pressure system, thermal design, and manufacturing plan.
     </p>
   </header>
-
   <figure class="project-media">
     <img src="assets/pictures/FOCA Diagram.png" alt="Hand drawn twelve-panel mission storyboard from launch vehicle separation through measurement phase" itemprop="image" />
     <figcaption>Hand drawn mission storyboard: launch vehicle separation through net capture, reel-in, and measurement phase. Mission success milestones are flagged in the panels.</figcaption>
   </figure>
-
   <section class="project-details">
     <h3 class="sr-only">Project details</h3>
-
-    <!-- ============================== OVERVIEW ============================== -->
     <div class="project-overview">
       <h4>Overview</h4>
-      <p>
-        F.O.C.A. (Foreign Object Capture &amp; Analysis) is a 300 kg class, monopropellant LEO spacecraft designed to capture and stabilize an uncooperative object. The target is a tumbling, non-responsive body of 1 to 3 m characteristic size and up to 200 kg, with no grapple fixtures, no docking interface, and no attitude cooperation. Capture is by deployable net and tether, followed by closed-loop reel-in to a 2 to 3 m hold length and an optical characterization phase.
-      </p>
-      <p>
-        I worked the project as an individual contributor and owned the vehicle architecture, primary structure and packaging, capture mechanism concept, mass budget, trade studies, and the SRR, SDR, and PDR documentation. This entry covers the structural, mechanical, and manufacturing side of that work. Avionics, navigation, and ground segment design are documented in the PDR but are not detailed here.
-      </p>
-      <p>
-        The architecture is conservative on the bus and aggressive in one place. Propulsion, power, attitude control, communications, and thermal hardware are all flight-proven classes (TRL 9). Development risk is concentrated in the net and tether payload, because that element determines mission success and needs the most verification effort. The net concept is baselined on the RemoveDEBRIS in-flight demonstration.
-      </p>
-
+      <p>F.O.C.A. (Foreign Object Capture &amp; Analysis) is a 300 kg class, monopropellant LEO spacecraft designed to capture and stabilize an uncooperative object. The target is a tumbling, non-responsive body of 1 to 3 m characteristic size and up to 200 kg, with no grapple fixtures, no docking interface, and no attitude cooperation. Capture is by deployable net and tether, followed by closed-loop reel-in to a 2 to 3 m hold length and an optical characterization phase.</p>
+      <p>I worked the project as an individual contributor and owned the vehicle architecture, primary structure and packaging, capture mechanism concept, mass budget, trade studies, and the SRR, SDR, and PDR documentation. This entry covers the structural, mechanical, and manufacturing side of that work. Avionics, navigation, and ground segment design are documented in the PDR but are not detailed here.</p>
+      <p>The architecture is conservative on the bus and aggressive in one place. Propulsion, power, attitude control, communications, and thermal hardware are all flight-proven classes (TRL 9). Development risk is concentrated in the net and tether payload, because that element determines mission success and needs the most verification effort. The net concept is baselined on the RemoveDEBRIS in-flight demonstration.</p>
       <div class="table-wrap"><table class="kv" aria-label="Design point summary">
         <caption class="sr-only">Design point summary</caption>
         <thead><tr><th>Parameter</th><th>Value at PDR</th></tr></thead>
@@ -101,31 +238,15 @@
         </tbody>
       </table></div>
     </div>
-
-    <!-- ============================== ARCHITECTURE ============================== -->
     <div class="project-architecture">
       <h4>Vehicle architecture</h4>
-      <p>
-        The bus is a monolithic aluminum honeycomb sandwich box. All subsystems are hosted inside or on this structure, with the net launcher on the negative Y face, aligned with the close approach corridor, and an identical backup net stowed on the opposite face.
-      </p>
-      <p>
-        Packaging followed three constraints. The net deployment axis has to stay clear of the arrays and antennas. The reel and net mechanism mount to a stiffened internal shear panel so tether loads go into primary structure. Thruster cant angles are set so the thrust centroid passes through the center of mass within the accuracy of mass property knowledge, which limits parasitic torque during translation.
-      </p>
-
-
+      <p>The bus is a monolithic aluminum honeycomb sandwich box. All subsystems are hosted inside or on this structure, with the net launcher on the negative Y face, aligned with the close approach corridor, and an identical backup net stowed on the opposite face.</p>
+      <p>Packaging followed three constraints. The net deployment axis has to stay clear of the arrays and antennas. The reel and net mechanism mount to a stiffened internal shear panel so tether loads go into primary structure. Thruster cant angles are set so the thrust centroid passes through the center of mass within the accuracy of mass property knowledge, which limits parasitic torque during translation.</p>
     </div>
-
-    <!-- ============================== STRUCTURE ============================== -->
     <div class="project-structure">
       <h4>Primary structure</h4>
-      <p>
-        The primary structure is an aluminum honeycomb sandwich box with internal shear panels that carry the propulsion module, avionics stack, wheel assembly, and net deployment system. Launch quasi-static and random vibration loads govern sizing, not the on-orbit environment.
-      </p>
-      <p>
-        Local stiffening is added at the launch vehicle separation interface, the propellant tank mount, and the net mechanism mount. These are the concentrated load paths, and the stiffening also keeps natural frequencies above launch vehicle requirements. The design achieves a factor of safety of 1.5 at all interfaces against a 1.4 requirement. Carbon fiber face sheets are carried as a mass-reduction option pending a cost trade.
-      </p>
-      <!-- CONFIRM: this section assumes Fusion 360 was used for bus structure, packaging, and mechanism layout. Edit if the scope was different. -->
-
+      <p>The primary structure is an aluminum honeycomb sandwich box with internal shear panels that carry the propulsion module, avionics stack, wheel assembly, and net deployment system. Launch quasi-static and random vibration loads govern sizing, not the on-orbit environment.</p>
+      <p>Local stiffening is added at the launch vehicle separation interface, the propellant tank mount, and the net mechanism mount. These are the concentrated load paths, and the stiffening also keeps natural frequencies above launch vehicle requirements. The design achieves a factor of safety of 1.5 at all interfaces against a 1.4 requirement. Carbon fiber face sheets are carried as a mass-reduction option pending a cost trade.</p>
       <div class="table-wrap"><table class="kv" aria-label="Structure design summary">
         <caption class="sr-only">Structure design summary</caption>
         <thead><tr><th>Item</th><th>Design value</th></tr></thead>
@@ -139,22 +260,12 @@
           <tr><td>Weight option</td><td>Carbon fiber face sheets, pending cost trade</td></tr>
         </tbody>
       </table></div>
-
-      <p>
-        System-level mass margin follows a declining policy of 30% at SDR, 25% at PDR, 20% at CDR, and 10% at acceptance, so mass tracking is tied to the review schedule rather than to the structure alone.
-      </p>
+      <p>System-level mass margin follows a declining policy of 30% at SDR, 25% at PDR, 20% at CDR, and 10% at acceptance, so mass tracking is tied to the review schedule rather than to the structure alone.</p>
     </div>
-
-    <!-- ============================== CAPTURE MECHANISM ============================== -->
     <div class="project-capture">
       <h4>Net and tether capture mechanism</h4>
-      <p>
-        The capture payload is the only custom-development element on the vehicle. An 8 m net of approximately 10 kg is launched at about 10 m/s by a spring stack or cold gas charge. Four 0.3 to 0.5 kg corner masses carry the net outward and keep it tensioned in free flight. After envelopment, a Dyneema or Kevlar tether rated to 1000 N transfers load to a brushless-motor reel inside the bus.
-      </p>
-      <p>
-        The reel retracts at approximately 0.02 m/s and holds 20 to 50 N of regulated tension using load cell feedback at the tether attachment. A designed weak link allows autonomous tether release if tension passes a hard limit. The package stows in roughly 200 x 200 x 300 mm at 12 to 15 kg including the launcher, and it is allocated 30 kg with a 250 kg dynamic capture capacity against the 200 kg target requirement (+25%).
-      </p>
-
+      <p>The capture payload is the only custom-development element on the vehicle. An 8 m net of approximately 10 kg is launched at about 10 m/s by a spring stack or cold gas charge. Four 0.3 to 0.5 kg corner masses carry the net outward and keep it tensioned in free flight. After envelopment, a Dyneema or Kevlar tether rated to 1000 N transfers load to a brushless-motor reel inside the bus.</p>
+      <p>The reel retracts at approximately 0.02 m/s and holds 20 to 50 N of regulated tension using load cell feedback at the tether attachment. A designed weak link allows autonomous tether release if tension passes a hard limit. The package stows in roughly 200 x 200 x 300 mm at 12 to 15 kg including the launcher, and it is allocated 30 kg with a 250 kg dynamic capture capacity against the 200 kg target requirement (+25%).</p>
       <figure>
         <svg style="display:block;width:100%;max-width:100%;height:auto;overflow:visible" class="wide" viewBox="0 6 960 262" role="img" aria-labelledby="svg-net-t svg-net-d">
           <title id="svg-net-t">Net capture sequence schematic</title>
@@ -166,8 +277,6 @@
           </defs>
           <line class="grid" x1="320" y1="10" x2="320" y2="265" style="fill:none !important;stroke:currentColor;stroke-opacity:.18"/>
           <line class="grid" x1="640" y1="10" x2="640" y2="265" style="fill:none !important;stroke:currentColor;stroke-opacity:.18"/>
-
-          <!-- PANEL 1 -->
           <rect class="bx" x="20" y="100" width="50" height="70" style="fill:none !important;stroke:currentColor;stroke-opacity:.65;stroke-width:1.5"/>
           <text class="bs" x="45" y="139" text-anchor="middle" font-size="10" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">Chaser</text>
           <polygon class="tgt" points="225,110 255,105 270,135 250,168 222,150" style="fill:currentColor !important;fill-opacity:.18;stroke:currentColor;stroke-width:1.5"/>
@@ -175,8 +284,6 @@
           <line class="ln" x1="72" y1="215" x2="222" y2="215" marker-start="url(#arr)" marker-end="url(#arr)" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
           <text class="bs" x="147" y="232" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">20 m standoff, v_rel &lt; 0.2 m/s</text>
           <text class="bt" x="160" y="262" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:13px;font-weight:600">1. Armed at close approach corridor</text>
-
-          <!-- PANEL 2 -->
           <rect class="bx" x="340" y="100" width="50" height="70" style="fill:none !important;stroke:currentColor;stroke-opacity:.65;stroke-width:1.5"/>
           <text class="bs" x="365" y="139" text-anchor="middle" font-size="10" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">Chaser</text>
           <line class="ln" x1="392" y1="135" x2="445" y2="100" stroke-dasharray="4 3" style="fill:none !important;stroke:currentColor;stroke-opacity:.5;stroke-width:1.5"/>
@@ -197,8 +304,6 @@
           <text class="bs" x="432" y="64" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">~10 m/s</text>
           <text class="bs" x="480" y="195" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">corner masses carry net open</text>
           <text class="bt" x="480" y="262" text-anchor="middle" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:13px;font-weight:600">2. Net launch and expansion</text>
-
-          <!-- PANEL 3 -->
           <rect class="bx" x="660" y="100" width="50" height="70" style="fill:none !important;stroke:currentColor;stroke-opacity:.65;stroke-width:1.5"/>
           <text class="bs" x="685" y="139" text-anchor="middle" font-size="10" style="fill:currentColor !important;stroke:none;font-family:inherit;font-size:11px">Chaser</text>
           <polygon class="tgt" points="865,110 895,105 910,135 890,168 862,150" style="fill:currentColor !important;fill-opacity:.18;stroke:currentColor;stroke-width:1.5"/>
@@ -216,27 +321,21 @@
         </svg>
         <figcaption>Net capture sequence schematic (not to scale).</figcaption>
       </figure>
-
       <h5>Design problems the mechanism has to solve</h5>
       <ul>
         <li><strong>Deployment dynamics.</strong> The net must go from packed to fully expanded with low dispersion, governed by impulse and angular momentum conservation. At 600 km, drag over a sub-second deployment is negligible. The dominant uncertainty is rotational dispersion of the corner masses about the net axis: if they do not reach the design plane together, the net opens asymmetrically and effective capture area drops.</li>
         <li><strong>Contact dynamics.</strong> Too high a relative velocity at contact overloads individual filaments; too low, and the target can pass through before closure. Filament choice trades tensile strength against mass and packing volume. UHMWPE (Dyneema) exceeds 2,400 MPa tensile strength at a density well below steel, and mesh geometry balances porosity against the load capacity of individual strands.</li>
         <li><strong>Post-capture dynamics.</strong> The enveloped target, tether, and chaser form a flexible multibody system. The control problems are slack-taut cycling, tether vibration, and coupling between target tumble and chaser attitude, which is sensitive to a target inertia tensor the chaser cannot observe.</li>
       </ul>
-
       <h5>Design decisions that reduce the risk</h5>
       <ul>
         <li><strong>Oversized capture envelope.</strong> An 8 m net against a 1 to 3 m target tolerates several meters of pose error at release.</li>
-        <li><strong>Monte Carlo tuned corner masses.</strong> Mass distribution is tuned so that even under worst-case pre-release rotation dispersion, the net opens to at least 70% of nominal area before reaching the target. <!-- CONFIRM: tool used for the Monte Carlo analysis (MATLAB or Python). --></li>
+        <li><strong>Monte Carlo tuned corner masses.</strong> Mass distribution is tuned so that even under worst-case pre-release rotation dispersion, the net opens to at least 70% of nominal area before reaching the target.</li>
         <li><strong>Tether strength margin of approximately 10 to 1</strong> against maximum expected dynamic contact load, so filament rupture is not the limiting failure mode.</li>
         <li><strong>Closed-loop reel control.</strong> A load cell at the tether attachment throttles reel speed, slowing when tension exceeds 50 N and speeding up when it falls below 20 N. This prevents the slack-taut cycling that an open-loop scheme would allow.</li>
       </ul>
-
       <h5>Mechanical redundancy</h5>
-      <p>
-        A backup net is stowed on the opposite face. If the first net fails to envelop, the vehicle backs off, jettisons the deployed net through a tether release, and arms the second net. Separately, if tension passes a hard bound that indicates fragmentation or imminent filament rupture, the weak link severs, the vehicle enters safe mode, and it performs a collision avoidance maneuver.
-      </p>
-
+      <p>A backup net is stowed on the opposite face. If the first net fails to envelop, the vehicle backs off, jettisons the deployed net through a tether release, and arms the second net. Separately, if tension passes a hard bound that indicates fragmentation or imminent filament rupture, the weak link severs, the vehicle enters safe mode, and it performs a collision avoidance maneuver.</p>
       <h5>Net deployment mechanism definition</h5>
       <div class="table-wrap"><table class="kv" aria-label="Net deployment mechanism definition">
         <caption class="sr-only">Net deployment mechanism definition</caption>
@@ -251,41 +350,21 @@
         </tbody>
       </table></div>
     </div>
-
-    <!-- ============================== PROPULSION AND PRESSURE SYSTEM ============================== -->
     <div class="project-propulsion">
       <h4>Propulsion and pressure system</h4>
-      <p>
-        The baseline is a monopropellant hydrazine system. Two thruster classes share the feed system: 20 N thrusters for phasing and rendezvous maneuvers, and 1 N thrusters for fine control during proximity operations and tether stabilization. Valves are cross-strapped, which gives one level of fault tolerance: a single valve failure does not prevent completion of rendezvous, though it can erode delta-V margin. Catalyst beds are electrically preheated before firing, because cold starts cut specific impulse and produce thrust transients that are unacceptable during fine proximity maneuvering.
-      </p>
-      <p>
-        Propellant is held in a titanium-lined, carbon-overwrapped pressure vessel of approximately 50 L, operated at 20 to 30 bar with a burst margin near 1.5 times maximum expected operating pressure and a diaphragm or bladder for positive expulsion. Propellant mass is sized with the Tsiolkovsky equation:
-      </p>
+      <p>The baseline is a monopropellant hydrazine system. Two thruster classes share the feed system: 20 N thrusters for phasing and rendezvous maneuvers, and 1 N thrusters for fine control during proximity operations and tether stabilization. Valves are cross-strapped, which gives one level of fault tolerance: a single valve failure does not prevent completion of rendezvous, though it can erode delta-V margin. Catalyst beds are electrically preheated before firing, because cold starts cut specific impulse and produce thrust transients that are unacceptable during fine proximity maneuvering.</p>
+      <p>Propellant is held in a titanium-lined, carbon-overwrapped pressure vessel of approximately 50 L, operated at 20 to 30 bar with a burst margin near 1.5 times maximum expected operating pressure and a diaphragm or bladder for positive expulsion. Propellant mass is sized with the Tsiolkovsky equation:</p>
       <div class="equation">&Delta;v = I<sub>sp</sub> &middot; g<sub>0</sub> &middot; ln(m<sub>0</sub> / m<sub>f</sub>) &nbsp;&nbsp;&rArr;&nbsp;&nbsp; m<sub>0</sub> / m<sub>f</sub> = exp[ &Delta;v / (I<sub>sp</sub> &middot; g<sub>0</sub>) ]</div>
-      <p>
-        With a 350 m/s requirement and an I<sub>sp</sub> of 220 s, the mass ratio is 1.176, which needs about 43 kg of propellant at 290 kg wet. The design carries 44 kg for dispersion and the cold-start I<sub>sp</sub> penalty, which gives approximately 369 m/s of capability at 236 kg dry.
-      </p>
+      <p>With a 350 m/s requirement and an I<sub>sp</sub> of 220 s, the mass ratio is 1.176, which needs about 43 kg of propellant at 290 kg wet. The design carries 44 kg for dispersion and the cold-start I<sub>sp</sub> penalty, which gives approximately 369 m/s of capability at 236 kg dry.</p>
     </div>
-
-    <!-- ============================== THERMAL ============================== -->
     <div class="project-thermal">
       <h4>Thermal design</h4>
-      <p>
-        Thermal control is predominantly passive: MLI on most external surfaces, second-surface mirror radiators on selected panels, and thermal interface materials at high-dissipation mounts. Active control is limited to heaters with redundant controllers on the propellant tank, the hydrazine catalyst beds, and the LIDAR mount.
-      </p>
-      <p>
-        Two cases drive the design. The hot case combines high solar flux, full power during capture, and minimum deep-space view, with radiators rejecting approximately 200 W continuous plus reel motor peak load. The cold case is post-deployment safe mode, where loads fall to survival minimum and survival heaters hold the tank and catalyst beds above minimum temperature. Heater power carries at least 50% reserve against the worst cold case, and component temperature margin is greater than 5 degrees C in all cases.
-      </p>
+      <p>Thermal control is predominantly passive: MLI on most external surfaces, second-surface mirror radiators on selected panels, and thermal interface materials at high-dissipation mounts. Active control is limited to heaters with redundant controllers on the propellant tank, the hydrazine catalyst beds, and the LIDAR mount.</p>
+      <p>Two cases drive the design. The hot case combines high solar flux, full power during capture, and minimum deep-space view, with radiators rejecting approximately 200 W continuous plus reel motor peak load. The cold case is post-deployment safe mode, where loads fall to survival minimum and survival heaters hold the tank and catalyst beds above minimum temperature. Heater power carries at least 50% reserve against the worst cold case, and component temperature margin is greater than 5 degrees C in all cases.</p>
     </div>
-
-    <!-- ============================== BUDGETS ============================== -->
     <div class="project-budgets">
       <h4>Mass budget</h4>
-      <p>
-        Mass is carried per subsystem with explicit margin and rolled up against the PDR system-level policy. The dry total of 236 kg with 25% system-level margin gives an upper bound of approximately 295 kg dry, and a wet mass envelope of roughly 280 to 340 kg, which remains inside the lift capability of the launch vehicle candidates evaluated.
-      </p>
-
-
+      <p>Mass is carried per subsystem with explicit margin and rolled up against the PDR system-level policy. The dry total of 236 kg with 25% system-level margin gives an upper bound of approximately 295 kg dry, and a wet mass envelope of roughly 280 to 340 kg, which remains inside the lift capability of the launch vehicle candidates evaluated.</p>
       <div class="table-wrap"><table aria-label="Mass budget by subsystem">
         <thead><tr><th>Subsystem</th><th class="num">Dry mass (kg)</th><th class="num">Mass margin</th></tr></thead>
         <tbody>
@@ -304,14 +383,9 @@
         </tbody>
       </table></div>
     </div>
-
-    <!-- ============================== TRADE STUDIES ============================== -->
     <div class="project-trades">
       <h4>Design trade studies</h4>
-      <p>
-        Three trades were carried through PDR: capture mechanism, propulsion technology, and launch vehicle. Each used a weighted attribute matrix with a stated selection rationale. The working rule was that the ranking informs the decision but a hard requirement governs it: where the highest raw score belonged to an option that cannot meet a requirement, the narrative says so and the option is rejected on that basis.
-      </p>
-
+      <p>Three trades were carried through PDR: capture mechanism, propulsion technology, and launch vehicle. Each used a weighted attribute matrix with a stated selection rationale. The working rule was that the ranking informs the decision but a hard requirement governs it: where the highest raw score belonged to an option that cannot meet a requirement, the narrative says so and the option is rejected on that basis.</p>
       <h5>Capture mechanism: net, robotic arm, harpoon</h5>
       <div class="table-wrap"><table aria-label="Capture payload trade attribute values">
         <thead><tr><th>Attribute</th><th>Net</th><th>Robotic arm</th><th>Harpoon</th></tr></thead>
@@ -323,10 +397,7 @@
           <tr><td>Tolerance to uncertain geometry and motion</td><td>Highest</td><td>Low</td><td>Moderate</td></tr>
         </tbody>
       </table></div>
-      <p>
-        Capture flexibility carried the heaviest weight, since the mission premise is a target of unknown geometry and tumble state. The net captures by entanglement over a large envelope, which tolerates pose error and yields the lowest fragmentation risk. The arm needs tight alignment against a tumbling body and costs roughly four times the power and 15 kg more mass. The harpoon is simpler to deploy but penetrates the target and carries the highest risk of structural damage and new debris.
-      </p>
-
+      <p>Capture flexibility carried the heaviest weight, since the mission premise is a target of unknown geometry and tumble state. The net captures by entanglement over a large envelope, which tolerates pose error and yields the lowest fragmentation risk. The arm needs tight alignment against a tumbling body and costs roughly four times the power and 15 kg more mass. The harpoon is simpler to deploy but penetrates the target and carries the highest risk of structural damage and new debris.</p>
       <h5>Propulsion: cold gas, bipropellant hydrazine, monopropellant hydrazine</h5>
       <div class="table-wrap"><table aria-label="Propulsion trade attribute values">
         <thead><tr><th>Attribute</th><th>Cold gas</th><th>Bipropellant</th><th>Monoprop</th></tr></thead>
@@ -338,25 +409,15 @@
           <tr><td>Power requirement (relative, 1 to 3)</td><td>1</td><td>2</td><td>2</td></tr>
         </tbody>
       </table></div>
-      <p>
-        Bipropellant has the best specific impulse but adds dual propellant storage, ignition and thermal complexity, and mass. Cold gas is light and simple, and it scores well on mass, cost, thermal, and power attributes, but its specific impulse cannot close a roughly 350 m/s delta-V budget at a reasonable propellant mass. That requirement overrides its raw score. Monopropellant hydrazine is the compromise: adequate efficiency, flight heritage, and a simple, robust architecture suited to responsive proximity operations.
-      </p>
-
+      <p>Bipropellant has the best specific impulse but adds dual propellant storage, ignition and thermal complexity, and mass. Cold gas is light and simple, and it scores well on mass, cost, thermal, and power attributes, but its specific impulse cannot close a roughly 350 m/s delta-V budget at a reasonable propellant mass. That requirement overrides its raw score. Monopropellant hydrazine is the compromise: adequate efficiency, flight heritage, and a simple, robust architecture suited to responsive proximity operations.</p>
       <h5>Launch vehicle</h5>
-      <p>
-        Electron, Firefly Alpha, and Falcon 9 Transporter were scored on cost, mass capacity margin, insertion precision, schedule, heritage, and integration complexity. Alpha and Transporter tied at 0.74 against 0.66 for Electron, so the decision rested on engineering margin. Electron (approx. 300 kg to LEO) leaves inadequate growth margin against the upper end of the wet mass range. Transporter is the cost leader, but the drop-off orbit is set by the primary customer and circularizing at 600 km would consume delta-V from a margin that is already 5.7%.
-      </p>
-      <div class="callout">
-        <strong>Recommendation:</strong> Firefly Alpha as baseline (approx. 1030 kg to LEO), for mass margin and dedicated control of the insertion orbit. Falcon 9 Transporter is the cost-driven alternative, conditional on circularization delta-V fitting inside the propulsion margin.
+      <p>Electron, Firefly Alpha, and Falcon 9 Transporter were scored on cost, mass capacity margin, insertion precision, schedule, heritage, and integration complexity. Alpha and Transporter tied at 0.74 against 0.66 for Electron, so the decision rested on engineering margin. Electron (approx. 300 kg to LEO) leaves inadequate growth margin against the upper end of the wet mass range. Transporter is the cost leader, but the drop-off orbit is set by the primary customer and circularizing at 600 km would consume delta-V from a margin that is already 5.7%.</p>
+      <div class="callout"><strong>Recommendation:</strong> Firefly Alpha as baseline (approx. 1030 kg to LEO), for mass margin and dedicated control of the insertion orbit. Falcon 9 Transporter is the cost-driven alternative, conditional on circularization delta-V fitting inside the propulsion margin.
       </div>
     </div>
-
-    <!-- ============================== DESIGN RISKS ============================== -->
     <div class="project-risk">
       <h4>Design and structural risks</h4>
-      <p>
-        Risks were tracked on 5 x 5 likelihood and consequence matrices. The ones that bear on the mechanical design are below, with the treatment each one received.
-      </p>
+      <p>Risks were tracked on 5 x 5 likelihood and consequence matrices. The ones that bear on the mechanical design are below, with the treatment each one received.</p>
       <div class="table-wrap"><table class="register" aria-label="Mechanical and structural risk register">
         <thead><tr><th>ID</th><th>Risk</th><th>L / C</th><th>Rationale and treatment</th></tr></thead>
         <tbody>
@@ -367,13 +428,9 @@
         </tbody>
       </table></div>
     </div>
-
-    <!-- ============================== MANUFACTURING ============================== -->
     <div class="project-cdr">
       <h4>Manufacturing and verification plan</h4>
-      <p>
-        The make-or-buy split follows heritage. Anything with a flight-proven commercial equivalent is bought, and the two items that are mission-specific are made: the primary structure and the net and reel mechanism. Payload development is estimated at $2M to $4M NRE, and it scales with the extent of ground testing and qualification.
-      </p>
+      <p>The make-or-buy split follows heritage. Anything with a flight-proven commercial equivalent is bought, and the two items that are mission-specific are made: the primary structure and the net and reel mechanism. Payload development is estimated at $2M to $4M NRE, and it scales with the extent of ground testing and qualification.</p>
       <div class="table-wrap"><table class="mfg" aria-label="Make or buy decisions for mechanical and structural items">
         <thead><tr><th>Component</th><th>Make / Buy</th><th>Lead time</th><th>Rationale</th></tr></thead>
         <tbody>
@@ -385,13 +442,8 @@
           <tr><td>Solar arrays</td><td>Buy</td><td>12 to 15 mo</td><td>Standard deployable wings from Spectrolab or DHV</td></tr>
         </tbody>
       </table></div>
-      <p>
-        The net and reel mechanism begins prototype development immediately after PDR closure, with a hardware-in-the-loop deployment test article delivered before CDR. The COPV has a thin qualified vendor base, so its order is released at PDR plus 3 months, with a heavier monolithic titanium tank as the fallback. Risk reduction to CDR centers on vacuum deployment kinematics tests, contact load envelope tests, and simulation of the reel control law against realistic target dynamics. LIDAR cold-case performance is verified by thermal vacuum test.
-      </p>
-      <!-- CONFIRM: which of MATLAB or Python produced the delta-V sizing, mass budget roll-ups, and Monte Carlo work. The Tech & tools list below names both generically. -->
+      <p>The net and reel mechanism begins prototype development immediately after PDR closure, with a hardware-in-the-loop deployment test article delivered before CDR. The COPV has a thin qualified vendor base, so its order is released at PDR plus 3 months, with a heavier monolithic titanium tank as the fallback. Risk reduction to CDR centers on vacuum deployment kinematics tests, contact load envelope tests, and simulation of the reel control law against realistic target dynamics. LIDAR cold-case performance is verified by thermal vacuum test.</p>
     </div>
-
-    <!-- ============================== SKILLS ============================== -->
     <div class="project-skills">
       <h4>Skills applied</h4>
       <div class="table-wrap"><table aria-label="Skills applied">
@@ -406,7 +458,6 @@
           <tr><td>Manufacturing planning</td><td>Make-or-buy analysis, long-lead scheduling, prototype and test article planning, vendor concentration risk</td></tr>
         </tbody>
       </table></div>
-
       <h4>What I learned</h4>
       <ul>
         <li><strong>Numbers have to close across documents.</strong> Mass and delta-V figures appear in the budget, the sizing calculation, and the trade studies. Keeping them consistent, and tracking margins against a policy that tightens at each review, is a configuration control task in itself.</li>
@@ -416,8 +467,6 @@
         <li><strong>Design for recovery, not only the nominal case.</strong> A backup net and a weak-link tether release mean no single mechanical failure ends the mission or the vehicle.</li>
       </ul>
     </div>
-
-    <!-- ============================== YOUR ORIGINAL BLOCKS ============================== -->
     <div class="project-features">
       <h4>Key features / highlights</h4>
       <ul>
@@ -429,7 +478,6 @@
         <li>Make-or-buy and long-lead plan, with SRR, SDR, and PDR documentation authored to validate the design</li>
       </ul>
     </div>
-
     <div class="project-tech">
       <h4>Tech &amp; tools</h4>
       <ul class="tech-list" aria-label="Technologies used">
@@ -441,23 +489,17 @@
         <li>Systems engineering review process (SRR / SDR / PDR)</li>
       </ul>
     </div>
-
     <div class="project-role">
       <h4>My role</h4>
       <p>Sole designer and author. I defined the vehicle architecture, primary structure and packaging, capture mechanism concept, and mass budget, performed the design trade studies, and authored the SRR, SDR, and PDR documentation used to validate the design.</p>
     </div>
-
     <div class="project-links" aria-label="Project links">
-      <!-- Add a link here if you have a report, write-up, or repo, otherwise you can delete this div -->
-      <!-- <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Project Report</a> -->
     </div>
   </section>
-
   <footer class="project-footer" aria-hidden="false">
     <p class="project-stats">Duration: Jan to May 2026 &bull; Team: Individual &bull; Status: Completed</p>
   </footer>
 </article>
-
 
 
 
