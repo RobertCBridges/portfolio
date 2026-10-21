@@ -503,70 +503,225 @@ article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); 
 
 
 
-<article class="project" role="article" aria-labelledby="project-title-robotic-bat" data-project-id="robotic-bat" itemscope itemtype="https://schema.org/CreativeWork">
-    <header class="project-header">
+
+<style>
+/* ===================== OPTIONAL BASE STYLES (standalone preview only) ===================== */
+/* Delete this block when pasting into your site if your site already styles body text. */
+body { font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; margin:0; padding:2.5rem 1.25rem 5rem; color-scheme: light dark; }
+/* ===================== BAT ROBOT ENTRY STYLES (keep these with the article) ===================== */
+/* Scoped by the article's own data-project-id so the markup stays exactly as originally structured.   */
+/* The layout rules use !important on purpose: they override any site CSS that places headings and     */
+/* body text side by side (grid, flex, float, or multi-column rules on .project-details and its divs). */
+article[data-project-id="bat-robot"] {
+  --bat-accent: #2f6fdb;
+  --bat-warn: #d9822b;
+  --bat-line: rgba(127,127,127,.30);
+  --bat-tint: rgba(127,127,127,.07);
+  display:block !important;
+  max-width:56rem; margin:0 auto; padding:0;
+  font-size:1.02rem; line-height:1.7;
+}
+/* ---------- One vertical column, no matter what the site does ---------- */
+article[data-project-id="bat-robot"] .project-header,
+article[data-project-id="bat-robot"] .project-media,
+article[data-project-id="bat-robot"] .project-details,
+article[data-project-id="bat-robot"] .project-footer,
+article[data-project-id="bat-robot"] .project-details > div {
+  display:block !important; float:none !important; position:static !important;
+  width:auto !important; max-width:none !important;
+  columns:auto !important; column-count:1 !important; column-gap:0 !important;
+  grid-template-columns:none !important; grid-column:1 / -1 !important; grid-row:auto !important;
+  background:none !important; box-shadow:none !important; border-radius:0 !important;
+}
+article[data-project-id="bat-robot"] .project-details > div > * {
+  float:none !important; position:static !important; clear:none !important;
+  width:auto !important; max-width:100% !important; box-sizing:border-box;
+  grid-column:1 / -1 !important; grid-row:auto !important; flex:none !important;
+  margin-left:0 !important; margin-right:0 !important; left:auto !important; right:auto !important; transform:none !important;
+}
+article[data-project-id="bat-robot"] .project-details { margin:0 !important; padding:0 !important; border:0 !important; }
+article[data-project-id="bat-robot"] .project-details > div > :last-child { margin-bottom:0 !important; }
+article[data-project-id="bat-robot"] .project-details > div.project-links:empty { display:none !important; margin:0 !important; }
+article[data-project-id="bat-robot"] .project-details > div::before, article[data-project-id="bat-robot"] .project-details > div::after,
+article[data-project-id="bat-robot"] .project-details > div > h4::before, article[data-project-id="bat-robot"] .project-details > div > h4::after,
+article[data-project-id="bat-robot"] .project-details > div > h5::before, article[data-project-id="bat-robot"] .project-details > div > h5::after { content:none !important; display:none !important; }
+article[data-project-id="bat-robot"] .project-details > br, article[data-project-id="bat-robot"] .project-details > hr, article[data-project-id="bat-robot"] .project-details > p:empty,
+article[data-project-id="bat-robot"] .project-details > div > br, article[data-project-id="bat-robot"] .project-details > div > hr, article[data-project-id="bat-robot"] .project-details > div > p:empty,
+article[data-project-id="bat-robot"] .project-details > div > div:empty,
+article[data-project-id="bat-robot"] .project-details > p,
+article[data-project-id="bat-robot"] .project-details > div > p:has(+ h4),
+article[data-project-id="bat-robot"] .project-details > div > p:has(+ h5:first-of-type):first-child { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; }
+article[data-project-id="bat-robot"] .project-details > div:last-of-type { margin-bottom:0 !important; }
+article[data-project-id="bat-robot"] .project-details figure { height:auto !important; min-height:0 !important; }
+article[data-project-id="bat-robot"] .project-details > div {
+  margin:0 0 3rem 0 !important; padding:0 !important; border:0 !important; height:auto !important; min-height:0 !important;
+}
+article[data-project-id="bat-robot"] .project-details > div > h4,
+article[data-project-id="bat-robot"] .project-details > div > h5,
+article[data-project-id="bat-robot"] .project-details > div > p,
+article[data-project-id="bat-robot"] .project-details > div > figure,
+article[data-project-id="bat-robot"] .project-details > div > .table-wrap,
+article[data-project-id="bat-robot"] .project-details > div > .equation,
+article[data-project-id="bat-robot"] .project-details > div > .callout { display:block !important; }
+/* ---------- Header ---------- */
+article[data-project-id="bat-robot"] .project-header { margin:0 0 1.5rem !important; padding:0 !important; }
+article[data-project-id="bat-robot"] .project-title { font-size:2.2rem; line-height:1.2; letter-spacing:-.02em; margin:0 0 .6rem; }
+article[data-project-id="bat-robot"] .project-meta { font-size:.92rem; opacity:.75; margin:0 0 1.25rem; }
+article[data-project-id="bat-robot"] .project-summary { font-size:1.15rem; line-height:1.6; margin:0; }
+article[data-project-id="bat-robot"] .project-media { margin:0 0 2.25rem !important; padding:0 !important; }
+article[data-project-id="bat-robot"] .project-media figcaption { margin-top:.75rem; font-size:.85rem; opacity:.75; }
+article[data-project-id="bat-robot"] .project-footer { margin:0 !important; padding:1.5rem 0 0 !important; border-top:1px solid var(--bat-line) !important; font-size:.9rem; opacity:.8; }
+/* ---------- Section headings and text ---------- */
+article[data-project-id="bat-robot"] .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+article[data-project-id="bat-robot"] h4 {
+  font-size:1.6rem; line-height:1.25; letter-spacing:-.01em;
+  margin:0 0 1.1rem !important; padding:0 0 .5rem !important; border-top:0 !important; border-bottom:1px solid var(--bat-line);
+}
+article[data-project-id="bat-robot"] h5 { font-size:1.12rem; line-height:1.35; font-weight:650; margin:1.9rem 0 .5rem !important; padding:0 !important; }
+article[data-project-id="bat-robot"] .project-details p { margin:0 0 1rem !important; padding:0 !important; }
+article[data-project-id="bat-robot"] .project-details ul,
+article[data-project-id="bat-robot"] .project-details ol { margin:0 0 1.1rem !important; padding-top:0 !important; padding-bottom:0 !important; padding-left:1.5rem; }
+article[data-project-id="bat-robot"] .project-details li { margin:.35rem 0; }
+article[data-project-id="bat-robot"] .project-details li::marker { color:var(--bat-accent); }
+article[data-project-id="bat-robot"] .callout {
+  border-left:4px solid var(--bat-accent); padding:.8rem 1.25rem; margin:1.4rem 0 !important;
+  background:rgba(47,111,219,.08); border-radius:0 8px 8px 0;
+}
+/* ---------- Figures ---------- */
+article[data-project-id="bat-robot"] .project-details figure {
+  margin:1.5rem 0 !important; padding:1rem .9rem .8rem; background:var(--bat-tint); border-radius:8px; overflow-x:auto; counter-increment:bat-fig;
+}
+article[data-project-id="bat-robot"] .project-details { counter-reset: bat-fig; }
+article[data-project-id="bat-robot"] .project-details figcaption { margin-top:.7rem; font-size:.86rem; line-height:1.5; opacity:.85; }
+article[data-project-id="bat-robot"] .project-details figcaption::before { content:"Figure " counter(bat-fig) ". "; font-weight:700; }
+/* ---------- Tables ---------- */
+article[data-project-id="bat-robot"] .table-wrap { overflow-x:auto; margin:1.25rem 0 !important; padding:0 !important; }
+article[data-project-id="bat-robot"] table { border-collapse:collapse; width:100%; margin:0; font-size:.92rem; line-height:1.5; }
+article[data-project-id="bat-robot"] th,
+article[data-project-id="bat-robot"] td { padding:.55rem .8rem; border-bottom:1px solid var(--bat-line); text-align:left; vertical-align:top; }
+article[data-project-id="bat-robot"] thead th { font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; border-bottom:2px solid var(--bat-line); opacity:.85; }
+article[data-project-id="bat-robot"] tbody th { background:var(--bat-tint); }
+article[data-project-id="bat-robot"] td.num, article[data-project-id="bat-robot"] th.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+article[data-project-id="bat-robot"] table.kv td:first-child { font-weight:600; }
+article[data-project-id="bat-robot"] .project-media img, article[data-project-id="bat-robot"] .project-details figure img { display:block !important; width:auto !important; height:auto !important; max-width:100% !important; max-height:520px !important; margin:0 auto !important; border-radius:6px; }
+article[data-project-id="bat-robot"] .project-media img { max-height:560px !important; }
+article[data-project-id="bat-robot"] table.kv td:first-child { width:26%; }
+article[data-project-id="bat-robot"] table.wide td:first-child { width:24%; font-weight:600; }
+article[data-project-id="bat-robot"] .project-details > div > figure + figure { margin-top:1.5rem !important; }
+</style>
+<article class="project" role="article" aria-labelledby="project-title-robotic-bat" data-project-id="bat-robot" itemscope itemtype="https://schema.org/CreativeWork">
+<header class="project-header">
 <h2 id="project-title-robotic-bat" class="project-title" itemprop="name">Robotic Bat Research</h2>
 <p class="project-meta">
-<time class="project-date" datetime="2025-08" itemprop="datePublished">Aug 2025 – May 2026</time>
-<span class="project-role" itemprop="author">• Design & Fabrication Lead, Master's Project</span>
-<span class="project-tags">• <span itemprop="keywords">robotics, mechanical design, 3D printing</span></span>
+<time class="project-date" datetime="2025-08" itemprop="datePublished">Aug 2025 &ndash; May 2026</time>
+<span class="project-role" itemprop="author">&bull; Design &amp; Fabrication Lead, Master's Project</span>
+<span class="project-tags">&bull; <span itemprop="keywords">biomimetic robotics, ornithopter, design for additive manufacturing, tolerance analysis, gear train design, materials selection</span></span>
 </p>
-<p class="project-summary" itemprop="description">
-        A robotic bat designed and built from concept through fabrication and test, including its structure, circuitry, motors, and wing membrane.
-</p>
+<p class="project-summary" itemprop="description">A bat-inspired ornithopter for remote water sampling, designed and built from concept through fabrication and test, including its structure, circuitry, motors, and wing membrane. Gear train, front plate, and wing attachment redesign supported the first powered flapping demonstration on the platform.</p>
 </header>
-
-<figure class="project-media">
-<img src="assets/pictures/batrobot.png" alt="first flight test" itemprop="image" />
-<figcaption>Robotic bat structure.</figcaption>
-</figure>
-
+<figure class="project-media"><img src="assets/pictures/bat-robot-test-day.jpg" alt="Bat robot ornithopter on a test stand with a reflective membrane glued to carbon fiber wing spars" width="998" height="694" itemprop="image" /><figcaption>Integrated prototype on the test stand, with a reflective nylon membrane glued to the carbon fiber spars.</figcaption></figure>
 <section class="project-details">
 <h3 class="sr-only">Project details</h3>
-
-<div class="project-overview">
-<h4>Overview</h4>
-<p>
-          For my master's project, I designed and built a robotic bat, developing its structure, circuitry, motors,
-          and wing membrane and carrying the hardware from concept through fabrication and test. Structural
-          components were fabricated and iterated on using PLA, TPU, and resin 3D printing, allowing rapid design
-          changes as the mechanism was refined.
-</p>
+<div class="project-overview"><h4>Overview</h4>
+<p>The bat robot is an ornithopter built around the drinking maneuver of a bat. In that maneuver the animal flies low over water and shapes its wings into a concave surface that compresses the air column beneath it against the water, which produces the lift that holds it in position for the brief tongue extension. The platform is intended for remote water sample collection in locations that fixed wing and rotary wing aircraft cannot reach, and as an experimental platform for studying the aerodynamics of the maneuver.</p>
+<p>The platform was inherited from several prior teams and had three problems that blocked sustained flight. The gear actuated flapping mechanism failed at high RPM through slippage and tooth breakage. The wing material was still in iteration, and the urethane and silicone polymers tested previously tore or added more distributed load than the actuation could lift. The flight mechanism also had no pitch or yaw authority. The chassis had already been optimized for motor, battery, and gear stack placement and was kept as received.</p>
+<p>The goal was to establish reliable, repeatable flapping before adding mechanical complexity. My work covered the interface between the gear train and its printed structure, the wing spar attachments, the wing membrane material screening, and the circuit and motor integration. I also built a wing folding prototype and added airfoil sections to prepare for more bat-like kinematics.</p>
+<p>The integrated prototype drove its wings under power and produced a recognizable flapping motion on a test stand. It did not achieve free flight. The copper gear train ran the full test without the tooth shearing seen in earlier iterations, which closed out the gear material question for the platform.</p>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Parameter</th><th>Value at final test</th></tr></thead><tbody><tr><td>Platform</td><td>Bat-inspired ornithopter with a direct gear-driven reciprocating wing stroke (no four bar linkage in this iteration)</td></tr><tr><td>Drive and control</td><td>Electric motor, ESC, 4S battery, transmitter and receiver (replacing the earlier Arduino based control)</td></tr><tr><td>Gear progression</td><td>Off-the-shelf plastic, then resin printed (50 to 36 teeth), then copper at the main drive position</td></tr><tr><td>Printed structure</td><td>PLA front plate and housings with feature-specific clearances of 0.15 to 0.30 mm</td></tr><tr><td>Wing structure</td><td>Carbon fiber rod spars with printed PLA attachments, four per side, designed for polymer infiltration</td></tr><tr><td>Membranes screened</td><td>Ecoflex, urethane, uncoated silicone, Texalan film, 80 durometer silicone membrane, reflective nylon</td></tr><tr><td>Outcome</td><td>First powered flapping demonstration on the platform; free flight not achieved</td></tr></tbody></table></div>
 </div>
-
-<div class="project-features">
-<h4>Key features / highlights</h4>
-<ul>
-<li>Full hardware development from concept through fabrication and test</li>
-<li>Custom structure, circuitry, motor system, and wing membrane</li>
-<li>Iterative structural design using multiple 3D printing materials (PLA, TPU, resin)</li>
-</ul>
+<div class="project-failures"><h4>Inherited failure modes</h4>
+<p>Each problem on the inherited platform was traced to a cause, addressed with a specific change, and checked at the integrated test. Several were only partly closed, and those carry into the recommendations.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Issue</th><th>Observed cause</th><th>Action</th><th>Outcome at test</th></tr></thead><tbody><tr><td>Gear tooth failure</td><td>Resin gears broke under the friction generated at higher throttle settings</td><td>Copper gears at the main drive position</td><td>No tooth shearing or brittle failure through the full test</td></tr><tr><td>Gear slippage and skipping</td><td>Gears shifted relative to one another and skipped teeth under load</td><td>Tightened the assembly to reduce play, then redesigned the front plate for alignment and stiffness</td><td>Reduced on the bench; gear skipping and shaft sliding still appeared at fast motor acceleration and some fits shifted under operating load</td></tr><tr><td>Inconsistent fits</td><td>Inherited parts were optimized for weight, not dimensional tolerance, so rod, screw, and bearing fits varied</td><td>Characterized print clearances per feature across front plate iterations</td><td>Consistent static fits; needs re-characterization under load</td></tr><tr><td>Membrane detachment</td><td>The membrane would not stay on the spar through any of the custom attachments</td><td>Bonded the membrane directly to the spar for the final test</td><td>Reliable bond, with easy detachability lost</td></tr><tr><td>Oversized motor</td><td>Lowest available setting still drove the gear train faster than the wings could use</td><td>Not changed this term, to keep effort on the gears and wings</td><td>Open item; throttle response also begins near 30 percent</td></tr></tbody></table></div>
 </div>
-
-<div class="project-tech">
-<h4>Tech & tools</h4>
+<div class="project-gears"><h4>Drivetrain: gear material and geometry</h4>
+<p>The gear train converts motor output into the flapping stroke. The motor turns continuously at a speed set by the ESC, and the gear train reduces that rotation to a flapping frequency suited to the wing geometry. The spars are driven directly from the gear train at each wing root. For both wings to move consistently, the train has to stay aligned, transmit motion smoothly, and survive the friction generated in operation.</p>
+<figure><img src="assets/pictures/bat-gear-train-original.jpg" alt="Original gear train and black printed housing held in a hand" width="1000" height="1010" loading="lazy" decoding="async" /><figcaption>Original gear train and printed housing as inherited.</figcaption></figure>
+<h5>Material progression</h5>
+<p>The first generation used off-the-shelf plastic gears, which were not strong enough for the friction and loading in the mechanism and failed quickly. The second generation used resin printed gears. Resin allowed changes to gear ratio, tooth depth, and tooth count, so the tooth count was reduced from 50 to 36. The deeper, more engaged teeth were meant to mesh more securely, and the lower tooth count was meant to reduce friction. A deeper pitch angle was also used to keep the gears interlocked.</p>
+<p>The resin gears were useful for prototyping gear profiles quickly. They outperformed the plastic gears but still suffered tooth damage under sustained friction, and the longer print times made iteration slow. They worked as a prototyping step and not as the final gear set.</p>
+<figure><img src="assets/pictures/bat-gears-plastic-resin.jpg" alt="Black plastic gear with 50 teeth beside a grey resin gear with 36 teeth" width="1200" height="667" loading="lazy" decoding="async" /><figcaption>Plastic gear (left) and resin gear (right).</figcaption></figure>
+<p>The third generation used copper gears that were already available in the lab from a previous project. They were thicker, smaller, and heavier than the resin gears, which raised three concerns before use: whether they would mesh with the smaller plastic gears still in the system, whether the metal would wear the plastic teeth, and whether the press fit onto the rods, with no set screws, would hold. In testing they meshed well with the remaining plastic gears, withstood more friction than the resin gears, and reduced slipping. Their cost was added mass and thickness, and a change in gear dimensions that altered the gear ratio and forced a front plate redesign.</p>
+<figure><img src="assets/pictures/bat-gears-metal.jpg" alt="Two brass colored metal gears mounted on a white printed front plate with smaller white gears" width="486" height="514" loading="lazy" decoding="async" /><figcaption>Updated gear train with metal gears on the redesigned front plate.</figcaption></figure>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Gear material</th><th>Role</th><th>Result</th><th>Limitation</th></tr></thead><tbody><tr><td>Off-the-shelf plastic</td><td>Original gears</td><td>Failed quickly under friction and load</td><td>Insufficient strength</td></tr><tr><td>Resin printed, 36 teeth</td><td>Redesigned geometry</td><td>Better than plastic, but tooth damage under sustained friction</td><td>Long print times; brittle failure</td></tr><tr><td>Copper</td><td>Main drive position</td><td>No tooth shearing through the final test</td><td>Added mass and thickness; press fit without set screws; front plate redesign required</td></tr></tbody></table></div>
+<p>The smaller plastic gears elsewhere in the train showed no damage or excessive wear during the test, so there is no reason to replace them.</p>
+</div>
+<div class="project-frontplate"><h4>Front plate and tolerance characterization</h4>
+<p>Because the metal gears changed spacing and layout, the front plate was redesigned around the actual gear positions instead of forcing the new gears into the old layout. The plate repositions the rods, bearings, spacers, and gear holes, and its job is to hold the gears in alignment. When the plate was not stiff or properly toleranced, the gears bowed away from each other under vibration and load, which caused skipping, slipping, and uneven wing motion.</p>
+<p>Six plate iterations were printed beyond the inherited design. The inherited CAD had no clearances applied to its holes, which is a problem at the resolution of a desktop printer, and PLA expansion had to be factored in as well. The structural rods also had to thread through the housings. The prints came from the Rapid Prototyping Lab and were often delayed, so each correction after an error was costly in schedule, and that limited how many iterations were practical.</p>
+<figure><img src="assets/pictures/bat-front-plate-iterations.jpg" alt="Five printed white front plates in a row, the inherited design followed by iterations marked I to IV" width="1328" height="438" loading="lazy" decoding="async" /><figcaption>Front plate: inherited design (left) and iterations I to IV.</figcaption></figure>
+<h5>Clearance sweep</h5>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Clearance applied</th><th>Result</th></tr></thead><tbody><tr><td>0 mm</td><td>Rods and bearings too tight to assemble</td></tr><tr><td>0.15 mm</td><td>Still too tight for both rods and bearings</td></tr><tr><td>0.25 mm</td><td>Many holes too loose, though acceptable for bearings</td></tr><tr><td>0.20 mm</td><td>Better for the thin structural rods, but screw holes too loose because the screws thread directly into the plastic</td></tr></tbody></table></div>
+<p>The sweep showed that no single clearance value could serve every hole in the plate. The final version assigns clearance by function.</p>
+<h5>Final clearances by feature</h5>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Feature</th><th>Clearance</th><th>Rationale</th></tr></thead><tbody><tr><td>Thin structural rods</td><td>0.20 mm</td><td>Secure fit that can still be assembled</td></tr><tr><td>Screw holes</td><td>0.15 mm</td><td>Screw threads directly into the plastic without loosening</td></tr><tr><td>Bearing holes</td><td>0.25 mm</td><td>Slightly more clearance so the bearing presses in without damaging the print</td></tr><tr><td>Spacers and other loose-fit features</td><td>0.30 mm</td><td>Free fit</td></tr></tbody></table></div>
+<p>The updated assembly uses 4.5 mm spacers. A snap fit was the original goal, but a press fit proved more secure once the parts were seated. When a press fit was too tight it made movement along the bars difficult. Overtight fits were corrected by sanding the bars, and loose fits were corrected with tape or electrical shrink wrap. These were field fixes and not controlled dimensions, which is why re-characterization is on the recommendation list.</p>
+<figure><img src="assets/pictures/bat-front-plate-cad.png" alt="CAD view of the front plate with parameter driven hole diameter annotations" width="810" height="1094" loading="lazy" decoding="async" /><figcaption>Improved front plate in CAD, with parameter driven hole dimensions.</figcaption></figure>
+</div>
+<div class="project-wing"><h4>Wing spar attachments and membrane materials</h4>
+<p>The wing attachment design started with material selection. PLA and TPU were both printed, and PLA was chosen for its higher resolution at small sizes and faster print times. Each attachment needs a hole through which the polymer can enter and cure, so the bond is both adhesive and mechanical.</p>
+<p>The attachments were first designed as one solid piece per side. Several weight-reduction patterns were tried, and some exposed portions of the spar. Because of weight, the design settled on four small individual attachments per side, each with three horizontal holes that let the polymer flow through and maximize adhesion area. The current iteration is too small, and a larger attachment is recommended. As with the gear housings, print delays made each adjustment slow.</p>
+<h5>Membrane screening</h5>
+<p>With the attachments resolved, the work turned to the membrane. Polymers were cast in small batches to evaluate their properties and their adhesion to the attachments, and their behavior at different thicknesses was compared. The cast polymers were also too heavy for the fragile actuation system to move.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Material</th><th>Observation</th><th>Disposition</th></tr></thead><tbody><tr><td>Ecoflex, with baby powder</td><td>Hard to cast at uniform thickness; heavier and stiffer when thick, tears readily when thin; sticky</td><td>Rejected</td></tr><tr><td>Urethane</td><td>Behaved like slime at greater thicknesses and tore at any thickness; sticky even after cure</td><td>Rejected</td></tr><tr><td>Uncoated silicone</td><td>Too sticky to handle even with powder, tore easily, and too flexible to hold a wing shape</td><td>Rejected</td></tr><tr><td>Texalan, a Mylar based film</td><td>Light enough to fly, but effectively rigid and unable to deform to compress air</td><td>Rejected</td></tr><tr><td>80 durometer ultra-thin silicone membrane</td><td>80 µm thick, compared with about 56 µm for a bat wing membrane; tear resistance rated at 100 lb/in against 30 to 38 lb/in for Ecoflex and similar rubbers</td><td>Selected candidate; flight test pending</td></tr><tr><td>Reflective nylon</td><td>Tear resistant and chosen to improve visualization during the trial; not heat resistant, and part of a sheet melted when a flame used to shrink the shrink wrap got too close</td><td>Used for the final test</td></tr></tbody></table></div>
+<p>The membrane could not be kept on the spar through any of the custom attachments, so for the final test it was glued directly to the spar, using super glue, tape, and clamps. That accepted the loss of easy detachability in exchange for a reliable bond.</p>
+</div>
+<div class="project-folding"><h4>Wing folding prototype and airfoils</h4>
+<p>A bat wing is a continuous membrane on an elongated skeletal structure with more than 25 joints. Reproducing that articulation at this scale would put actuator and structure mass where the platform is most sensitive to it, so the wings were simplified to rigid spars with a flexible membrane. To prepare for more bat-like kinematics, I prototyped a wing folding and extension mechanism that models the humerus, radius, carpal, metacarpal, and phalange motion.</p>
+<figure><img src="assets/pictures/bat-wing-linkage-diagram.png" alt="Linkage diagrams of the wing folding mechanism, extended on the left and folded on the right, with humerus, radius, carpal, metacarpal, and phalange labeled" width="1400" height="814" loading="lazy" decoding="async" /><figcaption>Wing folding linkage, extended (left) and folded (right).</figcaption></figure>
+<p>The linkage uses revolute and cylindrical joints. As the wing folds into the chassis, the cylindrical joint connecting the humerus and radius slides inward along the humerus, which models the folding of the humerus and the extension of the radius. The joints on the metacarpal and phalange slide along the chassis, so the carpal, metacarpal, and phalange fold in while staying mostly parallel.</p>
+<p>The design favored easy iteration for future teams, so it uses parts already on the robot and prints the rest. The bars are carbon fiber rods: the thicker wing rods for the radius and phalange, which see the most rotation and translation, and the thinner chassis support rods for the metacarpals. The sliders are PLA parts fit to the rod diameter and the bearing outer diameter. PLA end caps seat the rods in bearings, and pins join the bearings. The phalange rod attaches to the chassis through a spring and rod damper that allows multi-axial rotation and translation, so rod lengths can change without locking the linkage.</p>
+<figure><img src="assets/pictures/bat-wing-folding-prototype.jpg" alt="Two photographs of the wing folding prototype on a table, extended on the left and folded on the right" width="1600" height="943" loading="lazy" decoding="async" /><figcaption>Wing folding prototype, extended (left) and folded (right).</figcaption></figure>
+<p>Three constraints shaped the prototype. This copy of the robot was reserved for flight actuation, so the humerus bar had to stay solid for wing attachment and a cylindrical slider was needed to emulate its shortening. The spring and rod damper had to stay so that electronics and chassis components could be repositioned later. The geometry itself also limits travel: the shoulder pieces protrude 1.8 in from the gear actuation system, the electronics carrier restricts motion along the y axis to 5.5 in, and the upper metacarpal slide is limited to 2.5 in between the motor attachment and the electronics holder.</p>
+<p>The wings also lay flat on the span of the chassis and wing rods, which gives little lift because the underside area is small. Airfoil sections were attached to the front of the wing to address that. They were modeled from NACA 6409 cross sections, printed in white TPU, and held on the wing rods by friction so their placement can be adjusted. The larger section (1.96 in chord) sits 4.5 in from the shoulder, and the smaller one (1.714 in chord) sits 11 in out, forming an under-wing arc. Camber angle was not optimized because electronics issues delayed the flight test.</p>
+</div>
+<div class="project-test"><h4>Integration and test</h4>
+<p>The final test ran the robot as an integrated prototype to observe the drivetrain and wings under power. It was not intended as a full flight. The robot carried the updated front plate, the metal lower gears, the existing smaller plastic gears, the wing spars, a temporary membrane, and the transmitter and receiver control setup. A 4S battery powered the motor, and the transmitter, receiver, and ESC controlled motor input in place of the earlier Arduino based method.</p>
+<figure><img src="assets/pictures/bat-test-stand.jpg" alt="Bat robot mounted on a tripod test stand in a lab with a whiteboard behind it" width="960" height="1162" loading="lazy" decoding="async" /><figcaption>Test day setup with the robot on the stand.</figcaption></figure>
+<p>The stand let the wings and drivetrain move without the body being held by hand, and it gave visibility of the gears, rods, dampers, and temporary stops, all of which were still exposed and adjustable. The ESC did not register until about 30 percent throttle, so the motor was ramped carefully. Testing was done in short runs, with the system stopped between runs to inspect gears, shafts, wing attachments, and damping.</p>
+<p>Several fixes were made on the day. The motor axle was too large for its bearing, and running without the bearing allowed unwanted axle motion that disturbed gear alignment. Correcting it meant taking the front plate apart, which was difficult because many parts were tightly press fit after the earlier tolerance work. The axle was sanded slightly so the bearing would fit, and the plate was reassembled. Shaft sliding and spring damping were adjusted as the system ran, and temporary hard stops were added so the mechanism could keep running.</p>
+<h5>Results</h5>
+<ul><li>Proof of flapping: the platform drove its wings under power and produced a recognizable flapping motion. Earlier teams could not reach this point because their gear assemblies failed before sustained operation.</li><li>Copper gears validated: no brittle failure or tooth shearing through the duration of the test, and no damage to the retained plastic gears.</li><li>Suspension damping: the system holding the robot in place added enough damping that the wings vibrated against it and could not reach their full stroke, so the test shows a constrained version of the intended motion.</li><li>Motor sizing: at its lowest available setting the motor still drove the gear train beyond a flapping speed the platform could use.</li></ul>
+</div>
+<div class="project-recommendations"><h4>Recommendations for the next iteration</h4>
+<p>Several decisions were validated by the test and should be kept: copper gears at the main drive position, or a lighter metal, and the existing plastic gears elsewhere. The remaining priorities, in order, are:</p>
+<ol>
+<li><strong>Re-characterize printed tolerances under load.</strong> The values in this entry gave consistent static fits, but several fits still shifted or loosened in operation. They are a starting point and not a final answer.</li>
+<li><strong>Replace the motor with a lower power unit.</strong> This gives finer control over flapping frequency and lowers the load on the gear engagement and tolerancing.</li>
+<li><strong>Redesign the suspension.</strong> It needs to provide structural support without imposing damping that degrades the stroke.</li>
+<li><strong>Iterate the wing folding mechanism and add actuation.</strong> A shorter humerus and more wing rods would allow actual folding and not only sliding, and would make room for more phalanges and metacarpals.</li>
+<li><strong>Flight test the silicone membrane</strong> with a strong adhesive, and test the airfoil designs for flexibility and effectiveness. Larger spar attachments are also recommended.</li>
+</ol>
+<p>The longer term direction is a four bar linkage in place of the direct gear driven stroke, and active coupling of the tail servo to the membrane to add pitch and yaw control. Both should follow the priorities above, because each of those addresses a foundational issue that would complicate more sophisticated mechanisms.</p>
+</div>
+<div class="project-skills"><h4>Skills applied</h4>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Area</th><th>Application on the bat robot</th></tr></thead><tbody><tr><td>Design for additive manufacturing</td><td>Feature-specific clearance selection for PLA, press fit and snap fit evaluation, bearing seat sizing, iteration planning around external print lead times</td></tr><tr><td>Machine design</td><td>Gear material selection, tooth count and tooth depth changes, effect of a gear change on ratio and layout, press fit gears on shafts, front plate stiffness and alignment</td></tr><tr><td>Materials selection</td><td>Polymer membrane screening on tear resistance, mass, tack, and thickness behavior; filament selection (PLA against TPU); gear material progression from failure analysis</td></tr><tr><td>CAD</td><td>Parameter driven front plate and housing geometry with feature-specific hole dimensions</td></tr><tr><td>Integration and test</td><td>Assembly of the integrated prototype, staged short runs with inspection between, on-site troubleshooting of axle, bearing, and damping issues</td></tr></tbody></table></div>
+<h4>What I learned</h4>
+<ul><li><strong>Tolerance is set per feature, not per part.</strong> One clearance value failed across the sweep because rods, screws, and bearings load the plastic differently.</li><li><strong>A bench fit does not predict a loaded fit.</strong> Fits that were consistent statically still shifted under operating load, so tolerance work needs a loaded check.</li><li><strong>Print turnaround sets the iteration budget.</strong> With external printing, each tolerance error cost days, which favors sweeping several clearances in a single print.</li><li><strong>Material solved what geometry did not.</strong> Reducing tooth count and deepening the pitch did not stop brittle failure in resin. Changing to copper did.</li><li><strong>A press fit trades serviceability for retention.</strong> It held the plate rigid, and it also made test day repairs slow.</li><li><strong>Subsystems expose each other.</strong> The oversized motor and the throttle threshold made every mechanical weakness show up faster, which helped identify what was not robust enough.</li></ul>
+</div>
+<div class="project-features"><h4>Key features / highlights</h4>
+<ul><li>Replaced resin gears with copper at the main drive position, with no tooth shearing through the integrated test</li><li>Redesigned the front plate around the new gear layout over six printed iterations</li><li>Defined feature-specific clearances for printed parts, from 0.15 to 0.30 mm</li><li>Designed polymer-bonded wing spar attachments, four per side, with through holes for adhesive flow</li><li>Screened six membrane materials and identified an 80 durometer silicone membrane for the next flight test</li><li>Supported the integrated test that produced the first powered flapping on the platform</li></ul>
+</div>
+<div class="project-tech"><h4>Tech &amp; tools</h4>
 <ul class="tech-list" aria-label="Technologies used">
-<li>Fusion 360</li>
-<li>3D printing (PLA, TPU, resin)</li>
-<li>Circuit & motor integration</li>
+<li>Fusion 360 (parametric CAD)</li>
+<li>PLA and TPU printing</li>
+<li>Resin printing</li>
+<li>Cornell Rapid Prototyping Lab</li>
+<li>Carbon fiber rod and bearing assemblies</li>
+<li>Fit and clearance characterization</li>
+<li>ESC, 4S battery, transmitter and receiver test setup</li>
 </ul>
 </div>
-
-<div class="project-role">
-<h4>My role</h4>
-<p>Designed and built the robotic bat's structure, circuitry, motors, and wing membrane, and fabricated and iterated on structural components through 3D printing.</p>
+<div class="project-role"><h4>My role</h4>
+<p>Design and fabrication lead on this individual master's project. I designed and built the robotic bat's structure, circuitry, motors, and wing membrane. That included the wing spar attachments and membrane material screening, the gear train interface and front plate redesign, print clearance characterization, the wing folding prototype and airfoils, and assembly and execution of the integrated test.</p>
 </div>
-
-<div class="project-links" aria-label="Project links">
-<!-- Add a link here if you have a report, write-up, or repo, otherwise you can delete this div -->
-<!-- <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Project Report</a> -->
-</div>
+<div class="project-links" aria-label="Project links"></div>
 </section>
-
 <footer class="project-footer" aria-hidden="false">
-<p class="project-stats">Duration: Aug 2025 – May 2026 • Team: Individual • Status: Completed</p>
+<p class="project-stats">Duration: Aug 2025 &ndash; May 2026 &bull; Team: Individual &bull; Status: Completed</p>
 </footer>
 </article>
+
 
 <article class="project" role="article" aria-labelledby="project-title-van-allen" data-project-id="van-allen-belt-simulation" itemscope itemtype="https://schema.org/CreativeWork">
     <header class="project-header">
