@@ -515,18 +515,24 @@ h1 {
 }
 
 .project-jump-links {
-  position: sticky;
-  top: 0;
-  z-index: 1002;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.65rem;
   max-width: 1100px;
-  margin: 0 auto 2rem;
+  margin: 1.5rem auto 2rem;
   padding: 0.65rem 1rem;
   background: #f5f5f5;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.project-jump-links a[aria-current="page"] {
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+.project-jump-links a[aria-current="page"]:hover {
+  background: #0056b3;
+  border-color: #0056b3;
 }
 .project-jump-links a {
   display: inline-block;
@@ -548,6 +554,9 @@ h1 {
 .project-jump-links a:focus-visible {
   outline: 2px solid #0056b3;
   outline-offset: 2px;
+}
+article.project[hidden] {
+  display: none !important;
 }
 html:has(.project-jump-links),
 body:has(.project-jump-links) {

@@ -1003,6 +1003,51 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
 </footer>
 </article>
 
+<script>
+  (() => {
+    const projectLinks = document.querySelectorAll('.project-jump-links a');
+    const projects = [...document.querySelectorAll('article.project')];
+
+    function projectForHash(hash) {
+      const target = document.getElementById(hash.slice(1));
+      return target?.closest('article.project') ?? null;
+    }
+
+    function showProject(selectedProject) {
+      projects.forEach(project => {
+        project.hidden = project !== selectedProject;
+      });
+      projectLinks.forEach(link => {
+        if (projectForHash(link.hash) === selectedProject) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    function syncProjectFromHash() {
+      showProject(projectForHash(window.location.hash) || projects[0]);
+    }
+
+    projectLinks.forEach(link => {
+      link.addEventListener('click', event => {
+        const project = projectForHash(link.hash);
+        if (!project) return;
+
+        event.preventDefault();
+        showProject(project);
+        if (window.location.hash !== link.hash) {
+          window.history.pushState(null, '', link.hash);
+        }
+      });
+    });
+
+    window.addEventListener('popstate', syncProjectFromHash);
+    window.addEventListener('hashchange', syncProjectFromHash);
+    syncProjectFromHash();
+  })();
+</script>
 
 <footer class="site-footer">
   <p>© 2026 Robert Bridges &mdash; Aerospace Engineering graduate from Cornell University</p>
