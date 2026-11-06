@@ -801,73 +801,208 @@ article[data-project-id="bat-robot"] .project-details > div > figure + figure { 
 </footer>
 </article>
 
+<style>
+/* ===================== FOCUS GLASSES ENTRY STYLES (keep these with the article) ===================== */
+/* Scoped by the article's own data-project-id so the markup stays exactly as originally structured.   */
+/* The layout rules use !important on purpose: they override any site CSS that places headings and     */
+/* body text side by side (grid, flex, float, or multi-column rules on .project-details and its divs). */
+article[data-project-id="focus-glasses"] {
+  --fg-accent: #2f6fdb;
+  --fg-warn: #d9822b;
+  --fg-line: rgba(127,127,127,.30);
+  --fg-tint: rgba(127,127,127,.07);
+  display:block !important;
+  box-sizing:border-box; width:95%; max-width:1200px; margin:0 auto;
+  font-size:1.02rem; line-height:1.7;
+}
+/* ---------- One vertical column, no matter what the site does ---------- */
+article[data-project-id="focus-glasses"] .project-header,
+article[data-project-id="focus-glasses"] .project-media,
+article[data-project-id="focus-glasses"] .project-details,
+article[data-project-id="focus-glasses"] .project-footer,
+article[data-project-id="focus-glasses"] .project-details > div {
+  display:block !important; float:none !important; position:static !important;
+  width:auto !important; max-width:none !important;
+  columns:auto !important; column-count:1 !important; column-gap:0 !important;
+  grid-template-columns:none !important; grid-column:1 / -1 !important; grid-row:auto !important;
+  background:none !important; box-shadow:none !important; border-radius:0 !important;
+}
+article[data-project-id="focus-glasses"] .project-details > div > * {
+  float:none !important; position:static !important; clear:none !important;
+  width:auto !important; max-width:100% !important; box-sizing:border-box;
+  grid-column:1 / -1 !important; grid-row:auto !important; flex:none !important;
+  margin-left:0 !important; margin-right:0 !important; left:auto !important; right:auto !important; transform:none !important;
+}
+article[data-project-id="focus-glasses"] .project-details { margin:0 !important; padding:0 !important; border:0 !important; }
+article[data-project-id="focus-glasses"] .project-details > div > :last-child { margin-bottom:0 !important; }
+article[data-project-id="focus-glasses"] .project-details > div.project-links:empty { display:none !important; margin:0 !important; }
+article[data-project-id="focus-glasses"] .project-details > div::before, article[data-project-id="focus-glasses"] .project-details > div::after,
+article[data-project-id="focus-glasses"] .project-details > div > h4::before, article[data-project-id="focus-glasses"] .project-details > div > h4::after,
+article[data-project-id="focus-glasses"] .project-details > div > h5::before, article[data-project-id="focus-glasses"] .project-details > div > h5::after { content:none !important; display:none !important; }
+article[data-project-id="focus-glasses"] .project-details > br, article[data-project-id="focus-glasses"] .project-details > hr, article[data-project-id="focus-glasses"] .project-details > p:empty,
+article[data-project-id="focus-glasses"] .project-details > div > br, article[data-project-id="focus-glasses"] .project-details > div > hr, article[data-project-id="focus-glasses"] .project-details > div > p:empty,
+article[data-project-id="focus-glasses"] .project-details > div > div:empty,
+article[data-project-id="focus-glasses"] .project-details > p,
+article[data-project-id="focus-glasses"] .project-details > div > p:has(+ h4),
+article[data-project-id="focus-glasses"] .project-details > div > p:has(+ h5:first-of-type):first-child { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; }
+article[data-project-id="focus-glasses"] .project-details > div:last-of-type { margin-bottom:0 !important; }
+article[data-project-id="focus-glasses"] .project-details figure { height:auto !important; min-height:0 !important; }
+article[data-project-id="focus-glasses"] .project-details > div {
+  margin:0 0 3rem 0 !important; padding:0 !important; border:0 !important; height:auto !important; min-height:0 !important;
+}
+article[data-project-id="focus-glasses"] .project-details > div > h4,
+article[data-project-id="focus-glasses"] .project-details > div > h5,
+article[data-project-id="focus-glasses"] .project-details > div > p,
+article[data-project-id="focus-glasses"] .project-details > div > figure,
+article[data-project-id="focus-glasses"] .project-details > div > .table-wrap,
+article[data-project-id="focus-glasses"] .project-details > div > .equation,
+article[data-project-id="focus-glasses"] .project-details > div > .callout { display:block !important; }
+/* ---------- Header ---------- */
+article[data-project-id="focus-glasses"] .project-header { margin:0 0 1.5rem !important; padding:0 !important; }
+article[data-project-id="focus-glasses"] .project-title { font-size:2.2rem; line-height:1.2; letter-spacing:-.02em; margin:0 0 .6rem; }
+article[data-project-id="focus-glasses"] .project-meta { font-size:.92rem; opacity:.75; margin:0 0 1.25rem; }
+article[data-project-id="focus-glasses"] .project-summary { font-size:1.15rem; line-height:1.6; margin:0; }
+article[data-project-id="focus-glasses"] .project-media { margin:0 0 2.25rem !important; padding:0 !important; }
+article[data-project-id="focus-glasses"] .project-media figcaption { margin-top:.75rem; font-size:.85rem; opacity:.75; }
+article[data-project-id="focus-glasses"] .project-footer { margin:0 !important; padding:1.5rem 0 0 !important; border-top:1px solid var(--fg-line) !important; font-size:.9rem; opacity:.8; }
+/* ---------- Section headings and text ---------- */
+article[data-project-id="focus-glasses"] .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+article[data-project-id="focus-glasses"] h4 {
+  font-size:1.6rem; line-height:1.25; letter-spacing:-.01em;
+  margin:0 0 1.1rem !important; padding:0 0 .5rem !important; border-top:0 !important; border-bottom:1px solid var(--fg-line);
+}
+article[data-project-id="focus-glasses"] h5 { font-size:1.12rem; line-height:1.35; font-weight:650; margin:1.9rem 0 .5rem !important; padding:0 !important; }
+article[data-project-id="focus-glasses"] .project-details p { margin:0 0 1rem !important; padding:0 !important; }
+article[data-project-id="focus-glasses"] .project-details ul,
+article[data-project-id="focus-glasses"] .project-details ol { margin:0 0 1.1rem !important; padding-top:0 !important; padding-bottom:0 !important; padding-left:1.5rem; }
+article[data-project-id="focus-glasses"] .project-details li { margin:.35rem 0; }
+article[data-project-id="focus-glasses"] .project-details li::marker { color:var(--fg-accent); }
+article[data-project-id="focus-glasses"] .callout {
+  border-left:4px solid var(--fg-accent); padding:.8rem 1.25rem; margin:1.4rem 0 !important;
+  background:rgba(47,111,219,.08); border-radius:0 8px 8px 0;
+}
+/* ---------- Figures ---------- */
+article[data-project-id="focus-glasses"] .project-details figure {
+  margin:1.5rem 0 !important; padding:1rem .9rem .8rem; background:var(--fg-tint); border-radius:8px; overflow-x:auto; counter-increment:fg-fig;
+}
+article[data-project-id="focus-glasses"] .project-details { counter-reset: fg-fig; }
+article[data-project-id="focus-glasses"] .project-details figcaption { margin-top:.7rem; font-size:.86rem; line-height:1.5; opacity:.85; }
+article[data-project-id="focus-glasses"] .project-details figcaption::before { content:"Figure " counter(fg-fig) ". "; font-weight:700; }
+/* ---------- Tables ---------- */
+article[data-project-id="focus-glasses"] .table-wrap { overflow-x:auto; margin:1.25rem 0 !important; padding:0 !important; }
+article[data-project-id="focus-glasses"] table { border-collapse:collapse; width:100%; margin:0; font-size:.92rem; line-height:1.5; }
+article[data-project-id="focus-glasses"] th,
+article[data-project-id="focus-glasses"] td { padding:.55rem .8rem; border-bottom:1px solid var(--fg-line); text-align:left; vertical-align:top; }
+article[data-project-id="focus-glasses"] thead th { font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; border-bottom:2px solid var(--fg-line); opacity:.85; }
+article[data-project-id="focus-glasses"] tbody th { background:var(--fg-tint); }
+article[data-project-id="focus-glasses"] td.num, article[data-project-id="focus-glasses"] th.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+article[data-project-id="focus-glasses"] table.kv td:first-child { font-weight:600; }
+article[data-project-id="focus-glasses"] .project-media img, article[data-project-id="focus-glasses"] .project-details figure img { display:block !important; width:auto !important; height:auto !important; max-width:100% !important; max-height:520px !important; margin:0 auto !important; border-radius:6px; }
+article[data-project-id="focus-glasses"] .project-media img { max-height:560px !important; }
+article[data-project-id="focus-glasses"] table.kv td:first-child { width:26%; }
+article[data-project-id="focus-glasses"] table.wide td:first-child { width:24%; font-weight:600; }
+article[data-project-id="focus-glasses"] .project-details > div > figure + figure { margin-top:1.5rem !important; }
+</style>
 <article class="project" role="article" aria-labelledby="project-title-focus-glasses" data-project-id="focus-glasses" itemscope itemtype="https://schema.org/CreativeWork">
-    <header class="project-header">
+<header class="project-header">
 <h2 id="project-title-focus-glasses" class="project-title" itemprop="name">Focus Glasses</h2>
 <p class="project-meta">
-<time class="project-date" datetime="2025-08" itemprop="datePublished">Aug – Dec 2025</time>
-<span class="project-role" itemprop="author">• Team Lead, Product Design</span>
-<span class="project-tags">• <span itemprop="keywords">product design, market research, finite element analysis</span></span>
+<time class="project-date" datetime="2025-08" itemprop="datePublished">Aug &ndash; Dec 2025</time>
+<span class="project-role" itemprop="author">&bull; Team Lead, Product Design</span>
+<span class="project-tags">&bull; <span itemprop="keywords">product design, market research, finite element analysis</span></span>
 </p>
-<p class="project-summary" itemprop="description">
-        A wearable product concept that uses invisible spectral flicker to help the wearer keep focus, developed with a 4-person team from market research through a full Product Design Specification.
-</p>
+<p class="project-summary" itemprop="description">A wearable product concept that uses invisible spectral flicker to help the wearer keep focus, developed with a 4-person team from market research through a full Product Design Specification.</p>
 </header>
-
-<figure class="project-media">
-<img src="assets/pictures/FocusGlasses.png" alt="Render of Focus Glasses product concept" itemprop="image" />
-<figcaption>Focus Glasses product concept.</figcaption>
-</figure>
-
+<figure class="project-media"><img src="assets/pictures/focus-glasses-render-hero.jpg" alt="Render of two pairs of Focus Glasses with thickened black temple arms and clear lenses" width="1400" height="609" itemprop="image" /><figcaption>Focus Glasses product concept, rendered. The temple arms house the PCB, LEDs, and cell.</figcaption></figure>
 <section class="project-details">
 <h3 class="sr-only">Project details</h3>
-
-<div class="project-overview">
-<h4>Overview</h4>
-<p>
-          Focus Glasses is an innovative wearable concept designed to help the user keep focus by making use of
-          invisible spectral flicker. Working with a 4-person team, I led market research to shape the product
-          direction and helped deliver a full Product Design Specification. To ensure the design was safe to wear,
-          I completed finite element analysis on the glasses. The project was presented at a public exhibit open to
-          students, professors, and the community, where it was voted best new product in the class.
-</p>
+<div class="project-overview"><h4>Overview</h4>
+<p>Focus Glasses is a wearable concept that helps the user keep focus by using invisible spectral flicker: LEDs in the frame alternate between white and off-white yellow light at 40 Hz, a rate intended to go unnoticed as flicker while stimulating gamma-band brain activity. The target user is a student or professional who has to hold attention through long lectures and work sessions.</p>
+<p>The project was developed by STEN Labs for MAE 5340 Innovative Product Design. I was team lead for product design and led the market research, helped deliver the full Product Design Specification (PDS), and completed the finite element analysis used to confirm the glasses are safe to wear. The concept was presented at a public exhibit open to students, professors, and the community, where it was voted best new product in the class.</p>
+<p>This entry concentrates on the design decisions, the structure and manufacturing plan, and the analysis behind them.</p>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Concept</td><td>Eyewear with micro-LED modules in the temple arms and an internal diffusion layer that delivers 40 Hz invisible spectral flicker (white to off-white yellow)</td></tr><tr><td>Design targets</td><td>Arm thickness under 7 mm, total mass under 60 g, 4 h or more of continuous use, USB-C charging in under 2 h, adjustable brightness</td></tr><tr><td>Frame</td><td>Injection molded polymer for cost, with a reinforced composite option for rigidity and thermal performance</td></tr><tr><td>Electronics</td><td>Custom PCB with ATtiny202 microcontroller, RGB LED, current limiting resistors, decoupling capacitor, slide switch, and coin cell holder</td></tr><tr><td>Manufacturing plan</td><td>Injection molding with secondary polishing, grinding, and punching for hinges; dual cavity steel mold for a 1,000 unit first batch</td></tr><tr><td>Retail target</td><td>$59 to $79, against a per-unit cost estimate of roughly $28 to $61 at 1,000 units</td></tr></tbody></table></div>
 </div>
-
-<div class="project-features">
-<h4>Key features / highlights</h4>
-<ul>
-<li>Uses invisible spectral flicker to support user focus</li>
-<li>Delivered a complete Product Design Specification with a 4-person team</li>
-<li>Finite element analysis performed to validate wearer safety</li>
-<li>Voted best new product in the class at a public exhibit</li>
-</ul>
+<div class="project-basis"><h4>Problem definition and design basis</h4>
+<p>Problem selection came from 50 episodes of immersion, observation, and interviews with Cornell students. The findings were grouped into seven problem areas and weighted with an analytic hierarchy process. Achievement (weight 0.34) and Focus and Management (0.30) ranked highest, with a consistency ratio of 0.086, inside the usual 0.10 limit. Focus became the problem the product would address.</p>
+<p>The literature review linked 40 Hz audio-visual stimulation to sustained attention. One study reported that 40 Hz flicker was associated with reduced delta-band activity during vigilance tasks, which is linked to lapses in attention, and that invisible spectral flicker can produce 40 Hz neural entrainment with a spatial distribution similar to stroboscopic light. The PDS treats the cognitive benefit in healthy adults as a hypothesis, supported by that literature and not yet tested on the product.</p>
+<p>Interviews produced two requirements that shaped the structure: comfort, because users are wary of wearables that are heavy or run hot, and discreet operation, so the device does not distract others. Lens compatibility was added as a design consideration, since prescription lenses, transition lenses, and blue light coatings can reflect or filter the flicker. Battery longevity and durability complete the set of nine customer requirements used in the House of Quality.</p>
 </div>
-
-<div class="project-tech">
-<h4>Tech & tools</h4>
+<div class="project-hoq"><h4>House of Quality and engineering parameters</h4>
+<p>Nine customer requirements were mapped to six engineering parameters. Each parameter was chosen for its direct effect on a requirement and for how many requirements it ties together through shared components, such as the cell, the PCB, and the LED package. Maximum surface temperature ranked first, ahead of mass, which moved the analysis effort toward thermal behavior and away from static structural loading.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Customer requirement</th><th>Importance</th><th>Mass (kg, lower)</th><th>Cell capacity (mAh, higher)</th><th>LED size (mm, lower)</th><th>Radiance (lux, higher)</th><th>Max surface temp (°C, lower)</th><th>CoG to geometric center (mm, lower)</th></tr></thead><tbody><tr><td>Lightweight</td><td>3</td><td>9</td><td>5</td><td>3</td><td>1</td><td>0</td><td>9</td></tr><tr><td>Balanced</td><td>2</td><td>5</td><td>5</td><td>3</td><td>1</td><td>0</td><td>0</td></tr><tr><td>Affordable</td><td>2</td><td>3</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Comfortable</td><td>4</td><td>9</td><td>3</td><td>1</td><td>1</td><td>9</td><td>7</td></tr><tr><td>Durable</td><td>4</td><td>3</td><td>0</td><td>0</td><td>1</td><td>7</td><td>0</td></tr><tr><td>Discreet appearance</td><td>4</td><td>3</td><td>1</td><td>9</td><td>1</td><td>0</td><td>5</td></tr><tr><td>Effective</td><td>5</td><td>1</td><td>5</td><td>5</td><td>9</td><td>0</td><td>0</td></tr><tr><td>Safe</td><td>5</td><td>0</td><td>3</td><td>0</td><td>9</td><td>9</td><td>0</td></tr><tr><td>Easy to use</td><td>4</td><td>3</td><td>0</td><td>3</td><td>1</td><td>5</td><td>9</td></tr><tr><td><strong>Score</strong></td><td></td><td>120</td><td>87</td><td>98</td><td>111</td><td>129</td><td>111</td></tr><tr><td><strong>Relative weight</strong></td><td></td><td>18.29%</td><td>13.26%</td><td>14.94%</td><td>16.92%</td><td>19.66%</td><td>16.92%</td></tr><tr><td><strong>Rank</strong></td><td></td><td>2</td><td>5</td><td>4</td><td>3</td><td>1</td><td>3</td></tr></tbody></table></div>
+</div>
+<div class="project-triz"><h4>Engineering contradictions and TRIZ</h4>
+<p>Four contradictions drove the concept, and each one was tracked through the design iterations.</p>
+<ul><li><strong>Cost against functionality.</strong> Smart glasses can replicate the technique at much higher cost and complexity, so the product has to stay cheap, which limits features such as EEG sensing and feedback.</li><li><strong>Utility against form factor.</strong> Slim metal frames have no room to embed circuits, while thicker casual frames have the surface area and enclosure volume in the arms.</li><li><strong>Battery life against weight.</strong> A larger cell extends use between charges and adds mass and arm thickness.</li><li><strong>Effectiveness against visual interference.</strong> A stronger stimulus is more effective and also risks distracting nearby people.</li></ul>
+<p>A substance-field model framed the interactions. Five substances were identified: the retina, the LED modules, the lens and frame material, the electronics and cell in the arm, and ambient light. Four fields act between them: optical (the 40 Hz stimulus), thermal, structural, and electrical. The intended path is LED to optical field to retina. The harmful path is LED to thermal field to wearer, since excess heat or radiance can exceed comfort and safety limits. The analysis also flagged ambient light overpowering the signal, limited arm volume forcing uneven LED placement, and mechanical stress on the frame from embedded electronics.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Problem</th><th>TRIZ principle</th><th>Applied solution</th></tr></thead><tbody><tr><td>Heat build-up near the face</td><td>24, Intermediary</td><td>Thermal dissipation paths and pulse modulated LED drive instead of continuous output</td></tr><tr><td>Visible flicker at some viewing angles</td><td>32, Color Change</td><td>Shift the spectral output toward wavelengths that are harder to detect</td></tr><tr><td>Ambient light overpowering the 40 Hz signal</td><td>3, Local Quality</td><td>Collimating micro-diffusers keep the stimulus within the wearer's field of view</td></tr><tr><td>Limited volume in the temple arm</td><td>30, Flexible Shells and Thin Films</td><td>Flexible PCBs that conform to the curved temples</td></tr><tr><td>Distributed electronics and thermal load</td><td>1, Segmentation and 5, Merging</td><td>Modular sections along the frame curvature, with MCU, driver, and sensing on one compact PCB</td></tr><tr><td>Variable ambient conditions</td><td>15, Dynamism</td><td>Adaptive brightness and pulse parameters in firmware (design intent; the V0 firmware uses fixed levels)</td></tr></tbody></table></div>
+</div>
+<div class="project-embodiment"><h4>Embodiment and structure</h4>
+<p>The embodiment is a lightweight eyewear platform with thickened temple arms that carry a compact PCB, LED driver, sensing, and the cell. Micro-LEDs sit near the front of each temple, with an internal diffusion layer between the LEDs and the eye so the delivery is uniform and free of glare. All components follow the natural curvature of the frame, which reduces bulk, keeps the mass balanced about the geometric center, and preserves the appearance of ordinary eyewear. Mass distribution is tied directly to the HoQ through the center of gravity parameter.</p>
+<figure><img src="assets/pictures/focus-glasses-render-front.jpg" alt="Front view render of two pairs of Focus Glasses with black frames and dark lenses" width="1160" height="350" loading="lazy" decoding="async" /><figcaption>Front view. The frame profile reads as conventional eyewear, which supports the discreet appearance requirement.</figcaption></figure>
+<p>Two frame materials were carried. Injection molded polymer meets the cost target. A reinforced composite improves rigidity and thermal performance for the arm that houses the electronics. In the choice-based conjoint study, carbon fiber scored strongly above plastic, which makes the composite option relevant to demand even though it costs more.</p>
+<figure><img src="assets/pictures/focus-glasses-render-parts.jpg" alt="Render of Focus Glasses frames and detached temple arms arranged apart" width="1400" height="630" loading="lazy" decoding="async" /><figcaption>Frame fronts and temple arms shown separately, which is the module boundary for the electronics.</figcaption></figure>
+</div>
+<div class="project-electronics"><h4>Electronics and firmware</h4>
+<p>The first PCB revision (V0, right temple) carries an ATtiny202 microcontroller, a Wurth multi-color RGB LED with current limiting resistors on each channel, a 0.1 µF decoupling capacitor on the supply, a slide switch, a CR1220 coin cell holder, and UPDI test points for programming. The board is long and narrow so it fits inside a temple arm.</p>
+<figure><img src="assets/pictures/focus-glasses-schematic.png" alt="Schematic of the Focus Glasses circuit with coin cell, switch, RGB LED, three resistors, ATtiny202, and decoupling capacitor" width="1600" height="693" loading="lazy" decoding="async" /><figcaption>Circuit schematic: cell, switch, common anode RGB LED with a series resistor per channel, ATtiny202, decoupling capacitor, and UPDI test points.</figcaption></figure>
+<figure><img src="assets/pictures/focus-glasses-pcb-layout.png" alt="EAGLE board layout of the V0 PCB, shown as a copper layout and as a rendered board" width="1632" height="942" loading="lazy" decoding="async" /><figcaption>V0 board layout in EAGLE, copper view (top) and rendered board (bottom), rotated for display.</figcaption></figure>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Part</th><th>Specification</th><th>Function</th></tr></thead><tbody><tr><td>Microcontroller</td><td>ATtiny202 (SOIC)</td><td>Generates the flicker waveform and drives the RGB channels</td></tr><tr><td>LED</td><td>Wurth 155124M172400 RGB, common anode</td><td>Light source for the two alternating levels</td></tr><tr><td>Power</td><td>CR1220 3 V lithium cell with holder, slide switch</td><td>Supply for MCU and LED</td></tr><tr><td>Passives</td><td>Series resistor per LED channel, 0.1 µF decoupling capacitor</td><td>Current limiting and supply decoupling</td></tr></tbody></table></div>
+<p>The final test firmware toggles the output between two PWM levels (120 and 40 of 255) on the red and green channels every half period of a 40 Hz cycle, which is 12,500 µs. The toggle runs on a non-blocking micros() timer, so the loop is not blocked by delays. An earlier test sketch ran at 30 Hz with blocking delays, alternating yellow and white.</p>
+</div>
+<div class="project-analysis"><h4>Mechanical and thermal analysis</h4>
+<p>Structural loading on the glasses is low, and the concern with embedded electronics is thermal. The PDS holds a first-pass hand calculation for each, and records that the analysis would be updated as finite element models were simulated and validated. I completed the finite element analysis in Ansys to confirm the frame is safe under wearer loading.</p>
+<h5>Structural hand calculation</h5>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Quantity</th><th>Value</th></tr></thead><tbody><tr><td>Temple cross section area</td><td>About 50 mm²</td></tr><tr><td>Maximum user press force</td><td>About 10 N (gripping, tapping, and scrolling loads of 2 to 10 N)</td></tr><tr><td>Applied stress, σ = F / A</td><td>10 N / 50 mm² = 0.2 MPa</td></tr><tr><td>ABS yield strength</td><td>About 40 MPa</td></tr><tr><td>Margin on yield</td><td>About 200 times</td></tr></tbody></table></div>
+<p>The static margin is large, so the structural risk lies elsewhere: repeated flexing of the load-bearing hinges and the heavier arm that the embedded electronics create. The failure mode analysis below carries both.</p>
+<h5>LED thermal estimate</h5>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Quantity</th><th>Value</th></tr></thead><tbody><tr><td>Supply and forward voltage</td><td>3 V cell, 2 V red LED forward voltage</td></tr><tr><td>Effective series resistance</td><td>90 Ω (circuit assumption in the PDS)</td></tr><tr><td>LED current</td><td>(3 V − 2 V) / 90 Ω = 11.1 mA</td></tr><tr><td>LED power, P = V × I</td><td>2 V × 11.1 mA = 22 mW, against a 48 mW datasheet limit for the red die</td></tr><tr><td>Junction to ambient thermal resistance</td><td>150 to 250 °C/W (datasheet range)</td></tr><tr><td>Temperature rise, ΔT = P × RθJA</td><td>3.3 to 5.5 °C, or about 28 to 31 °C at 25 °C ambient</td></tr></tbody></table></div>
+<p>This is a first-order estimate and sits well inside comfort and safety limits. It uses a single effective resistance and the red die forward voltage, so measured current and surface temperature on the built board are the next verification, especially with the green die, which needs more voltage headroom than a 3 V cell provides.</p>
+</div>
+<div class="project-manufacturing"><h4>Manufacturing and cost</h4>
+<p>Process selection followed the manufacturing lecture charts using three inputs: plastic as the material, mid to high batch volume, and thin wall, semi-complex geometry. Injection molding was the best fit. Polishing, grinding, and punching for the hinges complete the frame. The first batch of 1,000 units uses a dual cavity steel mold, with a molded-polymer cycle time of 30 to 60 s per shot. As demand grows, tooling scales to 8 or 16 cavities, which cuts per-unit cycle time and, once the tooling cost is recovered, per-unit cost.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Component (1,000 units)</th><th>Low estimate</th><th>High estimate</th></tr></thead><tbody><tr><td>Frame, injection molded</td><td>$6.00</td><td>$12.00</td></tr><tr><td>Lenses, non-prescription</td><td>$4.00</td><td>$8.00</td></tr><tr><td>LEDs, 40 Hz micro SMD array</td><td>$1.50</td><td>$3.00</td></tr><tr><td>Microcontroller</td><td>$2.80</td><td>$6.50</td></tr><tr><td>Battery, small cell</td><td>$1.20</td><td>$3.00</td></tr><tr><td>Circuitry and PCB</td><td>$3.00</td><td>$7.00</td></tr><tr><td>Charging port or contact</td><td>$1.00</td><td>$2.50</td></tr><tr><td>Assembly labor</td><td>$4.00</td><td>$10.00</td></tr><tr><td>Quality control and testing</td><td>$2.00</td><td>$4.00</td></tr><tr><td>Packaging and inserts</td><td>$3.00</td><td>$5.00</td></tr><tr><td><strong>Sum of line items</strong></td><td><strong>$28.50</strong></td><td><strong>$61.00</strong></td></tr></tbody></table></div>
+<p>Estimates came from comparable eyewear production costs, a parts costing tool, and wholesale listings. The upper end of the range exceeds the lower end of the retail target, so margin depends on the mold utilization and purchasing gains that come with volume.</p>
+</div>
+<div class="project-market"><h4>Market, pricing, and demand</h4>
+<p>The addressable market was estimated at about 500,000 users across American campuses, from the share of college students who use non-prescribed pharmaceutical solutions for focus (11.1 percent) and survey data indicating that up to 25 percent are open to technological eyewear. A Bass diffusion model with coefficients p = 0.02 and q = 0.40 over 10 years gives 10,000 adopters in year 1 and 96,213 in year 10, with cumulative adoption reaching 96 percent of the modeled market.</p>
+<p>A choice-based conjoint study with 21 respondents set the price position. Attribute importance was nearly even across glasses style, battery life, cost, and material, each between 23 and 26 percent. Part-worth utilities show the direction of preference within each attribute.</p>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Attribute</th><th>Part-worth utility by level</th></tr></thead><tbody><tr><td>Glasses style</td><td>Fashionable +23.8, minimalist +28.4, sporty −52.2</td></tr><tr><td>Battery life</td><td>4 h −56.0, 8 h +17.9, 12 h +38.1</td></tr><tr><td>Cost</td><td>$50 +47.1, $100 +4.5, $150 −51.5</td></tr><tr><td>Material</td><td>Plastic −36.6, carbon fiber +34.6, metal +2.0</td></tr></tbody></table></div>
+<p>Respondents were price sensitive and preferred a minimal solution. Against a reference of $95 for basic frames from a major online eyewear retailer, a value-based range of $59 to $79 positions the product at the lower end of the market. In the competitor ranking against smart glasses and noise cancelling headphones, Focus Glasses scored highest on affordability, discreet appearance, and effectiveness against the customer requirements, and was rated below both competitors on durability.</p>
+</div>
+<div class="project-risk"><h4>Risk, regulatory, and IP</h4>
+<p>The failure mode and effects analysis ranks firmware and battery faults highest. The hinge, the main structural item, scores lowest.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Component</th><th>Failure mode</th><th>Effect</th><th>Cause</th><th>S</th><th>O</th><th>D</th><th>RPN</th></tr></thead><tbody><tr><td>Firmware</td><td>Incorrect flicker frequency</td><td>Ineffective stimulation, or flicker becomes visible</td><td>Firmware defect</td><td>7</td><td>4</td><td>6</td><td>168</td></tr><tr><td>Battery system</td><td>Overheating during charge or extended use</td><td>Burn risk, discomfort, possible shutdown</td><td>Cell degradation, poor contact, inadequate insulation</td><td>9</td><td>3</td><td>5</td><td>135</td></tr><tr><td>LED</td><td>Too bright, or visible flicker</td><td>Eye strain, photosensitivity risk</td><td>Misalignment, LED aging</td><td>8</td><td>3</td><td>5</td><td>120</td></tr><tr><td>PCB</td><td>Intermittent or no connection</td><td>Device resets or shuts off mid-session</td><td>PCB flexing, loose connections</td><td>5</td><td>4</td><td>4</td><td>80</td></tr><tr><td>Frame and hinges</td><td>Hinge or arm breaks</td><td>Poor fit, unusable glasses</td><td>Repeated flexing of load-bearing hinges, heavier arm</td><td>6</td><td>4</td><td>3</td><td>72</td></tr></tbody></table></div>
+<ul><li><strong>Regulatory.</strong> The PDS identifies eyeglasses as a Class I medical device that falls under FDA establishment registration and device listing.</li><li><strong>Liability and misuse.</strong> The device projects light toward the eye. It does not work properly with blue light glasses, since the lens can reflect the light back, so clear warnings are required. Users could also extend wakefulness late into the night, which counteracts the benefit.</li><li><strong>Intellectual property.</strong> A review of related patents covering smart glasses temple construction, multi-frequency sensing, eye tracking, augmented reality optics, and myopia control found none that claim focus enhancement through light modulation. The plan is a utility patent on invisible spectral flicker for attention, with the circuit and firmware held as trade secrets. A trademark search found no live marks for Focus Glasses or STEN Labs.</li></ul>
+</div>
+<div class="project-skills"><h4>Skills applied</h4>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Area</th><th>Application on the Focus Glasses</th></tr></thead><tbody><tr><td>Requirements and QFD</td><td>Customer requirement capture, House of Quality, ranking of engineering parameters, contradiction identification with TRIZ</td></tr><tr><td>Market research</td><td>Immersion and interviews, AHP problem selection, choice-based conjoint, competitor ranking, demand forecasting</td></tr><tr><td>Analysis</td><td>Hand calculation of structural stress and LED thermal rise, finite element analysis in Ansys for wearer safety</td></tr><tr><td>Design for manufacture</td><td>Injection molding process selection, tooling and cavity planning, per-unit cost estimation</td></tr><tr><td>Risk and IP</td><td>Failure mode and effects analysis, regulatory classification, patent landscape review</td></tr></tbody></table></div>
+<h4>What I learned</h4>
+<ul><li><strong>Rank the parameters before sizing anything.</strong> The House of Quality put surface temperature ahead of mass, and the hand calculation showed a stress margin of about 200 times. Together they showed where analysis effort was worth spending.</li><li><strong>A large static margin moves the risk to fatigue and assembly.</strong> The hinge and the heavier arm became the structural items to test, not the frame cross section.</li><li><strong>Small packaging volumes couple everything.</strong> The 7 mm arm and 60 g targets tied cell size, PCB shape, LED placement, and heat into one problem, which is why TRIZ contradiction mapping was useful.</li><li><strong>Hypotheses need a test plan.</strong> The cognitive benefit rests on literature, so a user study with a measured flicker waveform is the step that turns the concept into a validated product.</li></ul>
+</div>
+<div class="project-features"><h4>Key features / highlights</h4>
+<ul><li>Uses invisible spectral flicker to support user focus</li><li>Delivered a complete Product Design Specification with a 4-person team</li><li>Finite element analysis performed to validate wearer safety</li><li>Voted best new product in the class at a public exhibit</li><li>Mapped nine customer requirements to six engineering parameters, with maximum surface temperature ranked first</li><li>Resolved four design contradictions with TRIZ, including a flexible PCB for the curved temple</li><li>Estimated LED temperature rise of 3 to 6 °C and a static stress margin of about 200 times on ABS</li><li>Selected injection molding with a dual cavity mold for a 1,000 unit first batch</li></ul>
+</div>
+<div class="project-tech"><h4>Tech &amp; tools</h4>
 <ul class="tech-list" aria-label="Technologies used">
 <li>Ansys (FEA)</li>
 <li>Fusion 360</li>
-<li>Market research</li>
+<li>EAGLE (PCB layout)</li>
+<li>Arduino IDE, ATtiny202 firmware</li>
+<li>Market research (AHP, choice-based conjoint, Bass diffusion)</li>
 <li>Product Design Specification (PDS)</li>
 </ul>
 </div>
-
-<div class="project-role">
-<h4>My role</h4>
-<p>Led market research for the team and helped deliver the Product Design Specification. Completed the finite element analysis used to ensure the safety of the glasses.</p>
+<div class="project-role"><h4>My role</h4>
+<p>Team lead for product design. I led market research for the team, covering problem selection, target market, competitive analysis, pricing, and demand forecasting, and helped deliver the Product Design Specification. I completed the finite element analysis used to confirm the safety of the glasses.</p>
 </div>
-
-<div class="project-links" aria-label="Project links">
-<!-- Add a link here if you have a report, write-up, or repo, otherwise you can delete this div -->
-<!-- <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Product Design Specification</a> -->
-</div>
+<div class="project-links" aria-label="Project links"></div>
 </section>
-
 <footer class="project-footer" aria-hidden="false">
-<p class="project-stats">Duration: Aug – Dec 2025 • Team: 4 • Status: Completed</p>
+<p class="project-stats">Duration: Aug &ndash; Dec 2025 &bull; Team: 4 &bull; Status: Completed</p>
 </footer>
 </article>
+
 
 <footer class="site-footer">
   <p>© 2026 Robert Bridges &mdash; Aerospace Engineering graduate from Cornell University</p>
