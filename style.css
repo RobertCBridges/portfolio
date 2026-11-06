@@ -514,72 +514,6 @@ h1 {
   flex: 1 1 auto;
 }
 
-.project-index {
-  width: 95%;
-  max-width: 1200px;
-  margin: 1.5rem auto 2rem;
-}
-.project-index h1 {
-  margin: 0 0 1.25rem;
-  text-align: center;
-}
-.project-index-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
-  gap: 1rem;
-}
-.project-index-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid rgba(15, 23, 36, 0.1);
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(12, 20, 30, 0.06);
-}
-.project-index-card > img {
-  display: block;
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  background: #f5f5f5;
-}
-.project-index-card-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.25rem;
-}
-.project-index-card h2 {
-  margin: 0 0 0.75rem;
-  font-size: 1.35rem;
-}
-.project-index-card h2 a {
-  color: inherit;
-  text-decoration: none;
-}
-.project-index-card p {
-  margin: 0 0 1rem;
-}
-.project-index-button {
-  display: inline-block;
-  margin-top: auto;
-  padding: 0.65rem 1rem;
-  border-radius: 6px;
-  background: #007bff;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-}
-.project-index-button:hover {
-  background: #0056b3;
-}
-.project-index-button:focus-visible,
-.project-index-card h2 a:focus-visible {
-  outline: 2px solid #0056b3;
-  outline-offset: 3px;
-}
 .project-jump-links {
   display: flex;
   flex-wrap: wrap;
@@ -624,7 +558,6 @@ h1 {
 article.project[hidden] {
   display: none !important;
 }
-.project-index[hidden],
 .project-jump-links[hidden] {
   display: none !important;
 }
@@ -637,12 +570,6 @@ body:has(.project-jump-links) {
 }
 .project-title {
   scroll-margin-top: 6rem;
-}
-
-@media (max-width: 600px) {
-  .project-index-card > img {
-    height: 180px;
-  }
 }
 
 @media (max-width: 700px) {

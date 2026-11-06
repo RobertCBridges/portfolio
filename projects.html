@@ -202,13 +202,7 @@ article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); 
 <!-- ======================  COPY FROM HERE INTO YOUR SITE  ================= -->
 <!-- ======================================================================= -->
 
-<section class="project-index" aria-labelledby="project-index-title">
-  <h1 id="project-index-title">Projects</h1>
-  <div class="project-index-grid"></div>
-</section>
-
-<nav class="project-jump-links" aria-label="Jump to a project" hidden>
-  <a class="project-index-link" href="projects.html">All projects</a>
+<nav class="project-jump-links" aria-label="Choose a project">
   <a href="#project-title-foca">F.O.C.A.: Original Spacecraft Mission Design</a>
   <a href="#project-title-robotic-bat">Robotic Bat Research</a>
   <a href="#project-title-van-allen">Van Allen Belt Electron Simulation</a>
@@ -1011,10 +1005,8 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
 
 <script>
   (() => {
-    const projectIndex = document.querySelector('.project-index');
-    const projectIndexGrid = document.querySelector('.project-index-grid');
     const projectNavigation = document.querySelector('.project-jump-links');
-    const projectLinks = projectNavigation.querySelectorAll('a[href^="#"]');
+    const projectLinks = projectNavigation.querySelectorAll('a');
     const projects = [...document.querySelectorAll('article.project')];
 
     function projectForHash(hash) {
@@ -1024,8 +1016,6 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
     }
 
     function showProject(selectedProject) {
-      projectIndex.hidden = Boolean(selectedProject);
-      projectNavigation.hidden = !selectedProject;
       projects.forEach(project => {
         project.hidden = project !== selectedProject;
       });
@@ -1039,48 +1029,8 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
     }
 
     function syncProjectFromHash() {
-      showProject(projectForHash(window.location.hash));
+      showProject(projectForHash(window.location.hash) || projects[0]);
     }
-
-    projects.forEach(project => {
-      const title = project.querySelector('.project-title');
-      const summary = project.querySelector('.project-summary');
-      const image = project.querySelector('.project-media img');
-      const card = document.createElement('article');
-      card.className = 'project-index-card';
-
-      if (image) {
-        const preview = document.createElement('img');
-        preview.src = image.getAttribute('src');
-        preview.alt = image.alt;
-        preview.loading = 'lazy';
-        card.append(preview);
-      }
-
-      const cardContent = document.createElement('div');
-      cardContent.className = 'project-index-card-content';
-
-      const heading = document.createElement('h2');
-      const link = document.createElement('a');
-      link.href = `#${title.id}`;
-      link.textContent = title.textContent;
-      heading.append(link);
-      cardContent.append(heading);
-
-      if (summary) {
-        const description = document.createElement('p');
-        description.textContent = summary.textContent.trim();
-        cardContent.append(description);
-      }
-
-      const viewLink = document.createElement('a');
-      viewLink.className = 'project-index-button';
-      viewLink.href = `#${title.id}`;
-      viewLink.textContent = 'View project';
-      cardContent.append(viewLink);
-      card.append(cardContent);
-      projectIndexGrid.append(card);
-    });
 
     projectLinks.forEach(link => {
       link.addEventListener('click', event => {
@@ -1093,28 +1043,6 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
           window.history.pushState(null, '', link.hash);
         }
       });
-    });
-
-    projectIndexGrid.addEventListener('click', event => {
-      const link = event.target.closest('a[href^="#"]');
-      if (!link) return;
-
-      const project = projectForHash(link.hash);
-      if (!project) return;
-
-      event.preventDefault();
-      showProject(project);
-      if (window.location.hash !== link.hash) {
-        window.history.pushState(null, '', link.hash);
-      }
-    });
-
-    projectNavigation.querySelector('.project-index-link').addEventListener('click', event => {
-      event.preventDefault();
-      showProject(null);
-      if (window.location.hash) {
-        window.history.pushState(null, '', window.location.pathname + window.location.search);
-      }
     });
 
     window.addEventListener('popstate', syncProjectFromHash);
