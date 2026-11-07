@@ -207,6 +207,7 @@ article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); 
   <a href="#project-title-robotic-bat">Robotic Bat Research</a>
   <a href="#project-title-van-allen">Van Allen Belt Electron Simulation</a>
   <a href="#project-title-focus-glasses">Focus Glasses</a>
+  <a href="#project-title-spin-wheel">Spin Wheel</a>
 </nav>
 
 <article class="project" role="article" aria-labelledby="project-title-foca" data-project-id="foca-spacecraft" itemscope itemtype="https://schema.org/CreativeWork" hidden>
@@ -728,9 +729,7 @@ article[data-project-id="bat-robot"] .project-details > div > figure + figure { 
 <p class="project-stats">Duration: Aug 2025 &ndash; May 2026 &bull; Team: Individual &bull; Status: Completed</p>
 </footer>
 </article>
-<!-- ======================================================================= -->
-<!-- ======================  COPY UP TO HERE  =============================== -->
-<!-- ======================================================================= -->
+
 
 
 <article class="project" role="article" aria-labelledby="project-title-van-allen" data-project-id="van-allen-belt-simulation" itemscope itemtype="https://schema.org/CreativeWork" hidden>
@@ -1002,6 +1001,226 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
 <p class="project-stats">Duration: Aug &ndash; Dec 2025 &bull; Team: 4 &bull; Status: Completed</p>
 </footer>
 </article>
+
+<style>
+/* ===================== SPINWHEEL ENTRY STYLES (keep these with the article) ===================== */
+/* Scoped by the article's own data-project-id so the markup stays exactly as originally structured.   */
+/* The layout rules use !important on purpose: they override any site CSS that places headings and     */
+/* body text side by side (grid, flex, float, or multi-column rules on .project-details and its divs). */
+article[data-project-id="spin-wheel"] {
+  --sw-accent: #2f6fdb;
+  --sw-warn: #d9822b;
+  --sw-line: rgba(127,127,127,.30);
+  --sw-tint: rgba(127,127,127,.07);
+  display:block !important;
+  box-sizing:border-box; width:95%; max-width:1200px; margin:0 auto;
+  font-size:1.02rem; line-height:1.7;
+}
+/* ---------- One vertical column, no matter what the site does ---------- */
+article[data-project-id="spin-wheel"] .project-header,
+article[data-project-id="spin-wheel"] .project-media,
+article[data-project-id="spin-wheel"] .project-details,
+article[data-project-id="spin-wheel"] .project-footer,
+article[data-project-id="spin-wheel"] .project-details > div {
+  display:block !important; float:none !important; position:static !important;
+  width:auto !important; max-width:none !important;
+  columns:auto !important; column-count:1 !important; column-gap:0 !important;
+  grid-template-columns:none !important; grid-column:1 / -1 !important; grid-row:auto !important;
+  background:none !important; box-shadow:none !important; border-radius:0 !important;
+}
+article[data-project-id="spin-wheel"] .project-details > div > * {
+  float:none !important; position:static !important; clear:none !important;
+  width:auto !important; max-width:100% !important; box-sizing:border-box;
+  grid-column:1 / -1 !important; grid-row:auto !important; flex:none !important;
+  margin-left:0 !important; margin-right:0 !important; left:auto !important; right:auto !important; transform:none !important;
+}
+article[data-project-id="spin-wheel"] .project-details { margin:0 !important; padding:0 !important; border:0 !important; }
+article[data-project-id="spin-wheel"] .project-details > div > :last-child { margin-bottom:0 !important; }
+article[data-project-id="spin-wheel"] .project-details > div.project-links:empty { display:none !important; margin:0 !important; }
+article[data-project-id="spin-wheel"] .project-details > div::before, article[data-project-id="spin-wheel"] .project-details > div::after,
+article[data-project-id="spin-wheel"] .project-details > div > h4::before, article[data-project-id="spin-wheel"] .project-details > div > h4::after,
+article[data-project-id="spin-wheel"] .project-details > div > h5::before, article[data-project-id="spin-wheel"] .project-details > div > h5::after { content:none !important; display:none !important; }
+article[data-project-id="spin-wheel"] .project-details > br, article[data-project-id="spin-wheel"] .project-details > hr, article[data-project-id="spin-wheel"] .project-details > p:empty,
+article[data-project-id="spin-wheel"] .project-details > div > br, article[data-project-id="spin-wheel"] .project-details > div > hr, article[data-project-id="spin-wheel"] .project-details > div > p:empty,
+article[data-project-id="spin-wheel"] .project-details > div > div:empty,
+article[data-project-id="spin-wheel"] .project-details > p,
+article[data-project-id="spin-wheel"] .project-details > div > p:has(+ h4),
+article[data-project-id="spin-wheel"] .project-details > div > p:has(+ h5:first-of-type):first-child { display:none !important; margin:0 !important; padding:0 !important; height:0 !important; }
+article[data-project-id="spin-wheel"] .project-details > div:last-of-type { margin-bottom:0 !important; }
+article[data-project-id="spin-wheel"] .project-details figure { height:auto !important; min-height:0 !important; }
+article[data-project-id="spin-wheel"] .project-details > div {
+  margin:0 0 3rem 0 !important; padding:0 !important; border:0 !important; height:auto !important; min-height:0 !important;
+}
+article[data-project-id="spin-wheel"] .project-details > div > h4,
+article[data-project-id="spin-wheel"] .project-details > div > h5,
+article[data-project-id="spin-wheel"] .project-details > div > p,
+article[data-project-id="spin-wheel"] .project-details > div > figure,
+article[data-project-id="spin-wheel"] .project-details > div > .table-wrap,
+article[data-project-id="spin-wheel"] .project-details > div > .equation,
+article[data-project-id="spin-wheel"] .project-details > div > .callout { display:block !important; }
+/* ---------- Header ---------- */
+article[data-project-id="spin-wheel"] .project-header { margin:0 0 1.5rem !important; padding:0 !important; }
+article[data-project-id="spin-wheel"] .project-title { font-size:2.2rem; line-height:1.2; letter-spacing:-.02em; margin:0 0 .6rem; }
+article[data-project-id="spin-wheel"] .project-meta { font-size:.92rem; opacity:.75; margin:0 0 1.25rem; }
+article[data-project-id="spin-wheel"] .project-summary { font-size:1.15rem; line-height:1.6; margin:0; }
+article[data-project-id="spin-wheel"] .project-media { margin:0 0 2.25rem !important; padding:0 !important; }
+article[data-project-id="spin-wheel"] .project-media figcaption { margin-top:.75rem; font-size:.85rem; opacity:.75; }
+article[data-project-id="spin-wheel"] .project-footer { margin:0 !important; padding:1.5rem 0 0 !important; border-top:1px solid var(--sw-line) !important; font-size:.9rem; opacity:.8; }
+/* ---------- Section headings and text ---------- */
+article[data-project-id="spin-wheel"] .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+article[data-project-id="spin-wheel"] h4 {
+  font-size:1.6rem; line-height:1.25; letter-spacing:-.01em;
+  margin:0 0 1.1rem !important; padding:0 0 .5rem !important; border-top:0 !important; border-bottom:1px solid var(--sw-line);
+}
+article[data-project-id="spin-wheel"] h5 { font-size:1.12rem; line-height:1.35; font-weight:650; margin:1.9rem 0 .5rem !important; padding:0 !important; }
+article[data-project-id="spin-wheel"] .project-details p { margin:0 0 1rem !important; padding:0 !important; }
+article[data-project-id="spin-wheel"] .project-details ul,
+article[data-project-id="spin-wheel"] .project-details ol { margin:0 0 1.1rem !important; padding-top:0 !important; padding-bottom:0 !important; padding-left:1.5rem; }
+article[data-project-id="spin-wheel"] .project-details li { margin:.35rem 0; }
+article[data-project-id="spin-wheel"] .project-details li::marker { color:var(--sw-accent); }
+article[data-project-id="spin-wheel"] .callout {
+  border-left:4px solid var(--sw-accent); padding:.8rem 1.25rem; margin:1.4rem 0 !important;
+  background:rgba(47,111,219,.08); border-radius:0 8px 8px 0;
+}
+/* ---------- Figures ---------- */
+article[data-project-id="spin-wheel"] .project-details figure {
+  margin:1.5rem 0 !important; padding:1rem .9rem .8rem; background:var(--sw-tint); border-radius:8px; overflow-x:auto; counter-increment:sw-fig;
+}
+article[data-project-id="spin-wheel"] .project-details { counter-reset: sw-fig; }
+article[data-project-id="spin-wheel"] .project-details figcaption { margin-top:.7rem; font-size:.86rem; line-height:1.5; opacity:.85; }
+article[data-project-id="spin-wheel"] .project-details figcaption::before { content:"Figure " counter(sw-fig) ". "; font-weight:700; }
+/* ---------- Tables ---------- */
+article[data-project-id="spin-wheel"] .table-wrap { overflow-x:auto; margin:1.25rem 0 !important; padding:0 !important; }
+article[data-project-id="spin-wheel"] table { border-collapse:collapse; width:100%; margin:0; font-size:.92rem; line-height:1.5; }
+article[data-project-id="spin-wheel"] th,
+article[data-project-id="spin-wheel"] td { padding:.55rem .8rem; border-bottom:1px solid var(--sw-line); text-align:left; vertical-align:top; }
+article[data-project-id="spin-wheel"] thead th { font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; border-bottom:2px solid var(--sw-line); opacity:.85; }
+article[data-project-id="spin-wheel"] tbody th { background:var(--sw-tint); }
+article[data-project-id="spin-wheel"] td.num, article[data-project-id="spin-wheel"] th.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+article[data-project-id="spin-wheel"] table.kv td:first-child { font-weight:600; }
+article[data-project-id="spin-wheel"] .project-media img, article[data-project-id="spin-wheel"] .project-details figure img { display:block !important; width:auto !important; height:auto !important; max-width:100% !important; max-height:520px !important; margin:0 auto !important; border-radius:6px; }
+article[data-project-id="spin-wheel"] .project-media img { max-height:560px !important; }
+article[data-project-id="spin-wheel"] table.kv td:first-child { width:26%; }
+article[data-project-id="spin-wheel"] table.wide td:first-child { width:24%; font-weight:600; }
+article[data-project-id="spin-wheel"] .project-details > div > figure + figure { margin-top:1.5rem !important; }
+</style>
+<article class="project" role="article" aria-labelledby="project-title-spin-wheel" data-project-id="spin-wheel" itemscope itemtype="https://schema.org/CreativeWork" hidden>
+<header class="project-header">
+<h2 id="project-title-spin-wheel" class="project-title" itemprop="name">SpinWheel</h2>
+<p class="project-meta">
+<time class="project-date" datetime="2025-01" itemprop="datePublished">Jan &ndash; May 2025</time>
+<span class="project-role" itemprop="author">&bull; Product Designer</span>
+<span class="project-tags">&bull; <span itemprop="keywords">product design, structural analysis, design for manufacturing</span></span>
+</p>
+<p class="project-summary" itemprop="description">A haptic scroll wheel with magnetic encoding, a hollow-shaft BLDC detent motor, and a capacitive trackpad, offered as injection molded ABS and CNC aluminum variants and developed from customer requirements through structural analysis, manufacturing, and costing.</p>
+</header>
+<figure class="project-media"><img src="assets/pictures/spinwheel-render-hero.jpg" alt="Render of the SpinWheel as an assembled cylindrical knob with a trackpad top, next to an exploded view of its internal stack-up" width="1500" height="938" itemprop="image" /><figcaption>SpinWheel, assembled (left) and exploded (right). The stack runs from the trackpad and knob through the motor, encoder, controller, and cell to the bottom cover.</figcaption></figure>
+<section class="project-details">
+<h3 class="sr-only">Project details</h3>
+<div class="project-overview"><h4>Overview</h4>
+<p>SpinWheel is a 55 mm desktop scroll controller that replaces the notched mechanical wheel with a magnetic encoder, a hollow-shaft BLDC motor that renders detents in firmware, and a capacitive trackpad in the knob face. It targets users who scroll through large files for a living, such as CAD users, video editors, analysts, and developers, and it addresses two complaints found in forum and review mining: wheels that are too coarse for fine work or too sluggish for navigation, and no way to change the feel without coding.</p>
+<p>The project was developed by a two-person team for MAE 5630/4631 Advanced Product Design, from January 22 to May 17, 2025. The team completed a Product Design Specification covering customer requirements, TRIZ, House of Quality, embodiment, mechanical analysis, manufacturing, costing, reliability, risk, and intellectual property. It also built a working prototype, filed a patent application, and presented the product at a public exhibition.</p>
+<p>This entry concentrates on the structure, the mechanical analysis, and the manufacturing plan for the two housing variants.</p>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Concept</td><td>Cylindrical 55 mm scroll wheel with contactless sensing, firmware-defined haptic detents, and a circular capacitive trackpad in the top face</td></tr><tr><td>Sensing</td><td>AS5600 12-bit magnetic encoder with a diametric magnet, 4,096 counts per revolution (0.088 degrees per count), no contacting wear parts</td></tr><tr><td>Actuation</td><td>Hollow-shaft BLDC motor commanded by the controller to render detents, free spin, and other feel profiles</td></tr><tr><td>Electronics</td><td>nRF52840 controller with BLE and USB HID, 400 mAh lithium polymer cell, shielded capacitive trackpad</td></tr><tr><td>Housing variants</td><td>Injection molded ABS for volume at $50, and CNC machined 6061 aluminum for a premium tier, with identical internals</td></tr><tr><td>Service environment</td><td>Indoor desktop use at room temperature, internal temperature held below about 60 &deg;C, controller dissipation under 0.1 W, against an ABS softening point above 100 &deg;C</td></tr></tbody></table></div>
+</div>
+<div class="project-basis"><h4>Problem definition and customer requirements</h4>
+<p>The scroll wheel has changed little since the mid-1990s. Forum threads on Reddit and the 3Dconnexion forum describe the same issues repeatedly: sensitivity that suits neither precision work nor fast navigation, latency in wireless devices, and weak feedback. The fixes people describe are either makeshift or require writing code. Higher end devices such as the Microsoft Surface Dial and the 3Dconnexion SpaceMouse address parts of this at higher prices, so the product goal was comparable function at a lower cost.</p>
+<p>Six customer requirements came out of that review and were weighted for the House of Quality.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Requirement</th><th>Description</th></tr></thead><tbody><tr><td>Smooth, precise scrolling</td><td>Fluid motion with no jitter and high resolution response for CAD, video, and document navigation</td></tr><tr><td>Customizable scroll feel</td><td>Switch between detented and free-spin modes, with adjustable sensitivity</td></tr><tr><td>Durability and reliability</td><td>Repeated use without mechanical degradation</td></tr><tr><td>Additional control surface</td><td>The wheel doubles as a capacitive touchpad for media control and gestures</td></tr><tr><td>Cross-platform use</td><td>BLE and USB HID on macOS, Windows, and Linux</td></tr><tr><td>All-day battery life</td><td>Rechargeable cell and an efficient controller</td></tr></tbody></table></div>
+<p>The customer hypothesis in the PDS is that a high-resolution encoder, adjustable resistance, and low-latency wireless would improve scrolling precision and reduce lag for professionals, gamers, and accessibility users, at a lower price than existing high end devices. The 30 percent productivity gain stated in the hypothesis is a target, and it has not been measured.</p>
+</div>
+<div class="project-hoq"><h4>House of Quality and engineering parameters</h4>
+<p>Six customer requirements were mapped to five engineering parameters, each tied to one functional element. The relationship matrix uses 9 for strong, 3 for medium, and 1 for weak. Technical importance is the sum of customer weight times relationship strength. The encoder (41 percent) and the haptic motor (25 percent) dominate, which concentrated the design effort on the encoder and magnet arrangement and on the motor stack, and left the cell and the trackpad as selected components.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Customer requirement</th><th>Weight (1 to 10)</th><th>AS5600 encoder</th><th>nRF52840 BLE and USB latency, protocol</th><th>BLDC detent profile control</th><th>400 mAh cell, power budget</th><th>Circular trackpad</th></tr></thead><tbody><tr><td>Smooth, precise scrolling</td><td>10</td><td>9</td><td></td><td>1</td><td></td><td></td></tr><tr><td>Cross-platform use</td><td>5</td><td></td><td>9</td><td>9</td><td></td><td></td></tr><tr><td>Customizable scroll feel</td><td>10</td><td>9</td><td>3</td><td>9</td><td></td><td></td></tr><tr><td>Durability</td><td>7</td><td>9</td><td></td><td></td><td>1</td><td></td></tr><tr><td>Battery life</td><td>4</td><td></td><td>3</td><td></td><td>9</td><td></td></tr><tr><td>Additional control</td><td>6</td><td></td><td>3</td><td></td><td></td><td>9</td></tr><tr><td><strong>Technical importance</strong></td><td></td><td>243</td><td>105</td><td>145</td><td>43</td><td>54</td></tr><tr><td><strong>Relative weight</strong></td><td></td><td>41%</td><td>18%</td><td>25%</td><td>7%</td><td>9%</td></tr></tbody></table></div>
+<p>The competitive assessment scores the SpinWheel target against four reference devices on a 1 to 5 scale, with the largest gaps on customizable feel and additional control.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Customer requirement</th><th>SpinWheel target</th><th>Kensington scroll ball</th><th>Dell mouse</th><th>3Dconnexion CAD mouse</th><th>Microsoft Surface Dial</th></tr></thead><tbody><tr><td>Smooth, precise scrolling</td><td>5</td><td>4</td><td>4</td><td>2</td><td>4</td></tr><tr><td>Cross-platform use</td><td>3</td><td>5</td><td>5</td><td>3</td><td>1</td></tr><tr><td>Customizable scroll feel</td><td>5</td><td>1</td><td>1</td><td>3</td><td>3</td></tr><tr><td>Durability</td><td>4</td><td>2</td><td>2</td><td>1</td><td>3</td></tr><tr><td>Battery life</td><td>3</td><td>5</td><td>5</td><td>3</td><td>3</td></tr><tr><td>Additional control</td><td>4</td><td>1</td><td>1</td><td>4</td><td>3</td></tr></tbody></table></div>
+</div>
+<div class="project-triz"><h4>Engineering contradictions and TRIZ</h4>
+<p>Four contradictions were tracked through the iterations.</p>
+<ul><li><strong>Precision against speed.</strong> Fine control calls for high detent torque, and fast scrolling calls for low friction glide.</li><li><strong>Customization against reliability.</strong> Adjustable resistance and modes add mechanical and electrical complexity.</li><li><strong>Multi-function surface against clarity of input.</strong> Using one surface for rotation and touch can make fast inputs ambiguous.</li><li><strong>Power against feedback quality.</strong> Haptic output and BLE both draw from a small cell that has to last a working day.</li></ul>
+<p>Commercial devices have mostly traded these off, for example with mechanical detents, a manual free-spin switch, or extra thumb wheels and buttons. A substance-field model of the finger, trackpad, encoder, housing, and a shielding layer, acting through mechanical, capacitive, magnetic, signal, and haptic fields, exposed one hard problem: the magnetic field of the encoder magnet disturbs capacitive sensing when the trackpad and the encoder share an axis.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Problem</th><th>TRIZ principle</th><th>Applied solution</th></tr></thead><tbody><tr><td>Fixed detents against free spin</td><td>15, Dynamism</td><td>Firmware-defined detent profiles rendered by the BLDC motor, changed with no hardware change</td></tr><tr><td>Part count and stack height</td><td>5, Merging</td><td>Diametric magnet carried in the motor shaft, so the motor and the sensing target share one rotating part</td></tr><tr><td>One surface, two input types</td><td>3, Local Quality</td><td>Distinct sensing zones, with the trackpad outer edge handing off to scrolling</td></tr><tr><td>Magnetic interference with the trackpad</td><td>24, Intermediary</td><td>Shielding layer between the trackpad and the encoder magnet</td></tr><tr><td>Ambiguous mode</td><td>Added feedback field</td><td>Haptic cues distinguish scrolling from zooming</td></tr></tbody></table></div>
+</div>
+<div class="project-embodiment"><h4>Embodiment and structure</h4>
+<p>The product is a 55 mm cylinder. The knob also serves as the bezel around the trackpad, and the stack beneath it follows the signal path. The hollow shaft of the BLDC motor is a structural requirement as well as a packaging choice, since the trackpad connector ribbon has to pass through it to reach the main board. The AS5600 board sits at the shaft axis under the motor to read the magnet. The nRF52840 board and the lithium polymer cell sit in the lower housing, closed by a flat bottom cover. A port slot is cut into the lower shell wall.</p>
+<figure><img src="assets/pictures/spinwheel-stack-up.jpg" alt="Exploded CAD of the SpinWheel next to an annotated sketch listing trackpad, knob, hollow-shaft BLDC motor, AS5600 encoder, nRF52840, Li-Po battery, and bottom cover" width="1468" height="1100" loading="lazy" decoding="async" /><figcaption>Exploded CAD (left) with the annotation that the motor hollow shaft passes the trackpad ribbon, and the layer sketch (right) from the concept stage.</figcaption></figure>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Subsystem</th><th>Selection</th><th>Function</th></tr></thead><tbody><tr><td>Trackpad</td><td>Circular capacitive trackpad with shielding</td><td>Gesture input and the outer scroll zone</td></tr><tr><td>Knob and bezel</td><td>Rotating cylindrical shell around the trackpad</td><td>User input surface and trackpad retention</td></tr><tr><td>Motor</td><td>BLDC with hollow shaft</td><td>Haptic detent torque, and ribbon pass-through</td></tr><tr><td>Encoder</td><td>AS5600 with a diametric magnet</td><td>Contactless 12-bit angle sensing</td></tr><tr><td>Controller</td><td>nRF52840 on a custom PCB</td><td>BLE and USB HID, motor control, touch processing</td></tr><tr><td>Cell</td><td>400 mAh lithium polymer</td><td>Cordless operation, with USB charging</td></tr></tbody></table></div>
+</div>
+<div class="project-analysis"><h4>Mechanical analysis</h4>
+<p>The structural loads on a desktop input device are small, and the analysis questions were how the housing behaves under repeated tapping, how it carries a twisting input at the knob rim, and how long it lasts under cyclic use. Estimated user forces are 2 to 10 N.</p>
+<h5>Hand calculation</h5>
+<div class="table-wrap"><table class="kv"><thead><tr><th>Quantity</th><th>Value</th></tr></thead><tbody><tr><td>Loaded area (scroll knob)</td><td>About 466 mm&sup2;</td></tr><tr><td>Maximum user press force</td><td>About 10 N</td></tr><tr><td>Applied stress, &sigma; = F / A</td><td>10 N / 466 mm&sup2; = 0.021 MPa</td></tr><tr><td>ABS yield strength</td><td>About 40 MPa, a margin of about 1,900 times</td></tr><tr><td>6061 aluminum yield strength</td><td>About 275 MPa, a margin of about 13,000 times</td></tr></tbody></table></div>
+<p>Average stress under a press is far below yield for both materials, so the finite element cases look at where load concentrates and at the twist input, not at gross strength.</p>
+<h5>Finite element analysis: tapping</h5>
+<p>A distributed vertical load on the top face gives a peak displacement of 1.24 &times; 10<sup>-3</sup> mm (1.24 &micro;m) at the center of the face, falling radially toward the rim, and a peak von Mises stress of 3.7 &times; 10<sup>5</sup> N/m&sup2; (0.37 MPa), also at the center. Peak strain is 6.0 &times; 10<sup>-5</sup>. The displacement is about a micrometer, and the stress is about 100 times below ABS yield.</p>
+<figure><img src="assets/pictures/spinwheel-fea-tapping.jpg" alt="Two FEA plots of the SpinWheel under a distributed vertical load: resultant displacement on the left and von Mises stress on the right, both highest at the center of the top face" width="1700" height="637" loading="lazy" decoding="async" /><figcaption>Tapping case. Resultant displacement (left, peak 1.24e-3 mm) and von Mises stress (right, peak 3.7e5 N/m&sup2;), both highest at the center of the top face.</figcaption></figure>
+<h5>Finite element analysis: twist</h5>
+<p>A tangential load applied around the knob rim gives a peak von Mises stress of 2.94 &times; 10<sup>7</sup> N/m&sup2; (29.4 MPa), about 80 times the tapping case, concentrated at the rim where the load is applied. The body of the shell stays at low stress. Peak displacement is 0.138 mm at the outer edge, growing with radius from the wheel axis, as expected for torsion about that axis.</p>
+<figure><img src="assets/pictures/spinwheel-fea-twist.jpg" alt="Two FEA plots of the SpinWheel under a tangential rim load: von Mises stress on the left concentrated at the rim and displacement on the right growing toward the outer edge" width="1700" height="598" loading="lazy" decoding="async" /><figcaption>Twist case. Von Mises stress (left, peak 2.94e7 N/m&sup2;) is local to the rim load, and displacement (right, peak 0.138 mm) grows with radius.</figcaption></figure>
+<p>Against an ABS yield of about 40 MPa, the rim peak is a ratio of about 1.4, and against 6061 it is about 9. A load applied at an edge tends to overpredict local stress, and the plot shows the peak is confined to the loaded rim. The next step for the ABS shell is a refined mesh at the load application, a friction-limited torque from the knob to the hand as the load, and a rib or thicker rim if the peak persists.</p>
+<h5>Cyclic life and Weibull model</h5>
+<p>Life was modeled with a Weibull distribution with a shape parameter of 2.0, a wear-dominated failure assumption, and a scale parameter chosen so that at least 90 percent of units survive two years at 200 cycles per day. The model is a planning assumption and has not been fitted to cycle test data.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Metric</th><th>ABS</th><th>Aluminum</th></tr></thead><tbody><tr><td>Median life</td><td>5.70 years (416,277 cycles)</td><td>22.81 years (1,665,109 cycles)</td></tr><tr><td>Scale parameter, &eta;</td><td>6.85 years</td><td>27.4 years</td></tr><tr><td>Expected failures at 2 years</td><td>8.17%</td><td>0.53%</td></tr><tr><td>Expected failures at 5 years</td><td>41%</td><td>3.3%</td></tr></tbody></table></div>
+<figure><img src="assets/pictures/spinwheel-weibull-reliability.png" alt="Plot of survival probability against cycles for the ABS and aluminum versions, with a 0.9 reliability line" width="1440" height="434" loading="lazy" decoding="async" /><figcaption>Reliability against cycles (top axis in years at 200 cycles per day). The dashed line is 90 percent survival.</figcaption></figure>
+<figure><img src="assets/pictures/spinwheel-weibull-cumulative.png" alt="Plot of expected cumulative failures over five years for the ABS and aluminum versions, with two and three year warranty lines" width="1010" height="600" loading="lazy" decoding="async" /><figcaption>Expected cumulative failures over five years, with warranty periods marked.</figcaption></figure>
+<p>The two-year figures are the ones the warranty rests on. They also show the gap between the variants clearly: the ABS version reaches 8 percent failures at two years and 41 percent at five, which makes cycle testing of the ABS shell and the retention features the highest value physical test.</p>
+</div>
+<div class="project-manufacturing"><h4>Manufacturing and materials</h4>
+<p>Two housing variants share one internal assembly. ABS is injection molded for volume, and 6061 aluminum is CNC machined and anodized for a premium tier.</p>
+<h5>ABS housing, injection molded</h5>
+<p>The shell is designed to the injection molding rules: a uniform 2 mm wall, inside the 2 to 4 mm range that the Ashby process charts mark as favorable, 1 to 2 degrees of draft on vertical surfaces, fillets at corners for flow, and no undercuts that would need side actions. A finish of N7 to N8 (Ra 1.6 to 3.2 &micro;m) comes straight from the mold, with texture and color built into the tool, so no secondary operation is needed. At a planned volume of 1,000,000 units, the SolidWorks costing tool gives a mold cost of $56,058, a total of $0.293 per part including $0.056 of tooling amortization, and about $40,000 for ramp-up and validation.</p>
+<h5>Aluminum housing, CNC machined</h5>
+<p>The shell is cut from 2 inch 6061 round bar. At 46.66 cm&sup3; the finished housing has a mass of about 126 g. The design carries threaded inserts for fasteners that survive repeated assembly, and alignment features for the internals. Machining holds a tolerance of &plusmn;0.05 mm and an N6 finish (Ra 0.8 &micro;m) before anodizing. The plan is 200,000 units, including a 5 percent defect margin. The costing tool prices the stock at $2.528 per part, since it is billed on the billet and not on the finished mass, with $10,000 for setup and fixtures and $20,000 for programming.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Item</th><th>ABS</th><th>Aluminum</th></tr></thead><tbody><tr><td>Process</td><td>Injection molding</td><td>CNC machining and anodizing</td></tr><tr><td>Material</td><td>ABS</td><td>6061 aluminum</td></tr><tr><td>Planned volume</td><td>1,000,000</td><td>200,000</td></tr><tr><td>Tooling</td><td>$56,058 mold</td><td>$10,000 setup and jigs</td></tr><tr><td>Ramp-up</td><td>About $40,000</td><td>$20,000</td></tr><tr><td>Tooling and ramp-up per unit</td><td>About $0.10</td><td>About $0.15</td></tr><tr><td>Surface finish</td><td>N7 to N8, as molded</td><td>N6, anodized</td></tr><tr><td>Tolerance and features</td><td>Uniform 2 mm wall, draft, no undercuts</td><td>&plusmn;0.05 mm, threaded inserts, alignment features</td></tr></tbody></table></div>
+<h5>Material selection</h5>
+<p>The two materials were chosen on Ashby charts for strength against cost and for modulus against density. ABS is the lowest cost polymer on the chart, at about $2.5 per kg and about 40 MPa, and it is light, at 1.05 g/cm&sup3;. 6061 sits near the middle of the metals in strength, about 270 MPa at about $4.5 per kg, and it has a specific stiffness (E/&rho;) about 12 times that of ABS, which is the basis for the stiffer, more precise feel of the premium variant.</p>
+<figure><img src="assets/pictures/spinwheel-ashby.png" alt="Two Ashby charts, strength against material cost on the left and Young modulus against density on the right, with ABS and aluminum 6061 highlighted" width="1700" height="672" loading="lazy" decoding="async" /><figcaption>Ashby charts used for selection, with ABS and 6061 outlined. Left: tensile strength against material cost. Right: Young modulus against density.</figcaption></figure>
+</div>
+<div class="project-cost"><h4>Cost of goods</h4>
+<p>Both variants share one electronics bill of materials. The line items below are the PDS estimates, and the cell and PCB are not itemized in that table, so they should be added when the BOM is next revised.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Electronics (both variants)</th><th>Low estimate</th><th>High estimate</th></tr></thead><tbody><tr><td>Magnetic encoder</td><td>$2.00</td><td>$4.00</td></tr><tr><td>BLDC motor, haptic</td><td>$3.00</td><td>$6.00</td></tr><tr><td>nRF52840 controller</td><td>$2.50</td><td>$5.00</td></tr><tr><td>Capacitive trackpad</td><td>$9.00</td><td>$9.00</td></tr><tr><td>Assembly and test</td><td>$2.00</td><td>$4.00</td></tr><tr><td><strong>Sum of line items</strong></td><td><strong>$18.50</strong></td><td><strong>$28.00</strong></td></tr></tbody></table></div>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Per unit</th><th>ABS</th><th>Aluminum</th></tr></thead><tbody><tr><td>Housing</td><td>$1.50 to $2.00</td><td>$28 to $49</td></tr><tr><td>Electronics</td><td>$18 to $26 (PDS stated)</td><td>$18 to $26 (PDS stated)</td></tr><tr><td>Total COGS (PDS)</td><td>$20 to $30, average about $25</td><td>$48 to $75, average about $55</td></tr><tr><td>Launch price</td><td>$50</td><td>$135</td></tr><tr><td>Gross margin at average COGS, before tooling and marketing</td><td>About 50%</td><td>About 59%</td></tr></tbody></table></div>
+<p>Price positions came from a choice-based conjoint survey. Additional control and price were the two most influential attributes. $50 was the most preferred price point (utility +51.5), preference dropped sharply at $80 and above, and trackpad-integrated formats scored well above scroll-only ones (utility +72.59). That supports a $50 mass-market tier and a clearly differentiated premium tier near $130 to $135.</p>
+</div>
+<div class="project-market"><h4>Market and demand</h4>
+<p>Any computer user is a possible customer, so the target was narrowed to people who scroll through large files: analysts, developers, accountants, creative professionals, gamers and streamers, and music producers. The scroll wheel market was reported at $1.2 billion in 2023 (DataIntelo). Demand over a 24 to 36 month window was modeled with a Bass diffusion model for each variant, with coefficients adapted from published consumer electronics studies.</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Parameter</th><th>ABS</th><th>Aluminum</th></tr></thead><tbody><tr><td>Market size, M</td><td>1,000,000 units</td><td>200,000 units</td></tr><tr><td>Innovation, p</td><td>0.02</td><td>0.01</td></tr><tr><td>Imitation, q</td><td>0.40</td><td>0.35</td></tr><tr><td>Expected adoption</td><td>Faster, earlier peak, driven by gaming and creator communities</td><td>Slower novelty curve typical of premium accessories</td></tr></tbody></table></div>
+</div>
+<div class="project-risk"><h4>Risk, warranty, regulatory, and IP</h4>
+<p>In the failure mode and effects analysis the battery system carries the highest RPN, and the wireless connection carries the highest severity (9).</p>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Component</th><th>Failure mode</th><th>Effect</th><th>Cause</th><th>S</th><th>O</th><th>D</th><th>RPN</th></tr></thead><tbody><tr><td>Battery system</td><td>No power or short usage time</td><td>Device stops working unexpectedly</td><td>Cell degradation, poor contact</td><td>7</td><td>5</td><td>5</td><td>175</td></tr><tr><td>Motor</td><td>Jerky or no scrolling</td><td>Navigation is difficult</td><td>Sensor misalignment, dirt buildup</td><td>6</td><td>5</td><td>5</td><td>150</td></tr><tr><td>Housing and case</td><td>Cracking or loose components</td><td>Poor experience, possible internal damage</td><td>Dropping, poor material, weak fasteners</td><td>5</td><td>5</td><td>6</td><td>150</td></tr><tr><td>Wireless connection</td><td>Intermittent or no connection</td><td>Lag, dropped input, disconnect</td><td>Signal interference, firmware bug</td><td>9</td><td>4</td><td>4</td><td>144</td></tr><tr><td>Touch surface</td><td>Gestures not recognized</td><td>Reduced functionality</td><td>Firmware glitch, user error</td><td>6</td><td>3</td><td>6</td><td>108</td></tr></tbody></table></div>
+<ul><li><strong>Warranty.</strong> Full replacement or refund in the first 6 months with no conditions, replacement on verified failure from 6 to 24 months, and discounted upgrades or repair afterward. A later firmware revision could log usage hours over Bluetooth to help verify claims.</li><li><strong>Safety and environment.</strong> Both variants contain a lithium cell and electronics and need proper disposal. Housings use mechanical fasteners and no adhesives, the ABS shell is one polymer with no overmolding, and the aluminum shell is a single alloy that goes through standard scrap channels. Recycled 6061 stock is the planned source for the aluminum variant.</li><li><strong>Misuse and liability.</strong> A wireless device is exposed to eavesdropping and input injection if it is not secured, and open firmware can be reprogrammed for other functions. Ergonomic effects of prolonged use are an open consideration, although the product intent is to reduce fatigue.</li><li><strong>Intellectual property.</strong> The landscape includes rotary controls and touch surfaces from Apple, Microsoft, Logitech, and 3Dconnexion, and each feature has to be designed around related claims. The plan pursues a utility patent for the function and a design patent for the form, holds the firmware that maps rotary input to cursor input as a trade secret, and seeks trademarks for the name, logo, and overall shape. The team filed a patent application.</li></ul>
+</div>
+<div class="project-skills"><h4>Skills applied</h4>
+<div class="table-wrap"><table class="wide"><thead><tr><th>Area</th><th>Application on the SpinWheel</th></tr></thead><tbody><tr><td>Requirements and QFD</td><td>Customer requirement capture from forum and review mining, House of Quality with recomputed technical importance, competitive assessment</td></tr><tr><td>Inventive problem solving</td><td>Substance-field modeling and contradiction mapping, TRIZ Dynamism, Merging, Local Quality, and Intermediary principles</td></tr><tr><td>Mechanical design</td><td>Hollow-shaft stack-up, ribbon routing, encoder and magnet placement, shielding between magnetic and capacitive sensing</td></tr><tr><td>Analysis</td><td>Hand calculation of contact stress, finite element cases for tapping and twist, Weibull life model with a warranty tie-in</td></tr><tr><td>Design for manufacture</td><td>Injection molding rules (wall, draft, undercuts, finish), CNC machining with threaded inserts, Ashby material and process selection, tooling and unit cost</td></tr><tr><td>Risk and IP</td><td>Failure mode and effects analysis, patent landscape, utility and design patent strategy, trade secret and trademark planning</td></tr></tbody></table></div>
+<h4>What I learned</h4>
+<ul><li><strong>Weight the matrix before sizing parts.</strong> Encoder and motor accounted for about two thirds of technical importance, which showed where design effort belonged.</li><li><strong>Average stress hides the load path.</strong> The press case has a margin of about 1,900 times, while the twist case concentrates stress at the rim to within a factor of 1.4 of ABS yield. Local peaks, not averages, decided where the shell needed attention.</li><li><strong>Sensing fields share space.</strong> A magnet and a capacitive surface on the same axis interact, so shielding and layer order had to be part of the stack-up from the start.</li><li><strong>Reliability is a modeling choice until it is tested.</strong> The Weibull parameters set the warranty window, and a 41 percent five-year failure estimate for ABS shows why cycle testing comes before volume tooling.</li><li><strong>One internal assembly, two shells.</strong> Sharing the electronics between the ABS and aluminum variants let each housing be priced and toleranced to its own process.</li></ul>
+</div>
+<div class="project-features"><h4>Key features / highlights</h4>
+<ul><li>Contactless 12-bit magnetic encoding with firmware-defined haptic detents from a hollow-shaft BLDC motor</li><li>Circular capacitive trackpad in the knob face, with magnetic shielding between it and the encoder</li><li>Complete Product Design Specification developed with a two-person team</li><li>Built a working prototype, filed a patent application, and presented at a public exhibition</li><li>Mapped six customer requirements to five engineering parameters, with the encoder (41 percent) and motor (25 percent) leading</li><li>FEA for tapping (peak 0.37 MPa) and twist (peak 29.4 MPa, local to the rim) cases, plus a Weibull life model</li><li>Two housing variants from one internal assembly: injection molded ABS at $50 and CNC aluminum near $135</li><li>Tooling and unit cost built up for both processes, with a failure mode analysis and a patent plan</li></ul>
+</div>
+<div class="project-tech"><h4>Tech &amp; tools</h4>
+<ul class="tech-list" aria-label="Technologies used">
+<li>SolidWorks (Simulation FEA, Costing)</li>
+<li>CES EduPack (Ashby charts)</li>
+<li>Python (Bass diffusion model)</li>
+<li>AS5600 magnetic encoder, nRF52840</li>
+<li>TRIZ, House of Quality, FMEA</li>
+<li>Choice-based conjoint</li>
+<li>Product Design Specification (PDS)</li>
+</ul>
+</div>
+<div class="project-role"><h4>My role</h4>
+<p>Co-developed the SpinWheel with one teammate through the full Product Design Specification, covering the requirements and House of Quality, the TRIZ analysis, the embodiment and mechanical analysis, manufacturing and cost planning, market research, and the risk and patent work. The team built the prototype and presented it at a public exhibition.</p>
+</div>
+<div class="project-links" aria-label="Project links"></div>
+</section>
+<footer class="project-footer" aria-hidden="false">
+<p class="project-stats">Duration: Jan &ndash; May 2025 &bull; Team: 2 &bull; Status: Completed</p>
+</footer>
+</article>
+
+
 
 <script>
   (() => {
