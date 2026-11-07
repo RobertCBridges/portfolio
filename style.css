@@ -515,6 +515,9 @@ h1 {
 }
 
 .project-jump-links {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -573,6 +576,10 @@ body:has(.project-jump-links) {
 }
 
 @media (max-width: 700px) {
+  .project-jump-links {
+    top: 4rem;
+  }
+
   .project-title {
     scroll-margin-top: 17rem;
   }
