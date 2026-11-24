@@ -219,7 +219,7 @@ article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); 
       <span class="project-tags">&bull; <span itemprop="keywords">spacecraft structures, mechanism design, design for manufacture, trade studies, systems engineering</span></span>
     </p>
     <p class="project-summary" itemprop="description">
-      Original LEO interceptor concept for net-and-tether capture of uncooperative tumbling objects, carried through SRR, SDR, and PDR review gates. This entry covers the structure, capture mechanism, pressure system, thermal design, and manufacturing plan.
+      A 300 kg-class LEO spacecraft concept for capturing and stabilizing tumbling debris, developed through SRR, SDR, and PDR. This work focuses on the structure, capture mechanism, pressure system, thermal design, and manufacturing plan.
     </p>
   </header>
   <figure class="project-media">
@@ -230,9 +230,9 @@ article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); 
     <h3 class="sr-only">Project details</h3>
     <div class="project-overview">
       <h4>Overview</h4>
-      <p>F.O.C.A. (Foreign Object Capture &amp; Analysis) is a 300 kg class, monopropellant LEO spacecraft designed to capture and stabilize an uncooperative object. The target is a tumbling, non-responsive body of 1 to 3 m characteristic size and up to 200 kg, with no grapple fixtures, no docking interface, and no attitude cooperation. Capture is by deployable net and tether, followed by closed-loop reel-in to a 2 to 3 m hold length and an optical characterization phase.</p>
-      <p>I worked the project as an individual contributor and owned the vehicle architecture, primary structure and packaging, capture mechanism concept, mass budget, trade studies, and the SRR, SDR, and PDR documentation. This entry covers the structural, mechanical, and manufacturing side of that work. Avionics, navigation, and ground segment design are documented in the PDR but are not detailed here.</p>
-      <p>The architecture is conservative on the bus and aggressive in one place. Propulsion, power, attitude control, communications, and thermal hardware are all flight-proven classes (TRL 9). Development risk is concentrated in the net and tether payload, because that element determines mission success and needs the most verification effort. The net concept is baselined on the RemoveDEBRIS in-flight demonstration.</p>
+      <p>F.O.C.A. (Foreign Object Capture &amp; Analysis) is a 300 kg-class, monopropellant spacecraft for LEO. It would capture a tumbling, non-responsive object 1 to 3 m across and up to 200 kg, without grapple fixtures, docking interfaces, or attitude cooperation. The plan uses a deployable net and tether, then reels the target to a 2 to 3 m hold distance for optical characterization.</p>
+      <p>I led the project individually and was responsible for the vehicle architecture, primary structure and packaging, capture mechanism, mass budget, trade studies, and the SRR, SDR, and PDR documents. This entry covers the structural, mechanical, and manufacturing work. The PDR includes the avionics, navigation, and ground segment, but those areas are outside the scope here.</p>
+      <p>The bus uses conservative, flight-proven hardware for propulsion, power, attitude control, communications, and thermal control (TRL 9). The net-and-tether payload is the exception: it carries the greatest development risk because mission success depends on it and it needs the most verification. The baseline follows the net concept demonstrated in flight by RemoveDEBRIS.</p>
       <div class="table-wrap"><table class="kv" aria-label="Design point summary">
         <caption class="sr-only">Design point summary</caption>
         <thead><tr><th>Parameter</th><th>Value at PDR</th></tr></thead>
@@ -417,7 +417,7 @@ article[data-project-id="foca-spacecraft"] svg .mass { fill:var(--foca-accent); 
           <tr><td>Power requirement (relative, 1 to 3)</td><td>1</td><td>2</td><td>2</td></tr>
         </tbody>
       </table></div>
-      <p>Bipropellant has the best specific impulse but adds dual propellant storage, ignition and thermal complexity, and mass. Cold gas is light and simple, and it scores well on mass, cost, thermal, and power attributes, but its specific impulse cannot close a roughly 350 m/s delta-V budget at a reasonable propellant mass. That requirement overrides its raw score. Monopropellant hydrazine is the compromise: adequate efficiency, flight heritage, and a simple, robust architecture suited to responsive proximity operations.</p>
+      <p>Bipropellant has the best specific impulse but adds dual propellant storage, ignition and thermal complexity, and mass. Cold gas is light and simple, and it scores well on mass, cost, thermal, and power attributes, but its specific impulse cannot close a roughly 350 m/s delta-V budget at a reasonable propellant mass. That requirement overrides its raw score. Monopropellant hydrazine is the compromise: adequate efficiency, flight heritage, and a simple architecture suited to responsive proximity operations.</p>
       <h5>Launch vehicle</h5>
       <p>Electron, Firefly Alpha, and Falcon 9 Transporter were scored on cost, mass capacity margin, insertion precision, schedule, heritage, and integration complexity. Alpha and Transporter tied at 0.74 against 0.66 for Electron, so the decision rested on engineering margin. Electron (approx. 300 kg to LEO) leaves inadequate growth margin against the upper end of the wet mass range. Transporter is the cost leader, but the drop-off orbit is set by the primary customer and circularizing at 600 km would consume delta-V from a margin that is already 5.7%.</p>
       <div class="callout"><strong>Recommendation:</strong> Firefly Alpha as baseline (approx. 1030 kg to LEO), for mass margin and dedicated control of the insertion orbit. Falcon 9 Transporter is the cost-driven alternative, conditional on circularization delta-V fitting inside the propulsion margin.
@@ -625,15 +625,15 @@ article[data-project-id="bat-robot"] .project-details > div > figure + figure { 
 <span class="project-role" itemprop="author">&bull; Design &amp; Fabrication Lead, Master's Project</span>
 <span class="project-tags">&bull; <span itemprop="keywords">biomimetic robotics, ornithopter, design for additive manufacturing, tolerance analysis, gear train design, materials selection</span></span>
 </p>
-<p class="project-summary" itemprop="description">A bat-inspired ornithopter for remote water sampling, designed and built from concept through fabrication and test, including its structure, circuitry, motors, and wing membrane. Gear train, front plate, and wing attachment redesign supported the first powered flapping demonstration on the platform.</p>
+<p class="project-summary" itemprop="description">A bat-inspired ornithopter for remote water sampling, built from initial concept through fabrication and testing. Redesigned gears, front plate, and wing attachments enabled the platform's first powered flapping demonstration.</p>
 </header>
 <figure class="project-media"><img src="assets/pictures/bat-robot-test-day.jpg" alt="Bat robot ornithopter on a test stand with a reflective membrane glued to carbon fiber wing spars" width="998" height="694" itemprop="image" /><figcaption>Integrated prototype on the test stand, with a reflective nylon membrane glued to the carbon fiber spars.</figcaption></figure>
 <section class="project-details">
 <h3 class="sr-only">Project details</h3>
 <div class="project-overview"><h4>Overview</h4>
-<p>The bat robot is an ornithopter built around the drinking maneuver of a bat. In that maneuver the animal flies low over water and shapes its wings into a concave surface that compresses the air column beneath it against the water, which produces the lift that holds it in position for the brief tongue extension. The platform is intended for remote water sample collection in locations that fixed wing and rotary wing aircraft cannot reach, and as an experimental platform for studying the aerodynamics of the maneuver.</p>
-<p>The platform was inherited from several prior teams and had three problems that blocked sustained flight. The gear actuated flapping mechanism failed at high RPM through slippage and tooth breakage. The wing material was still in iteration, and the urethane and silicone polymers tested previously tore or added more distributed load than the actuation could lift. The flight mechanism also had no pitch or yaw authority. The chassis had already been optimized for motor, battery, and gear stack placement and was kept as received.</p>
-<p>The goal was to establish reliable, repeatable flapping before adding mechanical complexity. My work covered the interface between the gear train and its printed structure, the wing spar attachments, the wing membrane material screening, and the circuit and motor integration. I also built a wing folding prototype and added airfoil sections to prepare for more bat-like kinematics.</p>
+<p>This ornithopter is based on the way bats drink while in flight. The bat flies close to the water and cups its wings, using the concave underside to press a column of air against the surface and hold its position briefly while it extends its tongue. The platform is intended to collect water samples in places that fixed-wing and rotary-wing aircraft cannot reach, and to serve as a testbed for the maneuver's aerodynamics.</p>
+<p>The platform came from earlier teams and had three main problems. The gear-driven flapping mechanism slipped and broke teeth at higher RPM. The wing membrane was still changing: the urethane and silicone samples had torn or become too heavy for the mechanism to lift. The system also lacked pitch and yaw control. Since the chassis already had workable motor, battery, and gear-stack packaging, I kept it as received.</p>
+<p>I focused first on making the flapping motion reliable and repeatable. My work covered the gear train's connection to the printed structure, wing spar attachments, membrane material screening, and circuit and motor integration. I also built a wing-folding prototype and added airfoil sections in preparation for more bat-like kinematics.</p>
 <p>The integrated prototype drove its wings under power and produced a recognizable flapping motion on a test stand. It did not achieve free flight. The copper gear train ran the full test without the tooth shearing seen in earlier iterations, which closed out the gear material question for the platform.</p>
 <div class="table-wrap"><table class="kv"><thead><tr><th>Parameter</th><th>Value at final test</th></tr></thead><tbody><tr><td>Platform</td><td>Bat-inspired ornithopter with a direct gear-driven reciprocating wing stroke (no four bar linkage in this iteration)</td></tr><tr><td>Drive and control</td><td>Electric motor, ESC, 4S battery, transmitter and receiver (replacing the earlier Arduino based control)</td></tr><tr><td>Gear progression</td><td>Off-the-shelf plastic, then resin printed (50 to 36 teeth), then copper at the main drive position</td></tr><tr><td>Printed structure</td><td>PLA front plate and housings with feature-specific clearances of 0.15 to 0.30 mm</td></tr><tr><td>Wing structure</td><td>Carbon fiber rod spars with printed PLA attachments, four per side, designed for polymer infiltration</td></tr><tr><td>Membranes screened</td><td>Ecoflex, urethane, uncoated silicone, Texalan film, 80 durometer silicone membrane, reflective nylon</td></tr><tr><td>Outcome</td><td>First powered flapping demonstration on the platform; free flight not achieved</td></tr></tbody></table></div>
 </div>
@@ -741,7 +741,7 @@ article[data-project-id="bat-robot"] .project-details > div > figure + figure { 
 <span class="project-tags">• <span itemprop="keywords">space radiation, simulation, orbital environment</span></span>
 </p>
 <p class="project-summary" itemprop="description">
-        A simulation of electron acceleration in the outer Van Allen Belt during a May 2024 solar storm, modeling the radiation environment satellites and spacecraft must operate within.
+        A simulation of electron acceleration in the outer Van Allen Belt during a May 2024 solar storm, recreating the radiation environment spacecraft encounter.
 </p>
 </header>
 
@@ -757,11 +757,10 @@ article[data-project-id="bat-robot"] .project-details > div > figure + figure { 
 <div class="project-overview">
 <h4>Overview</h4>
 <p>
-          This project modeled the radiation environment that satellites and spacecraft must operate within by
-          simulating electron acceleration in the outer Van Allen Belt during a May 2024 solar storm, recreating
-          observed energies up to 2.4 MeV. To explain the observed rise in radiation belt energy, I simulated
-          electron interaction with whistler-mode chorus waves, connecting the modeled wave-particle interactions
-          to the measured increase in electron energy.
+          This project models the radiation environment encountered by satellites and spacecraft. It simulates
+          electron acceleration in the outer Van Allen Belt during a May 2024 solar storm and recreates observed
+          energies up to 2.4 MeV. I also modeled electron interaction with whistler-mode chorus waves to connect
+          wave-particle dynamics to the measured increase in radiation belt energy.
 </p>
 </div>
 
@@ -910,15 +909,15 @@ article[data-project-id="focus-glasses"] .project-details > div > figure + figur
 <span class="project-role" itemprop="author">&bull; Team Lead, Product Design</span>
 <span class="project-tags">&bull; <span itemprop="keywords">product design, market research, finite element analysis</span></span>
 </p>
-<p class="project-summary" itemprop="description">A wearable product concept that uses invisible spectral flicker to help the wearer keep focus, developed with a 4-person team from market research through a full Product Design Specification.</p>
+<p class="project-summary" itemprop="description">A wearable concept that uses invisible spectral flicker to support attention. Developed with a four-person team, from market research through a complete Product Design Specification.</p>
 </header>
 <figure class="project-media"><img src="assets/pictures/focus-glasses-render-hero.jpg" alt="Render of two pairs of Focus Glasses with thickened black temple arms and clear lenses" width="1400" height="609" itemprop="image" /><figcaption>Focus Glasses product concept, rendered. The temple arms house the PCB, LEDs, and cell.</figcaption></figure>
 <section class="project-details">
 <h3 class="sr-only">Project details</h3>
 <div class="project-overview"><h4>Overview</h4>
-<p>Focus Glasses is a wearable concept that helps the user keep focus by using invisible spectral flicker: LEDs in the frame alternate between white and off-white yellow light at 40 Hz, a rate intended to go unnoticed as flicker while stimulating gamma-band brain activity. The target user is a student or professional who has to hold attention through long lectures and work sessions.</p>
-<p>The project was developed by STEN Labs for MAE 5340 Innovative Product Design. I was team lead for product design and led the market research, helped deliver the full Product Design Specification (PDS), and completed the finite element analysis used to confirm the glasses are safe to wear. The concept was presented at a public exhibit open to students, professors, and the community, where it was voted best new product in the class.</p>
-<p>This entry concentrates on the design decisions, the structure and manufacturing plan, and the analysis behind them.</p>
+<p>Focus Glasses uses invisible spectral flicker to help a wearer maintain attention. LEDs in the frame alternate between white and off-white yellow at 40 Hz, a rate intended to avoid visible flicker while stimulating gamma-band brain activity. The target users are students and professionals who need to sustain attention during lectures or extended work sessions.</p>
+<p>STEN Labs developed this project for MAE 5340: Innovative Product Design. As product-design lead, I ran the market research, helped complete the Product Design Specification, and carried out the finite element analysis for wearer safety. We presented the concept at a public exhibit for students, faculty, and the community, where it was voted the class's best new product.</p>
+<p>This entry covers the design decisions, frame structure and manufacturing plan, and the analyses behind them.</p>
 <div class="table-wrap"><table class="kv"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Concept</td><td>Eyewear with micro-LED modules in the temple arms and an internal diffusion layer that delivers 40 Hz invisible spectral flicker (white to off-white yellow)</td></tr><tr><td>Design targets</td><td>Arm thickness under 7 mm, total mass under 60 g, 4 h or more of continuous use, USB-C charging in under 2 h, adjustable brightness</td></tr><tr><td>Frame</td><td>Injection molded polymer for cost, with a reinforced composite option for rigidity and thermal performance</td></tr><tr><td>Electronics</td><td>Custom PCB with ATtiny202 microcontroller, RGB LED, current limiting resistors, decoupling capacitor, slide switch, and coin cell holder</td></tr><tr><td>Manufacturing plan</td><td>Injection molding with secondary polishing, grinding, and punching for hinges; dual cavity steel mold for a 1,000 unit first batch</td></tr><tr><td>Retail target</td><td>$59 to $79, against a per-unit cost estimate of roughly $28 to $61 at 1,000 units</td></tr></tbody></table></div>
 </div>
 <div class="project-basis"><h4>Problem definition and design basis</h4>
@@ -1112,15 +1111,15 @@ article[data-project-id="spin-wheel"] .project-details > div > figure + figure {
 <span class="project-role" itemprop="author">&bull; Product Designer</span>
 <span class="project-tags">&bull; <span itemprop="keywords">product design, structural analysis, design for manufacturing</span></span>
 </p>
-<p class="project-summary" itemprop="description">A haptic scroll wheel with magnetic encoding, a hollow-shaft BLDC detent motor, and a capacitive trackpad, offered as injection molded ABS and CNC aluminum variants and developed from customer requirements through structural analysis, manufacturing, and costing.</p>
+<p class="project-summary" itemprop="description">A haptic scroll controller with magnetic encoding, a hollow-shaft BLDC detent motor, and a capacitive trackpad. Developed from customer research through structural analysis, manufacturing, and cost planning, with ABS and CNC aluminum housings.</p>
 </header>
 <figure class="project-media"><img src="assets/pictures/spinwheel-render-hero.jpg" alt="Render of the SpinWheel as an assembled cylindrical knob with a trackpad top, next to an exploded view of its internal stack-up" width="1500" height="938" itemprop="image" /><figcaption>SpinWheel, assembled (left) and exploded (right). The stack runs from the trackpad and knob through the motor, encoder, controller, and cell to the bottom cover.</figcaption></figure>
 <section class="project-details">
 <h3 class="sr-only">Project details</h3>
 <div class="project-overview"><h4>Overview</h4>
-<p>SpinWheel is a 55 mm desktop scroll controller that replaces the notched mechanical wheel with a magnetic encoder, a hollow-shaft BLDC motor that renders detents in firmware, and a capacitive trackpad in the knob face. It targets users who scroll through large files for a living, such as CAD users, video editors, analysts, and developers, and it addresses two complaints found in forum and review mining: wheels that are too coarse for fine work or too sluggish for navigation, and no way to change the feel without coding.</p>
-<p>The project was developed by a two-person team for MAE 5630/4631 Advanced Product Design, from January 22 to May 17, 2025. The team completed a Product Design Specification covering customer requirements, TRIZ, House of Quality, embodiment, mechanical analysis, manufacturing, costing, reliability, risk, and intellectual property. It also built a working prototype, filed a patent application, and presented the product at a public exhibition.</p>
-<p>This entry concentrates on the structure, the mechanical analysis, and the manufacturing plan for the two housing variants.</p>
+<p>SpinWheel is a 55 mm desktop scroll controller that replaces a mechanical wheel with magnetic sensing and software-defined haptic detents. A hollow-shaft BLDC motor provides the feedback, while a capacitive trackpad sits in the knob face. The device is aimed at people who work through large files—CAD users, video editors, analysts, developers, and others. It responds to two recurring complaints: wheels are often too coarse for precise work or too sluggish for navigation, and changing their feel usually requires firmware work.</p>
+<p>I and my teammate developed SpinWheel for MAE 5630/4631: Advanced Product Design, from January 22 through May 17, 2025. The work included a complete Product Design Specification, TRIZ and House of Quality analyses, mechanical design and FEA, manufacturing and costing, reliability, risk, and intellectual property planning. We also built a working prototype, filed a patent application, and presented the product at a public exhibition.</p>
+<p>This entry focuses on the structure, mechanical analysis, and manufacturing plan for the two housing variants.</p>
 <div class="table-wrap"><table class="kv"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Concept</td><td>Cylindrical 55 mm scroll wheel with contactless sensing, firmware-defined haptic detents, and a circular capacitive trackpad in the top face</td></tr><tr><td>Sensing</td><td>AS5600 12-bit magnetic encoder with a diametric magnet, 4,096 counts per revolution (0.088 degrees per count), no contacting wear parts</td></tr><tr><td>Actuation</td><td>Hollow-shaft BLDC motor commanded by the controller to render detents, free spin, and other feel profiles</td></tr><tr><td>Electronics</td><td>nRF52840 controller with BLE and USB HID, 400 mAh lithium polymer cell, shielded capacitive trackpad</td></tr><tr><td>Housing variants</td><td>Injection molded ABS for volume at $50, and CNC machined 6061 aluminum for a premium tier, with identical internals</td></tr><tr><td>Service environment</td><td>Indoor desktop use at room temperature, internal temperature held below about 60 &deg;C, controller dissipation under 0.1 W, against an ABS softening point above 100 &deg;C</td></tr></tbody></table></div>
 </div>
 <div class="project-basis"><h4>Problem definition and customer requirements</h4>
